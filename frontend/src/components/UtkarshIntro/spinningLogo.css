@@ -1,0 +1,29 @@
+@keyframes spin-coin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  .animate-spin-coin {
+    animation: spin-coin 5s infinite linear;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .coin-edge .edge {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+    /* Thickness */
+    height: 40px; 
+  }
