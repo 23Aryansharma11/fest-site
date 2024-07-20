@@ -2,9 +2,9 @@ import React from 'react'
 
 export const Past = () => {
   return (
-    <div>
-        <h1 style={{color:'white'}}>
-            PAST PERFORMERS
+    <div className='pt-20'>
+        <h1 className="font-normal" style={{color:"#FFbd00",fontSize:"4vw" }}>
+            Past Performers
         </h1>
 
     </div>

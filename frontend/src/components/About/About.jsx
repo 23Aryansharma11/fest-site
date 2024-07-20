@@ -3,15 +3,15 @@ import robotImage from "../../assets/robot_spy-B22OfTYi.png"; // Ensure you have
 
 const About = () => {
   return (
-    <div className=" min-h-screen p-4 md:p-8">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 flex justify-center items-center md:mb-6">
+    <div className="p-4 md:p-8">
+      <h2 style={{color:"#FFbd00"}} className="text-3xl md:text-4xl font-bold mb-4 flex justify-center items-center md:mb-6">
         About
       </h2>
-      <div className="flex flex-col md:flex-row ">
+      <div className="flex flex-col md:flex-row text-white">
         <div className=" md:w-1/3">
-          <h1 className="text-xl">IIT Roorkeey&apos;s Techfest</h1>
-          <h2 className="text-3xl md:text-5xl font-bold my-4">
-            Cognizance 2024
+          <h1 className="text-xl">UIT&apos;s Techfest</h1>
+          <h2 className="text-3xl md:text-5xl font-bold my-4 text-white">
+            UTKARSH 2024
           </h2>
           <div className="flex justify-center items-start md:mb-8">
             <div className="bg-yellow-500 w-1 mr-4 self-stretch"></div>
@@ -38,7 +38,7 @@ const About = () => {
         </div>
         <div className="hidden md:block md:w-1/3 ">
           <h2 className="text-3xl md:text-5xl font-bold my-4 ">
-            Cognizance 2024
+            UTKARSH 2024
           </h2>
           <div className="flex justify-center items-start md:mb-8">
             <div className="bg-yellow-500 w-1 mr-4 self-stretch"></div>
