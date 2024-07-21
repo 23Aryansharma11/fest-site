@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import NFS from "./nfs.jpeg"
 import PUBG from "./pubg.jpeg"
 import Hack from "./hackathon.jpg"

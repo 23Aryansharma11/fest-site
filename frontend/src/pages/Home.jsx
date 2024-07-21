@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Nav from '../components/navbar/Nav.jsx'
 
 import Events from '../components/events/Events.jsx'
