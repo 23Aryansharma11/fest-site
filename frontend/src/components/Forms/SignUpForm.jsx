@@ -10,6 +10,7 @@ const SignUpForm = () => {
   } = useForm();
   const [loading, setLoading] = useState(false); // Form loading state
   const signUp = async (data) => {
+    setLoading(true)
     try {
       /* 
       data = {
@@ -21,9 +22,13 @@ const SignUpForm = () => {
       // Send data to backend
       // Update global state
       setLoading(false);
+      // Show toast
       // navigate user
     } catch (error) {
       console.log(error);
+      setLoading(false)
+      // Show toast
+      // Navigate user
     }
   };
   return (

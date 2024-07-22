@@ -9,9 +9,10 @@ import {
   
 } from "react-router-dom";
 import SignUp from './pages/SignUp.jsx';
+import Login from './pages/Login.jsx';
 
 function App() {
- 
+
 
   return (
     <Router>
@@ -19,9 +20,10 @@ function App() {
     <div className="App">
     
     <Routes>
-     <Route exact path="/" element={<Home/>}/>
-     <Route exact path="/register" element={<SignUp/>}/>
-     </Routes>
+      <Route exact path="/" element={<Home/>}/>
+      <Route exact path="/register" element={<SignUp/>}/>
+      <Route exact path="/login" element={<Login/>}/>
+      </Routes>
     </div>
     
     </Router>
