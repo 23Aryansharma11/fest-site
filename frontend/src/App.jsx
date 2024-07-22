@@ -8,6 +8,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import SignUp from './pages/SignUp.jsx';
 
 function App() {
  
@@ -18,9 +19,8 @@ function App() {
     <div className="App">
     
     <Routes>
-     
      <Route exact path="/" element={<Home/>}/>
-     
+     <Route exact path="/register" element={<SignUp/>}/>
      </Routes>
     </div>
     
