@@ -21,7 +21,7 @@ const Events = () => {
         }
     }
   return (
-    <div className="container  relative xs:flex-col md:flex-row lg:justify-start sm:justify-center" style={{margin:"0,auto",width:"90%" ,padding:"0 13rem",display:"flex",alignItems:'center',justifyContent:"flexStart"}}>
+    <div className="container bg-black  relative xs:flex-col md:flex-row lg:justify-start sm:justify-center" style={{margin:"0,auto",width:"90%" ,padding:"0 13rem",display:"flex",alignItems:'center',justifyContent:"flexStart"}}>
     <div style={{maxWidth:'400px',minWidth:"400px"}} id="carouselExample" className="carousel slide md:pt-0 xs:pt-40 xs:w-screen">
   <div  className="carousel-inner">
     <div className="carousel-item active" >
