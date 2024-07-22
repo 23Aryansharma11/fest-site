@@ -21,10 +21,10 @@ const Events = () => {
         }
     }
   return (
-    <div className="container  relative xs:flex-col md:flex-row lg:justify-start sm:justify-center" style={{margin:"0,auto",width:"90%" ,padding:"0 13rem",display:"flex",alignItems:'center',justifyContent:"flexStart"}}>
-    <div style={{maxWidth:'400px',minWidth:"400px"}} id="carouselExample" className="carousel slide md:pt-0 xs:pt-40 xs:w-screen">
-  <div  className="carousel-inner">
-    <div className="carousel-item active" >
+    <div className="container xs:mx-auto relative xs:flex-col  md:flex-row lg:mx-0 lg:ml-24 xs:p-0 sm:justify-center" style={{margin:"auto" ,display:"flex",alignItems:'center',justifyContent:"flexStart"}}>
+    <div style={{maxWidth:'400px'}} id="carouselExample" className="carousel slide md:pt-0 xs:pt-40 xs:w-screen">
+  <div  className="carousel-inner w-full">
+    <div className="carousel-item active w-full" >
       <img src={NFS} className="d-block w-100" alt="..."
       />
     
