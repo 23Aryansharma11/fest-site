@@ -2,7 +2,7 @@ import SpinningLogo from "./SpinningLogo";
 
 const UtkarshIntro = () => {
   return (
-    <main className=" bg-[#14110F] text-white flex justify-center gap-16 md:justify-between flex-col md:flex-row h-screen ">
+    <main className=" bg-darkbg text-white flex justify-center gap-16 md:justify-between flex-col md:flex-row h-screen ">
       <section className="flex justify-center items-center w-full md:w-1/2">
         <SpinningLogo />
       </section>
@@ -11,14 +11,14 @@ const UtkarshIntro = () => {
         <h2 className="text-lg md:text-2xl md:leading-9">
           Welcome to Utkarsh, the largest techno-cultural fest in Himachal
           Pradesh! Hosted by{" "}
-          <span className="text-[#FCBA04] font-bold">
+          <span className="text-prim font-bold">
             University Institude of Technology
           </span>
           , HPU, Utkarsh attracts over{" "}
-          <span className="text-[#FCBA04] font-bold">5000</span> participants
+          <span className="text-prim font-bold">5000</span> participants
           from North India. Since 2014, we have proudly completed 8 editions,
           featuring over 25 competitions, lectures, and shows. <br />{" "}
-          <span className="text-[#FCBA04]">
+          <span className="text-prim">
             Join us for an unforgettable experience with luminaries from around
             the world.
           </span>
