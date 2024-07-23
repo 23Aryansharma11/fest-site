@@ -26,6 +26,11 @@ const eventSchema=new mongoose.Schema({
     type:String,
     required:true,
     },
+    contact:{
+        type:String,
+            required:true
+        
+    },
     year:{
         type:String,
         required:true,
@@ -47,5 +52,5 @@ const eventSchema=new mongoose.Schema({
     }
 
 
-})
+},{timestamps:true})
 export const Event=mongoose.model("Event",eventSchema);

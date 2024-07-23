@@ -3,7 +3,7 @@ import robotImage from "../../assets/robot_spy-B22OfTYi.png"; // Ensure you have
 
 const About = () => {
   return (
-    <div className="p-4 md:p-8">
+    <div className="bg-black p-4 md:p-8">
       <h2 style={{color:"#FFbd00"}} className="text-3xl md:text-4xl font-bold mb-4 flex justify-center items-center md:mb-6">
         About
       </h2>

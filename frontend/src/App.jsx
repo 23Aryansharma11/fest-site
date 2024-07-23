@@ -3,28 +3,34 @@ import './App.css'
 // import Nav from './components/navbar/nav'
 import Home from './pages/Home.jsx'
 import {
-  BrowserRouter as Router,
+ 
   Routes,
   Route,
-  Link
+  
 } from "react-router-dom";
+import SignUp from './pages/SignUp.jsx';
+import {Form} from './pages/Form.jsx';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
  
 
   return (
-    <Router>
+    <>
     
     <div className="App">
-    
+    {/* <Toaster/> */}
     <Routes>
-     
-     <Route exact path="/" element={<Home/>}/>
-     
+     <Route  path="/" element={<Home/>}/>
+     <Route  path="/register" element={<SignUp/>}/>
+     <Route  path="/form" element={<Form/>}/>
+    
      </Routes>
+     
     </div>
     
-    </Router>
+    </>
+    
   )
 }
 

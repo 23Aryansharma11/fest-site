@@ -3,7 +3,8 @@ import { User } from "../models/user.model.js";
 
 export const submitForm=async(req,res)=>{
     try{
-    const {eventName,player1Name,player2Name,player3Name,player4Name,email,year,branch,transaction}=req.body;
+    const {eventName,contact,player1Name,player2Name,player3Name,player4Name,email,year,branch,transaction}=req.body;
+    console.log(eventName)
     const user=await User.findById(req.user._id).select("-password")
     if(!user){
         return res.status(400).json({error:"User not authorized"});
@@ -13,6 +14,7 @@ export const submitForm=async(req,res)=>{
     }
     const event=new Event({
         eventName,
+        contact,
         player1Name,
         player2Name,
         player3Name,
@@ -21,6 +23,7 @@ export const submitForm=async(req,res)=>{
         year,
         branch,
         transaction,
+        
     })
     if(!event){
         return res.status(400).json({error:"Event not created"})
