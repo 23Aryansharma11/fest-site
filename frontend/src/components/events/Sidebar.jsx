@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 export const Sidebar = (props) => {
     console.log(props.props)
@@ -19,6 +19,9 @@ export const Sidebar = (props) => {
     <div className=" border-l-8 border-warning mt-4 ">
     <p className='text-base ml-3 '>{values[props.props].paragraph}</p>
     </div>
-    <button className='mt-4'>Explore more</button></div>
+    <div className="mt-3">
+    <Link to="/events" className='px-4 py-1 border-2 border-blue-4px-4 py-2 border-2 border-blue-500 text-white   hover:scale-10500 text-white focus:outline-none inline-block'>Explore more</Link>
+    </div>
+    </div>
   )
 }
