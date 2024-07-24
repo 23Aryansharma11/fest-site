@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
-import useRegistration from '../hooks/useRegistration'
+import useRegistration from '../hooks/useRegistration.js'
+import Nav from '../components/navbar/Nav'
+import { useAuthContext } from '../context/authcontext'
 // import { useRegistration } from '../hooks/useRegistration.js'
 // import Input from '../components/input/Input.jsx'
 
 export const Form = () => {
-  const [values,setValues]=useState({})
+  const {registration}=useRegistration()
+  const {authUser}=useAuthContext()
+  const [values,setValues]=useState({email:authUser.email,player2Name:"",player3Name:"",player4Name:""})
   const handleChange=(e)=>{
         setValues((prev)=>{return {...prev,[e.target.name]:e.target.value}})
   }
-  const {registration}=useRegistration()
+  
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try{
@@ -21,7 +25,10 @@ export const Form = () => {
   }
   console.log(values)
   return (
+    <>
+    <Nav/>
     <div className='w-full '>
+    <h1 className='text-yellow-500'>Registration Form</h1>
     <form onSubmit={(e)=>handleSubmit(e)}>
      <label className="form-control p-12 mx-auto backdrop:blur-xl max-w-lg min-w-64 bg-transparent border-yellow-400 border-l">
      <div >
@@ -29,12 +36,12 @@ export const Form = () => {
     <span className="label-text text-white">Event Name *</span>
    
   </div>
-  <input onChange={(e)=>{handleChange(e)}} name='eventName' required="true" type="text" placeholder="Enter event name" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
+  <input onChange={(e)=>{handleChange(e)}}  name='eventName' required="true" type="text" placeholder="Enter event name" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
   <div className="label">
     <span className="label-text text-white">Email *</span>
    
   </div>
-  <input type="text" required="true" onChange={(e)=>{handleChange(e)}} name='email'  placeholder="Enter Your email" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
+  <input type="text" required="true" disabled value={authUser.email} onChange={(e)=>{handleChange(e)}} name='email'  placeholder="Enter Your email" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
   <div className="label">
     <span required= "true"  className="label-text text-white">Contact No. *</span>
    
@@ -49,7 +56,7 @@ export const Form = () => {
     <span className="label-text text-white">Player 2 Name (if applicable)</span>
    
   </div>
-  <input required="true" type="text" onChange={(e)=>{handleChange(e)}} name='player2Name'  placeholder="Enter player 2 name (if applicable)" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
+  <input  type="text" onChange={(e)=>{handleChange(e)}} name='player2Name'  placeholder="Enter player 2 name (if applicable)" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
   <div className="label">
     <span className="label-text text-white">Player 3 Name (if applicable)</span>
    
@@ -83,6 +90,7 @@ export const Form = () => {
 
 
     </div>
+    </>
   )
 }
 

@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <div className="m-10">
       
-      <div className="flex items-center">
+      <div className="flex flex-col md:flex-row items-center">
 
-        <div className="w-1/2">
+        <div className="w-[100%] md:w-1/2 ">
         
           <h2 className="flex justify-start text-white  pb-4 ">Cognizance 20<span className="text-[#FFbd00]">24</span> </h2>
           <p>
@@ -18,8 +18,8 @@ const Footer = () => {
             industry
           </p>
         </div>
-        <div className="w-1/2">
-            <a href="/" className="pl-10 text-white">About Us</a>
+        <div className="flex  mt-10 md:mt-0  md:justify-center w-full md:w-1/2 ">
+            <a href="/" className=" text-white">About Us</a>
             <a href="/" className="pl-10 text-white">Events</a>
             <a href="/" className="pl-10 text-white">Meet Tech Team</a>
             <a href="/" className="pl-10 text-white">Meet Developers</a>

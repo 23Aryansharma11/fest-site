@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
+import { useAuthContext } from "../../context/authcontext";
 
 const Nav = () => {
+  const {setAuthUser,authUser}=useAuthContext()
   const navItems = [
     { label: "About", href: "/about" },
     { label: "Events", href: "/events" },
@@ -14,6 +16,8 @@ const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
+    localStorage.removeItem("user")
+    setAuthUser(null)
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -37,8 +41,9 @@ const Nav = () => {
       ))}
     </div>
     <div className="md:flex md:items-center ">
-      <Link to="/login" className="md:p-4 py-2 block text-white" onClick={toggleMobileMenu}>Login</Link>
-      <Link to="/register" className="md:p-4 py-2 block text-white" onClick={toggleMobileMenu}>Register</Link>
+    {authUser?<Link to="/" className="md:p-4 py-2 block text-white" onClick={toggleMobileMenu}>Logout</Link>: <><Link to="/login" className="md:p-4 py-2 block text-white" onClick={toggleMobileMenu}>Login</Link>
+    <Link to="/register" className="md:p-4 py-2 block text-white" onClick={toggleMobileMenu}>Register</Link></>}
+     
     </div>
   </div>
 </nav>

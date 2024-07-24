@@ -15,7 +15,7 @@ dotenv.config()
 app.use("/api/auth",authRoutes)
 app.use("/api/form",regitrationRoutes)
 app.use("/api/admin",adminRoutes)
-app.listen("3000",async()=>{
+app.listen("5000",async()=>{
     await connect()
     console.log("Server running ")
 })

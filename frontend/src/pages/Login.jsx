@@ -1,8 +1,8 @@
 import React from "react";
-import SignUpForm from "../components/Forms/SignUpForm.jsx";
+import LoginForm from "../components/Forms/LoginForm";
 import { IoIosArrowBack } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-const SignUp = () => {
+const Login = () => {
   const navigate = useNavigate();
   const imageUrl =
     "https://res.cloudinary.com/aryansharma/image/upload/v1721474616/UtkarshLogo.png";
@@ -14,15 +14,15 @@ const SignUp = () => {
       >
         <IoIosArrowBack />
       </button>
+      <section className="">
+        <LoginForm />
+      </section>
       <section className="hidden md:block">
         {/* Todo: Change image */}
         <img src={imageUrl} alt="Logo" className=" size-80" />
-      </section>
-      <section className="">
-        <SignUpForm />
       </section>
     </main>
   );
 };
 
-export default SignUp;
+export default Login;

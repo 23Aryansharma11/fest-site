@@ -1,10 +1,12 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { Navigate, useNavigate } from "react-router-dom";
 
  const useRegistration=()=>{
+    // const navigate=useNavigate()
     const [loading,setLoading]=useState(false)
     const registration=async({email,player1Name,player2Name,player3Name,player4Name,transaction,contact,branch,year,eventName})=>{
-      
+      console.log(eventName,email)
          const success=checkInput(email,eventName,player1Name,transaction,contact,branch,year);
          if(!success){
             return
@@ -19,16 +21,18 @@ import toast from "react-hot-toast";
                   "Content-type": "application/json"
                 }
               });
-              console.log(res)
+            //   console.log(res)
               const data=await res.json();
+              console.log(data)
               if(data.error){
                 throw new Error(data.error)
               }
-        //    toast.success(data)
-
+           toast.success("Form submiited")
+           
+   
         }catch(error){
             console.log(error)
-        //    toast.error(error)
+           toast.error(`${error}`)
         }finally{
             setLoading(false)
         }
