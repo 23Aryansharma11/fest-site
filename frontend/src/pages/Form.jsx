@@ -28,9 +28,9 @@ export const Form = () => {
     <>
     <Nav/>
     <div className='w-full '>
-    <h1 className='text-yellow-500'>Registration Form</h1>
+    <h1 className='text-yellow-500 py-3 orbitron'>Registration Form</h1>
     <form onSubmit={(e)=>handleSubmit(e)}>
-     <label className="form-control p-12 mx-auto backdrop:blur-xl max-w-lg min-w-64 bg-transparent border-yellow-400 border-l">
+     <label className="form-control p-12 mx-auto backdrop:blur-xl max-w-lg min-w-64 bg-transparent border-yellow-400 border-l cabin">
      <div >
   <div className="label w-full">
     <span className="label-text text-white">Event Name *</span>

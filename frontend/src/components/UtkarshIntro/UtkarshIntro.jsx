@@ -8,7 +8,7 @@ const UtkarshIntro = () => {
       </section>
       <section className="w-full md:w-1/2 flex flex-col  justify-center gap-5 md:gap-10 px-5 mr-20 text-left text-pretty">
         <h1 className="text-4xl md:text-6xl font-bold ">Utkarsh</h1>
-        <h2 className="text-lg md:text-2xl md:leading-9">
+        <h2 className="text-lg md:text-2xl md:leading-9 cabin">
           Welcome to Utkarsh, the largest techno-cultural fest in Himachal
           Pradesh! Hosted by{" "}
           <span className="text-prim font-bold">
