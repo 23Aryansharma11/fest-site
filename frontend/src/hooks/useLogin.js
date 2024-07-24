@@ -34,7 +34,7 @@ const useLogin=()=>{
       setAuthUser(data)
       toast.success("User Logged in")
       }catch(err){
-        toast.error(err)
+        toast.error(`${err}`)
       console.log(err)
       }finally{
         setLoading(false)

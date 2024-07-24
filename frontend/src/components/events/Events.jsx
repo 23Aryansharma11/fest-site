@@ -2,9 +2,17 @@ import  { useState } from 'react'
 import NFS from "./nfs.jpeg"
 import PUBG from "./pubg.jpeg"
 import Hack from "./hackathon.jpg"
+// import "./events.css"
 import { Sidebar } from './Sidebar'
+import Carousel from './carousels.jsx'
 const Events = () => {
     let [count,setCount]=useState(0)
+    const items = [
+    <div style={{ backgroundColor: 'red', height: '200px',width:"400px" }}>Slide 1</div>,
+    <div style={{ backgroundColor: 'green', height: '200px',width:"400px" }}>Slide 2</div>,
+    <div style={{ backgroundColor: 'blue', height: '200px',width:"400px" }}>Slide 3</div>,
+  ];
+
     const increaseCount=()=>{
         console.log("function called")
         if(count==2){
@@ -22,7 +30,7 @@ const Events = () => {
     }
   return (
     <div className="container xs:mx-auto relative xs:flex-col  md:flex-row lg:mx-0 lg:ml-24 xs:p-0 sm:justify-center" style={{margin:"auto" ,display:"flex",alignItems:'center',justifyContent:"flexStart"}}>
-    <div style={{maxWidth:'400px'}} id="carouselExample" className="carousel slide md:pt-0 xs:pt-40 xs:w-screen">
+    {/* <div style={{maxWidth:'400px'}} id="carouselExample" className="carousel slide md:pt-0 xs:pt-40 xs:w-screen">
   <div  className="carousel-inner w-full">
     <div className="carousel-item active w-full" >
       <img src={NFS} className="d-block w-100" alt="..."
@@ -47,7 +55,8 @@ const Events = () => {
     <span className="visually-hidden">Next</span>
     <span>{count}</span>
   </button>
-</div>
+</div> */}
+<Carousel items={items}/>
 <Sidebar props={count}/>
 </div>
   )
