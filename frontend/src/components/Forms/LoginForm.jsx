@@ -19,14 +19,14 @@ const {loading,logIn}=useLogin()
   }
   return (
     <div className="w-full flex flex-col text-white gap-10 justify-center items-center h-full ">
-      <p className="font-bold text-6xl">Utkarsh 2k24</p>
-      <p className="font-bold text-4xl ">Login</p>
+      <p className="font-bold text-5xl orbitron">Utkarsh 2k24</p>
+      <p className="font-bold text-4xl orbitron">Login</p>
       <form className="w-full" onSubmit={handleSubmit(handleLogin)}>
         <span className="text-red-600 text-sm font-lighttrue">
           {errors && errors?.email?.message ||
             errors?.password?.message}
         </span>
-        <div className="space-y-5">
+        <div className="space-y-5 cabin">
           <Input
             label="Email"
             placeholder="Enter email"
