@@ -20,8 +20,8 @@ const SignUpForm = () => {
   };
   return (
     <div className="w-full flex flex-col text-white gap-10 justify-center items-center h-full ">
-      <p className="font-bold text-6xl">Utkarsh 2k24</p>
-      <p className="font-bold text-4xl ">Sign Up</p>
+      <p className="font-bold text-5xl orbitron">Utkarsh 2k24</p>
+      <p className="font-bold text-4xl orbitron">Sign Up</p>
       <form className="w-full" onSubmit={handleSubmit(signUp)}>
         <span className=" text-red-600 text-sm font-lighttrue ">
           {/* Display errors (Staggered || One after another) */}
@@ -29,7 +29,7 @@ const SignUpForm = () => {
             errors?.email?.message ||
             errors?.password?.message}
         </span>
-        <div className="space-y-5">
+        <div className="space-y-5 cabin">
           <Input
             label="Name"
             placeholder="Enter your name"
