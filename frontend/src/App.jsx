@@ -14,6 +14,7 @@ import Login from './pages/Login.jsx';
 import {Form} from './pages/Form.jsx';
 import { Toaster } from 'react-hot-toast';
 import { useAuthContext } from './context/authcontext.jsx';
+import EventInfo from './pages/EventInfo.jsx';
 
 function App() {
 const {authUser}=useAuthContext()
@@ -28,7 +29,7 @@ const {authUser}=useAuthContext()
       <Route  path="/register" element={authUser?<Navigate to="/form"/>:<SignUp/>}/>
       <Route  path="/login" element={authUser?<Navigate to="/form"/>:<Login/>}/>
       <Route  path="/form" element={authUser?<Form/>:<Navigate to="/register" />}/>
-    
+      <Route path='events/:eventId' element={<EventInfo />} />
      </Routes>
      <Toaster/>
     </div>
