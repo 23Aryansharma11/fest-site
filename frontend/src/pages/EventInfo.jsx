@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import Nav from "../components/navbar/Nav";
 import { FaLocationDot } from "react-icons/fa6";
+import { useLocation } from 'react-router-dom';
 const EventInfo = () => {
+  const location = useLocation(); // Get the location object
+  const { state } = location; // Extract state from location object
+
+  // Check if state is available and contains the expected properties
+  if (!state) {
+    return <p>No data available</p>;
+  }
   const eventData = {
     name: "Need For Speed",
     imageUrl:
@@ -19,7 +27,7 @@ const EventInfo = () => {
           <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
             <img
               alt=""
-              src={eventData.imageUrl}
+              src={state.image}
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
@@ -27,8 +35,8 @@ const EventInfo = () => {
           <div className="lg:py-24">
             <span className="flex flex-col ">
               <h2 className="text-3xl font-bold sm:text-4xl flex items-center justify-between">
-                <span>{eventData.name}</span>{" "}
-                {eventData.entryFee && <span>₹{eventData.entryFee}</span>}
+                <span>{state.title}</span>{" "}
+                {state.prize && <span>₹{state.prize}</span>}
               </h2>
               <p className="flex items-center  gap-2 text-gray">
                 <FaLocationDot />
@@ -36,7 +44,7 @@ const EventInfo = () => {
               </p>
             </span>
 
-            <p className="mt-4 text-gray-600">{eventData.description}</p>
+            <p className="mt-4 text-gray-600">{state.description}</p>
 
             <Link
               to={`/form/${eventData.slug}`}

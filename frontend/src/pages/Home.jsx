@@ -18,6 +18,7 @@ const Home = () => {
         
         <Past/>
         <Footer/>
+        
     </div>
   )
 }

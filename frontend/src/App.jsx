@@ -10,7 +10,7 @@ import { useAuthContext } from "./context/authcontext.jsx";
 import EventPage from "./components/events/EventPage/EventPage.jsx";
 import {Admin} from "./pages/Admin.jsx";
 import { Applied } from "./pages/Applied.jsx";
-
+import EventInfo from "./pages/EventInfo.jsx"
 function App() {
   const { authUser } = useAuthContext();
 
@@ -33,6 +33,10 @@ function App() {
         <Route
           path="/events"
           element={<EventPage/>}
+        />
+        <Route
+          path="/eventdetail"
+          element={<EventInfo/>}
         />
         <Route
           path="/getall"
