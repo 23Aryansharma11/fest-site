@@ -2,13 +2,16 @@ import React, { useState } from 'react'
 import useRegistration from '../hooks/useRegistration.js'
 import Nav from '../components/navbar/Nav'
 import { useAuthContext } from '../context/authcontext'
+import { useParams } from 'react-router-dom'
 // import { useRegistration } from '../hooks/useRegistration.js'
 // import Input from '../components/input/Input.jsx'
 
 export const Form = () => {
-  const {registration}=useRegistration()
+  const {registration,loading}=useRegistration()
+  const {name}=useParams()
+  console.log(name)
   const {authUser}=useAuthContext()
-  const [values,setValues]=useState({email:authUser.email,player2Name:"",player3Name:"",player4Name:""})
+  const [values,setValues]=useState({email:authUser.email,player2Name:"",player3Name:"",player4Name:"",eventName:name})
   const handleChange=(e)=>{
         setValues((prev)=>{return {...prev,[e.target.name]:e.target.value}})
   }
@@ -28,7 +31,7 @@ export const Form = () => {
     <>
     <Nav/>
     <div className='w-full '>
-    <h1 className='text-yellow-500 py-3 orbitron'>Registration Form</h1>
+    <h1 className='text-yellow-500 py-3 orbitron xs:text-4xl'>Registration Form</h1>
     <form onSubmit={(e)=>handleSubmit(e)}>
      <label className="form-control p-12 mx-auto backdrop:blur-xl max-w-lg min-w-64 bg-transparent border-yellow-400 border-l cabin">
      <div >
@@ -36,7 +39,7 @@ export const Form = () => {
     <span className="label-text text-white">Event Name *</span>
    
   </div>
-  <input onChange={(e)=>{handleChange(e)}}  name='eventName' required="true" type="text" placeholder="Enter event name" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
+  <input disabled onChange={(e)=>{handleChange(e)}} value={name} name='eventName' required="true" type="text" placeholder="Enter event name" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
   <div className="label">
     <span className="label-text text-white">Email *</span>
    
@@ -83,7 +86,7 @@ export const Form = () => {
   </div>
   <input type="text" required placeholder="Enter Transaction id" onChange={(e)=>{handleChange(e)}} name='transaction'  className="input input-bordered select-warning border-white  bg-black text-white w-full " />
 </div>
-<button className="btn btn-warning   mt-6">Submit</button>
+<button className="btn btn-warning   mt-6">{loading?<span className="loading loading-infinity loading-lg"></span>:"Submit"}</button>
 </label>
 </form>
  

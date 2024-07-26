@@ -22,7 +22,7 @@ const Footer = () => {
             <a href="/" className=" text-white">About Us</a>
             <a href="/" className="pl-10 text-white">Events</a>
             <a href="/" className="pl-10 text-white">Meet Tech Team</a>
-            <a href="/" className="pl-10 text-white">Meet Developers</a>
+            <a href="/developers" className="pl-10 text-white">Meet Developers</a>
         </div>
       </div>
       <hr className="border-white border-5 my-2"  />

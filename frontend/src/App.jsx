@@ -11,6 +11,7 @@ import EventPage from "./components/events/EventPage/EventPage.jsx";
 import {Admin} from "./pages/Admin.jsx";
 import { Applied } from "./pages/Applied.jsx";
 import EventInfo from "./pages/EventInfo.jsx"
+import { Developers } from "./pages/Developers.jsx";
 function App() {
   const { authUser } = useAuthContext();
 
@@ -27,7 +28,7 @@ function App() {
           element={authUser ? <Navigate to="/" /> : <Login />}
         />
         <Route
-          path="/form"
+          path="/form/:name"
           element={authUser ? <Form /> : <Navigate to="/register" />}
         />
         <Route
@@ -45,6 +46,10 @@ function App() {
         <Route
           path="/getme"
           element={authUser?<Applied/>:<Navigate to="/register"/>}
+        />
+        <Route
+          path="/developers"
+          element={<Developers/>}
         />
       </Routes>
       <Toaster />

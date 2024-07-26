@@ -38,10 +38,10 @@ const handleLogout=async()=>{
 
   return (
     <nav className="bg-darkbg/95 md:bg-darkbg/50 md:backdrop-blur-lg text-white sticky top-0 z-20 mx-auto w-full flex items-center justify-between p-2 flex-wrap">
-      <div className="flex items-center justify-between font-bold text-2xl orbitron">
+    <Link to="/">  <div className="flex items-center justify-between font-bold text-2xl orbitron">
         <img className="size-15 pr-3" src="https://res.cloudinary.com/aryansharma/image/upload/f_auto,q_auto/utkarsh_logo" alt="logo"/>
         Utkarsh 2024
-      </div>
+      </div></Link>
       <div className="md:hidden flex items-center">
         <button onClick={toggleMobileMenu}>
           {isMobileMenuOpen ? (<IoCloseOutline size={24} />) : (<IoMenuOutline size={24} />)}

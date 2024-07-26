@@ -1,0 +1,46 @@
+import React from 'react'
+import { DevHelper } from '../components/developers/DevHelper'
+import Sujal from "../components/developers/sujal2.jpg"
+import Nav from '../components/navbar/Nav'
+export const Developers = () => {
+    const data=[{
+        name:"Sujal Verdhan",
+        description:"As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
+        work:"Web Developer",
+        insta:"https://www.instagram.com/sujal_vardhan/",
+        linkedin:"https://www.linkedin.com/in/sujal-verdhan-21859a225/",
+        image:Sujal
+
+    },{
+        name:"Divay Sharma",
+        description:"As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
+        work:"Web Developer",
+        insta:"",
+        linkedin:""
+    },{
+        name:"Aryan",
+        description:"As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
+        work:"Web Developer",
+        insta:"",
+        linkedin:""
+    },{
+        name:"Ruhani Kapoor",
+        description:"As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
+        work:"Web Developer",
+        insta:"",
+        linkedin:""
+    }]
+  return (
+    <>
+    <Nav/>
+    <div>
+        <h1 className='p-8 text-yellow-500 text-3xl'>Meet Our Developers</h1>
+        <div className='md:grid-cols-3 xs:grid-cols-1 sm:grid-cols-2 place-items-center  lg:grid-cols-4 d-grid gap-3 justify-center'>
+        {data.map((e)=>{
+            return <DevHelper value={e}/>
+        })}
+        </div>
+</div>
+</>
+  )
+}
