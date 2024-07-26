@@ -19,16 +19,16 @@ if(!user){
 req.user=user;
 next()
     }catch(err){
-console.log(err)
+
 return res.status(500).json({error:"Internal Server Error"});
     }
 }
 export const protectAdminRoute=async(req,res,next)=>{
     try{
-    const user=req.user;
+    const user=await req.user;
     console.log(user)
     if(user.isAdmin===false){
-        return res.status(401).json("You dont have admin permission ")
+        return res.status(401).json({error:"You dont have admin permission "})
     }
  
 next()

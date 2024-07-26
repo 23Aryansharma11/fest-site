@@ -8,12 +8,5 @@ await res.cookie('jwt',token,{
 
 })
 }
-export const generateAdminToken=async(userId,res)=>{
-    const token= jwt.sign({userId},process.env.JWTADMINSECRET,{expiresIn:'15d'})
-    await res.cookie('jwt',token,{
-        maxAge:15*24*60*60*1000,
-        httpOnly:true,
-        sameSite:"strict",
+
     
-    })
-    }

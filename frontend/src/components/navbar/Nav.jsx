@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
+import { useAuthContext } from "../../context/authcontext";
+import toast from "react-hot-toast";
 
 const Nav = () => {
+  const {authUser,setAuthUser}=useAuthContext()
   const navItems = [
     { label: "About", href: "/about" },
     { label: "Events", href: "/events" },
@@ -12,8 +15,24 @@ const Nav = () => {
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const handleLogout=async()=>{
+  localStorage.removeItem("user")     //doubt of error
+ await  setAuthUser(null);
+ try {
+  const res=await fetch("/api/auth/logout")
+  const data=await res.json();
+  if(data.error){
+    throw new Error(data.error)
+  }
+  toast.success(`Logged out successfully`)
+ } catch (error) {
+     toast.error(error)
+ }{
 
-  const toggleMobileMenu = () => {
+ }
+}
+  const toggleMobileMenu = async() => {
+  
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -35,16 +54,29 @@ const Nav = () => {
               {item.label}
             </NavLink>
           ))}
+           {authUser &&<NavLink  to="/getme" className={({ isActive }) => `py-2 md:px-4 md:py-0 block    ${isActive ? "text-prim": " hover:text-prim transition-colors duration-300"}`} onClick={toggleMobileMenu}>
+              Applied
+            </NavLink>}
+            {authUser && authUser.isAdmin ?<NavLink  to="/getall" className={({ isActive }) => `py-2 md:px-4 md:py-0 block    ${isActive ? "text-prim": " hover:text-prim transition-colors duration-300"}`} onClick={toggleMobileMenu}>
+              All Submissions
+            </NavLink>
+            :null
+            }
         </div>
         <div className="md:flex md:items-center gap-3">
-
-          {/*for mobile devices*/}
-          <Link to="/login" className="block hover:text-prim transition-colors duration-300 py-2 px-4 md:hidden" onClick={toggleMobileMenu}>Login</Link>
+{authUser? <Link to="/" className="block hover:text-prim transition-colors duration-300 py-2 px-4 md:hidden" onClick={handleLogout}>Logout</Link>
+:
+<><Link to="/login" className="block hover:text-prim transition-colors duration-300 py-2 px-4 md:hidden" onClick={toggleMobileMenu}>Login</Link>
           <Link to="/register" className="block hover:text-prim transition-colors duration-300 py-2 px-4 md:hidden" onClick={toggleMobileMenu}>Register</Link>
-
+</>
+}
+          {/*for mobile devices*/}
+          
           {/*for larger screens */}
-          <button className="hidden md:block"><Link to="/login" className="block text-white" onClick={toggleMobileMenu}>Login</Link></button>
-          <button className="hidden md:block md:bg-prim border-none hover:bg-yellow-600 transition-colors duration-300"><Link to="/register" className="block text-white" onClick={toggleMobileMenu}>Register</Link></button>
+        {authUser?<button className="hidden md:block"><Link to="/" className="block text-white" onClick={handleLogout}>Logout</Link></button>:<><button className="hidden md:block"><Link to="/login" className="block text-white" onClick={toggleMobileMenu}>Login</Link></button>
+        <button className="hidden md:block md:bg-prim border-none hover:bg-yellow-600 transition-colors duration-300"><Link to="/register" className="block text-white" onClick={toggleMobileMenu}>Register</Link></button>
+        </>
+        }
         </div>
       </div>
     </nav>

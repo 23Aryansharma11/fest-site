@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs"
 import { User } from "../models/user.model.js";
-import { generateAdminToken, generateToken } from "../lib/utils/generateToken.js";
+import {  generateToken } from "../lib/utils/generateToken.js";
 export const signUp=async(req,res)=>{
     const {fullName,email,password}=req.body;
     try{
@@ -29,7 +29,7 @@ if(emailfound){
         _id:user._id,
         fullName:user.fullName,
         email:user.email,
-    
+        isAdmin:user.isAdmin
     }
     )
 }catch(error){
@@ -40,32 +40,27 @@ export const login = async(req, res) => {
     const { email, password} = req.body;
   try{
   const userFound=await User.findOne({email});
+  if(!userFound){
+    return res.status(400).json({error:"No such user found"})
+  }
   
   const comparepass=await bcrypt.compare(password,userFound.password);
-  if(!userFound || !comparepass){
+  if(!comparepass){
     return res.status(400).json({error:"Enter valid username or password"})
   }
-  if(userFound.isAdmin){
-    generateAdminToken(userFound._id,res)
-    return res.status(200).json({
-      _id:userFound._id,
-      
-      fullName:userFound.fullName,
-      email:userFound.email,
-  })
-  }
-  else{
+  
   generateToken(userFound._id,res);
   return res.status(200).json({
     _id:userFound._id,
     
     fullName:userFound.fullName,
     email:userFound.email,
+    isAdmin:userFound.isAdmin
    
   })
-}
+
   }catch(err){
-    res.status(400).json({error:"Internal server error occured"})
+    res.status(500).json({error:"Internal server error occured"})
   }
   
   };
@@ -78,6 +73,7 @@ export const login = async(req, res) => {
     }
   };
   export const getMe = async(req, res) => {
+    console.log("in getme")
     try{
    const userid=req.user.id.toString();
    console.log(userid)

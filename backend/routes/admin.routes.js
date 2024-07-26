@@ -4,5 +4,5 @@ import { protectAdminRoute, protectRoute } from "../middleware/protectRoutes.js"
 const router=express.Router();
 router.post("/verify/:id",protectRoute,protectAdminRoute,Verify)
 router.post("/reject/:id",protectRoute,protectAdminRoute,reject)
-router.post("/getall",protectAdminRoute,getAll)
+router.get("/getall",protectRoute,protectAdminRoute,getAll)
 export default router

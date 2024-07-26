@@ -8,6 +8,8 @@ import { Form } from "./pages/Form.jsx";
 import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/authcontext.jsx";
 import EventPage from "./components/events/EventPage/EventPage.jsx";
+import {Admin} from "./pages/Admin.jsx";
+import { Applied } from "./pages/Applied.jsx";
 
 function App() {
   const { authUser } = useAuthContext();
@@ -18,11 +20,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route
           path="/register"
-          element={authUser ? <Navigate to="/form" /> : <SignUp />}
+          element={authUser ? <Navigate to="/" /> : <SignUp />}
         />
         <Route
           path="/login"
-          element={authUser ? <Navigate to="/form" /> : <Login />}
+          element={authUser ? <Navigate to="/" /> : <Login />}
         />
         <Route
           path="/form"
@@ -31,6 +33,14 @@ function App() {
         <Route
           path="/events"
           element={<EventPage/>}
+        />
+        <Route
+          path="/getall"
+          element={authUser && authUser.isAdmin?<Admin/>:<><h1 className="text-yellow-500 text-center">Buddy you think you look smart but you are wearing a fucking cape.</h1></>}
+        />
+        <Route
+          path="/getme"
+          element={authUser?<Applied/>:<Navigate to="/register"/>}
         />
       </Routes>
       <Toaster />

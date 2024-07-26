@@ -1,0 +1,44 @@
+.slider-track{
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc((250px +10px)* 14);
+}
+
+.sliider{
+    background: transparent;
+    box-shadow: 0 10px 20px -5px #00000020;
+    height: 40vh;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 75vw;
+}
+ .slide {
+    height: 300px;
+    width: 250px;
+}
+.sliider:before {
+    left: 0;
+    top: 0;
+}
+.sliider:before, .sliider:after {
+    background-color: transparent;
+    content: "";
+    height: 200px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+.sliider:after {
+    right: 0;
+    top: 0;
+    transform: rotate(180deg);
+}
+@keyframes scroll {
+    0%{
+transform: translate(0);
+    }
+    100%{
+transform: translate(-2000px);
+    }
+}
