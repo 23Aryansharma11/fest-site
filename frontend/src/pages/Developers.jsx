@@ -1,6 +1,7 @@
 import React from 'react'
 import { DevHelper } from '../components/developers/DevHelper'
 import Sujal from "../components/developers/sujal2.jpg"
+import Divay from "../components/developers/Divay.png"
 import Nav from '../components/navbar/Nav'
 export const Developers = () => {
     const data=[{
@@ -15,8 +16,9 @@ export const Developers = () => {
         name:"Divay Sharma",
         description:"As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
         work:"Web Developer",
-        insta:"",
-        linkedin:""
+        insta:"https://www.instagram.com/divay._.sharma/",
+        linkedin:"https://www.linkedin.com/in/divaysharma",
+        image:Divay
     },{
         name:"Aryan",
         description:"As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
