@@ -14,7 +14,7 @@ const Tabs = ({ tabs, onTabClick }) => {
       {tabs.map((tab) => (
         <button
           key={tab}
-          className={`w-1/2 px-6 py-2 font-bold ${activeTab === tab ? 'bg-yellow-500 text-black rounded-md'  : 'bg-black text-yellow-500'} rounded-md focus:outline-none`}
+          className={`w-100 px-6 py-2 font-bold ${activeTab === tab ? 'bg-yellow-500 text-black rounded-md'  : 'bg-black text-yellow-500'} rounded-md focus:outline-none`}
           onClick={() => handleTabClick(tab)}
         >
           {tab}

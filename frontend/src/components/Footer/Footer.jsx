@@ -12,7 +12,7 @@ const Footer = () => {
         </Link>
         <Link className="link link-hover text-white ">Meet Tech Team</Link>
         <Link to="/developers" className="link link-hover text-white ">
-          Meet Develpoers
+          Meet Developers
         </Link>
       </nav>
       <nav>

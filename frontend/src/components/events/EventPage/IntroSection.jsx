@@ -7,7 +7,7 @@ const IntroSection = () => {
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
           WELCOME TO COGNIZANCE 2024
         </h1>
-        <h2 className="text-6xl md:text-7xl font-bold mb-4">EVENTS</h2>
+        <h2 className="text-6xl md:text-7xl font-bold mb-4 text-yellow-500">EVENTS</h2>
         <p className="text-lg md:text-2xl mb-8">
           Experience a dynamic tech fest with drones, robots, interactive games,
           and cutting-edge innovation on display!

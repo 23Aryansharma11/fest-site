@@ -9,7 +9,7 @@ export const DevHelper = ({value}) => {
         <img style={{height:"100%",width:"100%",objectFit:"cover"}} src={value.image}></img>
     </div>
     <h2 className='my-3 text-2xl text-yellow-500'>{value.name}</h2>
-    <p className='my-3 text-center '>{value.description}</p>
+    <p className='my-3 text-center '><em>{value.description}</em></p>
     <h4 className='my-3 text-center text-yellow-500'><b>{value.work}</b></h4>
     <div className='mt-6 d-flex gap-3 justify-center text-white'>
         <a href={value.insta}><FaInstagram/></a>

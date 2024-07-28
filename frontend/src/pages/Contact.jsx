@@ -23,11 +23,11 @@ const Contact = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center w-full h-[100vh] bg-white px-5 py-5 overflow-hidden">
-        <div className="xl:max-w-7xl bg-white drop-shadow-xl border border-black/20 w-full rounded-md flex justify-between items-stretch px-5 xl:px-5 py-5">
+      <div className="flex justify-center items-center w-full h-[100vh] bg-inherit px-5 py-5 overflow-hidden">
+        <div className="xl:max-w-7xl bg-inherit drop-shadow-xl border-3 border-yellow-500 border-black/20 w-full rounded-md flex justify-between items-stretch px-5 xl:px-5 py-5">
           <button
             onClick={() => navigate(-1)}
-            className="absolute left-10 top-10 bg-white"
+            className="absolute left-10 top-10 btn btn-warning"
           >
             <IoIosArrowBack />
           </button>
@@ -35,11 +35,11 @@ const Contact = () => {
             <img
               src={contactImage}
               alt="contact"
-              className="h-[500px] bg-white"
+              className="h-[500px] bg-inherit"
             />
           </div>
           <div className="mx-auto w-full lg:w-1/2 md:p-10 py-5 md:py-0">
-            <h1 className="text-center text-2xl sm:text-3xl font-semibold text-[#4A07DA]">
+            <h1 className="text-center text-2xl sm:text-3xl font-semibold text-yellow-500">
               Contact Us
             </h1>
             <div className="w-full mt-5 sm:mt-8">
@@ -52,7 +52,7 @@ const Contact = () => {
                     onChange={(e) => {
                       setName(e.target.value);
                     }}
-                    className="input input-bordered input-primary w-full text-black placeholder:text-black/70"
+                    className="input input-bordered input-warning border-3   w-full text-black placeholder:text-black/70"
                   />
                 </div>
                 <input
@@ -62,7 +62,7 @@ const Contact = () => {
                   onChange={(e) => {
                     setEmail(e.target.value);
                   }}
-                  className="input input-bordered input-primary w-full text-black placeholder:text-black/70"
+                  className="input input-bordered input-warning border-3   w-full text-black placeholder:text-black/70"
                 />
                 <textarea
                   placeholder="Enter Your Message"
@@ -70,11 +70,11 @@ const Contact = () => {
                   onChange={(e) => {
                     setMessage(e.target.value);
                   }}
-                  className="input input-bordered input-primary w-full text-black placeholder:text-black h-32"
+                  className="input input-bordered input-warning p-3 border-3 w-full text-black placeholder:text-black h-32"
                 />
                 <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center">
                   <button
-                    className="btn btn-active btn-primary btn-block max-w-[200px]"
+                    className="btn btn-outline btn-warning  max-w-[200px]"
                     onClick={handleClick}
                   >
                     Submit

@@ -5,8 +5,12 @@ import { useAuthContext } from '../context/authcontext'
 import { useParams } from 'react-router-dom'
 // import { useRegistration } from '../hooks/useRegistration.js'
 // import Input from '../components/input/Input.jsx'
-
+import QR from "./qrcode.jpg"
 export const Form = () => {
+  const handleModal=()=>{
+    setQr(!qr)
+  }
+  const [qr,setQr]=useState(false)
   const {registration,loading}=useRegistration()
   const {name}=useParams()
   console.log(name)
@@ -33,8 +37,22 @@ export const Form = () => {
     <div className='w-full '>
     <h1 className='text-yellow-500 py-3 orbitron xs:text-4xl'>Registration Form</h1>
     <form onSubmit={(e)=>handleSubmit(e)}>
+    {qr?
+    <div className=' w-full d-flex justify-center'>
+  <div className='fixed h-max top-5 p-4 bg-white z-30 mx-auto  max-w-96'>
+   <div className='mx-auto'>
+    <img className="h-72 object-cover w-64 mx-auto pb-7" src={QR}></img>
+    
+   </div>
+ 
+ <p className='text-error'><b>Note:</b> Everyone is required to pay fees according to their event.And after payment it is required to fill transaction id in the form. Please keep in mind that Tech Team will only accept application after verification of transaction id. </p>
+ <button onClick={handleModal} className='absolute top-0 right-0 text-white'>X</button>
+  </div></div>:null
+  }
      <label className="form-control p-12 mx-auto backdrop:blur-xl max-w-lg min-w-64 bg-transparent border-yellow-400 border-l cabin">
-     <div >
+    
+     <div className='relative' >
+    
   <div className="label w-full">
     <span className="label-text text-white">Event Name *</span>
    
@@ -80,6 +98,9 @@ export const Form = () => {
    
   </div>
   <input type="text" required placeholder="Enter Branch" onChange={(e)=>{handleChange(e)}} name='branch' className="input input-bordered select-warning border-white  bg-black text-white w-full " />
+  
+  <a onClick={handleModal} className='text-error ml-auto float-right pt-6'>Generate QR Code</a>
+  
   <div className="label">
     <span className="label-text text-white">Transaction ID *</span>
    
