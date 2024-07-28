@@ -8,10 +8,11 @@ import { Form } from "./pages/Form.jsx";
 import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/authcontext.jsx";
 import EventPage from "./components/events/EventPage/EventPage.jsx";
-import {Admin} from "./pages/Admin.jsx";
+import { Admin } from "./pages/Admin.jsx";
 import { Applied } from "./pages/Applied.jsx";
-import EventInfo from "./pages/EventInfo.jsx"
+import EventInfo from "./pages/EventInfo.jsx";
 import { Developers } from "./pages/Developers.jsx";
+import Contact from "./pages/Contact.jsx";
 function App() {
   const { authUser } = useAuthContext();
 
@@ -31,26 +32,29 @@ function App() {
           path="/form/:name"
           element={authUser ? <Form /> : <Navigate to="/register" />}
         />
-        <Route
-          path="/events"
-          element={<EventPage/>}
-        />
-        <Route
-          path="/eventdetail"
-          element={<EventInfo/>}
-        />
+        <Route path="/events" element={<EventPage />} />
+        <Route path="/eventdetail" element={<EventInfo />} />
+        <Route path="/contact" element={<Contact />} />
         <Route
           path="/getall"
-          element={authUser && authUser.isAdmin?<Admin/>:<><h1 className="text-yellow-500 text-center">Buddy you think you look smart but you are wearing a fucking cape.</h1></>}
+          element={
+            authUser && authUser.isAdmin ? (
+              <Admin />
+            ) : (
+              <>
+                <h1 className="text-yellow-500 text-center">
+                  Buddy you think you look smart but you are wearing a fucking
+                  cape.
+                </h1>
+              </>
+            )
+          }
         />
         <Route
           path="/getme"
-          element={authUser?<Applied/>:<Navigate to="/register"/>}
+          element={authUser ? <Applied /> : <Navigate to="/register" />}
         />
-        <Route
-          path="/developers"
-          element={<Developers/>}
-        />
+        <Route path="/developers" element={<Developers />} />
       </Routes>
       <Toaster />
     </div>
