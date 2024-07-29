@@ -57,7 +57,7 @@ export const Form = () => {
     <span className="label-text text-white">Event Name *</span>
    
   </div>
-  <input disabled onChange={(e)=>{handleChange(e)}} value={name} name='eventName' required="true" type="text" placeholder="Enter event name" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
+  <input disabled onChange={(e)=>{handleChange(e)}} value={name} name='eventName' required="true" type="text" placeholder="Enter event name" className="input disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 input-bordered bg-black text-white select-warning border-white  w-full " />
   <div className="label">
     <span className="label-text text-white">Email *</span>
    
