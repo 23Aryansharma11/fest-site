@@ -4,12 +4,14 @@ import React, { useState } from 'react'
 import toast from 'react-hot-toast'
 import {useGetEvents} from '../hooks/useGetEvents.js'
 import { Admincard } from '../components/adminpage/Admincard.jsx'
+import Nav from '../components/navbar/Nav.jsx'
 
 export const Admin =() => {
     const {events,loading}=useGetEvents()
     console.log(events)
   return (
     <>
+    <Nav/>
     <h1 className='text-yellow-500 pb-8'>Submissions</h1>
      <div className='d-grid grid-cols-3 gap-1 m-0 p-0 place-items-center w-100'>
     {

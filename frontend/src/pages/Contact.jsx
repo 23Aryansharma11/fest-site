@@ -2,6 +2,8 @@ import { useState } from "react";
 import contactImage from "../assets/TECHNICAL TEAM LOGO.png";
 import { IoIosArrowBack } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import Nav from "../components/navbar/Nav";
+import Footer from "../components/Footer/Footer";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -23,6 +25,7 @@ const Contact = () => {
 
   return (
     <>
+    <Nav/>
       <div className="flex justify-center items-center w-full h-[100vh] bg-inherit px-5 py-5 overflow-hidden">
         <div className="xl:max-w-7xl bg-inherit drop-shadow-xl border-3 border-yellow-500 border-black/20 w-full rounded-md flex justify-between items-stretch px-5 xl:px-5 py-5">
           <button
@@ -85,6 +88,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
