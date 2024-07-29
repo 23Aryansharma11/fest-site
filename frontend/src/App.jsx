@@ -13,6 +13,8 @@ import { Applied } from "./pages/Applied.jsx";
 import EventInfo from "./pages/EventInfo.jsx";
 import { Developers } from "./pages/Developers.jsx";
 import Contact from "./pages/Contact.jsx";
+import { About } from "./pages/AboutPage.jsx";
+import Gallery from "./pages/Gallery.jsx";
 function App() {
   const { authUser } = useAuthContext();
 
@@ -55,6 +57,8 @@ function App() {
           element={authUser ? <Applied /> : <Navigate to="/register" />}
         />
         <Route path="/developers" element={<Developers />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
       <Toaster />
     </div>
