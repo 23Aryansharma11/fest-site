@@ -10,10 +10,10 @@ const Login = () => {
     <>
       <Nav />
 
-      <main className="bg-darkbg text-white min-h-screen w-full flex items-center justify-center md:justify-around ">
+      <main className="bg-darkbg text-white min-h-screen w-full flex items-center justify-center md:justify-around relative">
         <button
           onClick={() => navigate(-1)}
-          className="absolute left-10 top-10 border-gray"
+          className="absolute left-3 top-3 border-gray"
         >
           <IoIosArrowBack />
         </button>

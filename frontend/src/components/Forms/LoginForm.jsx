@@ -19,7 +19,7 @@ const {loading,logIn}=useLogin()
   }
   return (
     <div className="w-full flex flex-col text-white gap-10 justify-center items-center h-full ">
-      <p className="font-bold text-5xl orbitron">Utkarsh 2k24</p>
+      <p className="font-bold  orbitron text-center text-5xl">Utkarsh 2k24</p>
       <p className="font-bold text-4xl orbitron">Login</p>
       <form className="w-full" onSubmit={handleSubmit(handleLogin)}>
         <span className="text-red-600 text-sm font-lighttrue">

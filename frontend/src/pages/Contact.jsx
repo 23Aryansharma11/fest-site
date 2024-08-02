@@ -26,11 +26,11 @@ const Contact = () => {
   return (
     <>
     <Nav/>
-      <div className="flex justify-center items-center w-full h-[100vh] bg-inherit px-5 py-5 overflow-hidden">
-        <div className="xl:max-w-7xl bg-inherit drop-shadow-xl border-3 border-yellow-500 border-black/20 w-full rounded-md flex justify-between items-stretch px-5 xl:px-5 py-5">
+      <div className="flex justify-center items-center w-full h-[100vh] bg-inherit xs:p-0 md:px-5 py-5 overflow-hidden">
+        <div className="xl:max-w-7xl bg-inherit drop-shadow-xl border-3 border-yellow-500 border-black/20 w-full rounded-md flex justify-between items-stretch xs:px-2 md:px-5 xl:px-5 py-5">
           <button
             onClick={() => navigate(-1)}
-            className="absolute left-10 top-10 btn btn-warning"
+            className="absolute left-3 top-10 btn btn-warning"
           >
             <IoIosArrowBack />
           </button>
