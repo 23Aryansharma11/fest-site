@@ -17,6 +17,7 @@ import { About } from "./pages/AboutPage.jsx";
 
 import Gallery from "./pages/Gallery.jsx";
 import { Sponsors } from "./pages/Sponsors.jsx";
+import { Update } from "./pages/Update.jsx";
 function App() {
   const { authUser } = useAuthContext();
 
@@ -63,6 +64,10 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         
         <Route path="/sponsors" element={<Sponsors />} />
+        <Route
+          path="/update/:id"
+          element={authUser ? <Update /> : <Navigate to="/register" />}
+        />
       </Routes>
       <Toaster />
     </div>

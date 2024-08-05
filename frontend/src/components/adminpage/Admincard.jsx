@@ -10,7 +10,7 @@ export const Admincard = ({value}) => {
     console.log(value.branch)
     
   return (
-    <div className="card bg-neutral text-neutral-content w-96 border-yellow-500">
+    <div className="card bg-neutral text-neutral-content max-w-full border-yellow-500">
   <div className="card-body  text-left">
     <h2 className="card-title text-yellow-500">{value.eventName}</h2>
     <p >{value.player1Name} ,{value.player2Name} ,{value.player3Name} ,{value.player4Name}</p>

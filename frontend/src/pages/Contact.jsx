@@ -1,24 +1,41 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import contactImage from "../assets/TECHNICAL TEAM LOGO.png";
 import { IoIosArrowBack } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import Nav from "../components/navbar/Nav";
 import Footer from "../components/Footer/Footer";
-
+import toast from "react-hot-toast";
+import emailjs from "@emailjs/browser"
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const form = useRef();
 
-  const handleClick = () => {
-    console.log({
-      name: name,
-      email: email,
-      message: message,
-    });
-    setEmail("");
-    setMessage("");
-    setName("");
+  
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log(form.current);
+    // setEmail("");
+    // setMessage("");
+    // setName("");
+
+
+    emailjs
+    .sendForm('service_jnllih9', 'template_2tjrgqs', form.current, {
+      publicKey: '0gbVNLIjke5tfIr9H',
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+        toast.success("Message sent ")
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+        toast.error(`${error.text}`)
+      },
+    );
+    e.target.reset();
   };
 
   const navigate = useNavigate();
@@ -47,20 +64,24 @@ const Contact = () => {
             </h1>
             <div className="w-full mt-5 sm:mt-8">
               <div className="mx-auto w-full sm:max-w-md md:max-w-lg flex flex-col gap-5">
-                <div className="flex flex-col sm:flex-row gap-3">
+              <form onSubmit={handleClick} ref={form}>
+                <div className="flex  sm:flex-col gap-3">
+                
                   <input
                     type="text"
                     value={name}
+                    name="name"
                     placeholder="Enter Your Name"
                     onChange={(e) => {
                       setName(e.target.value);
                     }}
                     className="input input-bordered input-warning border-3   w-full text-black placeholder:text-black/70"
                   />
-                </div>
+               
                 <input
                   type="email"
                   value={email}
+                  name="email"
                   placeholder="Enter Your Email"
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -70,19 +91,23 @@ const Contact = () => {
                 <textarea
                   placeholder="Enter Your Message"
                   value={message}
+                  name="message"
                   onChange={(e) => {
                     setMessage(e.target.value);
                   }}
                   className="input input-bordered input-warning p-3 border-3 w-full text-black placeholder:text-black h-32"
                 />
-                <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center">
+                 </div>
+                <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center pt-3">
                   <button
                     className="btn btn-outline btn-warning  max-w-[200px]"
-                    onClick={handleClick}
+                 
                   >
                     Submit
                   </button>
+                  
                 </div>
+                </form>
               </div>
             </div>
           </div>
