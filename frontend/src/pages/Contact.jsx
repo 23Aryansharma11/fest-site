@@ -65,7 +65,7 @@ const Contact = () => {
             <div className="w-full mt-5 sm:mt-8">
               <div className="mx-auto w-full sm:max-w-md md:max-w-lg flex flex-col gap-5">
               <form onSubmit={handleClick} ref={form}>
-                <div className="flex  sm:flex-col gap-3">
+                <div className="flex  flex-col gap-3">
                 
                   <input
                     type="text"
