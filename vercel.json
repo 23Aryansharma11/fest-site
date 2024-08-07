@@ -9,10 +9,10 @@
         "use": "@vercel/node"
       },
       {
-        "src": "frontend/package.json",
+        "src": "/frontend/package.json",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "frontend/dist"
+          "distDir": "/frontend/dist"
         }
       }
     ],
