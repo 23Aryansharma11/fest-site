@@ -19,6 +19,7 @@ if(data.error){
 setEvents(data)
 }catch(err){
 console.log(err)
+toast.error(`${err}`);
 }finally {
 setLoading(false)
 }
