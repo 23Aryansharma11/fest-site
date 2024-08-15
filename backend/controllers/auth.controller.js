@@ -79,7 +79,7 @@ export const getMe = async (req, res) => {
     console.log(userid);
     const user = await User.findById(userid).populate("applied");
     if (!user) {
-      res.status(400).json({ error: "user not found" });
+     return res.status(400).json({ error: "user not found" });
     }
     return res.status(200).json(user.applied.reverse());
   } catch (err) {
