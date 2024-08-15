@@ -10,12 +10,12 @@ export const useGetMe=()=>{
            try{
             const res=await fetch("/api/auth/getme");
             const data=await res.json();
-            const reverse=await data.reverse();
+            
             console.log(data)
             if(data.error){
                 throw new Error(data.error)
             }
-            setApplied(reverse)
+            setApplied(data)
            }catch(err){
    toast.error(`${err}`)
    console.log(err)

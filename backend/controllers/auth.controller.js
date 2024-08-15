@@ -81,7 +81,7 @@ export const getMe = async (req, res) => {
     if (!user) {
       res.status(400).json({ error: "user not found" });
     }
-    return res.status(200).json(user.applied);
+    return res.status(200).json(user.applied.reverse());
   } catch (err) {
     res.status(500).json({ error: "Internal Server Error" });
   }
