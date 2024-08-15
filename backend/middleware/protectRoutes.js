@@ -4,16 +4,16 @@ export const protectRoute=async(req,res,next)=>{
     try{
     const token=await req.cookies.jwt;
     if(!token){
-        res.status(400).json({error:"No token generated or unauthorised user"})
+      return  res.status(400).json({error:"No token generated or unauthorised user"})
     }
     const decode=jwt.verify(token,process.env.JWTSECRET);
     if(!decode){
-        res.status(400).json({error:"User not verified"});
+      return  res.status(400).json({error:"User not verified"});
 
     }
     const user=await User.findById(decode.userId).select("-password");
 if(!user){
-    res.status(400).json({error:"No user found"});
+   return res.status(400).json({error:"No user found"});
 
 }
 req.user=user;
