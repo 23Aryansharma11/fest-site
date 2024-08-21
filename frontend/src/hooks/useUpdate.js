@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
 import { useNavigate, useParams } from 'react-router-dom'
+import { useAuthContext } from '../context/authcontext'
 
 export const useUpdate = () => {
     const navigate=useNavigate()
+    const {setAuthUser}=useAuthContext();
   const[loading,setLoading]=useState(false)
   const {id}=useParams()
   const update=async({contact,branch,year,player1Name,player2Name,player3Name,player4Name,transaction})=>{
@@ -17,6 +19,11 @@ export const useUpdate = () => {
             }
         })
         const data=await res.json();
+        if(data.error==="Token expired"){
+          localStorage.removeItem("user");
+          setAuthUser(null);
+          navigate("/")
+      }
         if(data.error){
             throw new Error(data.error)
         }

@@ -6,8 +6,11 @@ import  {Past } from '../components/pasperformers/Past.jsx'
 import About from '../components/About/About.jsx'
 import UtkarshIntro from '../components/UtkarshIntro/UtkarshIntro.jsx'
 import Footer from '../components/Footer/Footer.jsx'
+import { CgTrophy } from 'react-icons/cg'
 
 const Home = () => {
+  
+
   return (
     <div style={{width:"100%"}} className='bg-black'>
     

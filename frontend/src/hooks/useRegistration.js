@@ -1,9 +1,11 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { Navigate, useNavigate } from "react-router-dom";
+import { useAuthContext } from "../context/authcontext";
 
  const useRegistration=()=>{
-    // const navigate=useNavigate()
+    const navigate=useNavigate()
+    const {setAuthUser}=useAuthContext()
     const [loading,setLoading]=useState(false)
     const registration=async({email,player1Name,player2Name,player3Name,player4Name,transaction,contact,branch,year,eventName})=>{
       console.log(eventName,email)
@@ -24,6 +26,11 @@ import { Navigate, useNavigate } from "react-router-dom";
             //   console.log(res)
               const data=await res.json();
               console.log(data)
+              if(data.error==="Token expired"){
+                localStorage.removeItem("user");
+                setAuthUser(null);
+                navigate("/")
+            }
               if(data.error){
                 throw new Error(data.error)
               }

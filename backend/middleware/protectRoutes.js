@@ -6,7 +6,16 @@ export const protectRoute=async(req,res,next)=>{
     if(!token){
       return  res.status(400).json({error:"No token generated or unauthorised user"})
     }
-    const decode=jwt.verify(token,process.env.JWTSECRET);
+    const decode=jwt.verify(token,process.env.JWTSECRET,(err,res)=>{
+        if(err){
+            return "token expired";
+        }
+        return res;
+    });
+
+    if(decode==="token expired"){
+        return res.status(401).json({error:"Token expired"});
+    }
     if(!decode){
       return  res.status(400).json({error:"User not verified"});
 
@@ -19,7 +28,7 @@ if(!user){
 req.user=user;
 next()
     }catch(err){
-
+console.log(err)
 return res.status(500).json({error:"Internal Server Error"});
     }
 }
