@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="border-t border-gray-700 mt-5 footer footer-center bg-black text-base-content r p-10">
-      <nav className="grid grid-flow-col gap-4">
-        <Link className="link link-hover text-white ">About us</Link>
-        <Link to="/contact" className="link link-hover text-white ">
+      <nav className="grid grid-flow-col gap-4 ">
+        <Link className="link link-hover">About us</Link>
+        <Link to="/contact" className="link link-hover  ">
           Contact
         </Link>
-        <Link className="link link-hover text-white ">Meet Tech Team</Link>
-        <Link to="/developers" className="link link-hover text-white ">
+        <Link to="https://hpuniv.ac.in/university-detail/uiit/technical-team" className="link link-hover  ">Meet Tech Team</Link>
+        <Link to="/developers" className="link link-hover">
           Meet Developers
         </Link>
       </nav>

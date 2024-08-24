@@ -27,6 +27,13 @@ a {
 a:hover {
   color: #FCBA04;
 }
+.link{
+  color:white;
+}
+.link:hover {
+  text-decoration: none;
+  color: #FCBA04;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: "Orbitron", sans-serif;
 }

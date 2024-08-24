@@ -18,6 +18,7 @@ import { About } from "./pages/AboutPage.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import { Sponsors } from "./pages/Sponsors.jsx";
 import { Update } from "./pages/Update.jsx";
+import PageNotFOund from "./pages/PageNotFOund.jsx";
 function App() {
   const { authUser } = useAuthContext();
 
@@ -68,7 +69,12 @@ function App() {
           path="/update/:id"
           element={authUser ? <Update /> : <Navigate to="/register" />}
         />
+        <Route
+          path="*"
+          element={<PageNotFOund/>}
+        />
       </Routes>
+      
       <Toaster />
     </div>
   );
