@@ -1,4 +1,19 @@
 import robotImage from "../../assets/robot_spy-B22OfTYi.png";
+import {motion} from "framer-motion"
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,  // Stagger between children
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 const GallerySection = () => {
   const images = [
     {
@@ -16,8 +31,16 @@ const GallerySection = () => {
   ];
   return (
     <section className="min-h-screen w-full flex justify-center items-center">
+    <motion.div     initial="hidden"
+      whileInView="show"  // Parent container will animate when in view
+      viewport={{  amount: 0.2 }}  >
       <div className="h-full w-full flex flex-wrap justify-evenly items-center gap-5">
         {images.map((image, key) => (
+          <motion.div  variants={childVariants}
+        whileInView="show"  // Child will animate when it is in view
+        initial="hidden"
+        viewport={{  amount: 0.5 }}>
+         
           <div
             className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2"
             key={key}
@@ -28,8 +51,13 @@ const GallerySection = () => {
               className="w-full h-full object-cover"
             />
           </div>
+          </motion.div>
         ))}
         {images.map((image, key) => (
+          <motion.div variants={childVariants}
+        whileInView="show"  // Child will animate when it is in view
+        initial="hidden"
+        viewport={{  amount: 0.5 }}>
           <div
             className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2"
             key={key}
@@ -40,8 +68,13 @@ const GallerySection = () => {
               className="w-full h-full object-cover"
             />
           </div>
+          </motion.div>
         ))}
         {images.map((image, key) => (
+          <motion.div  variants={childVariants}
+        whileInView="show"  // Child will animate when it is in view
+        initial="hidden"
+        viewport={{  amount: 0.5 }}>
           <div
             className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2"
             key={key}
@@ -52,8 +85,13 @@ const GallerySection = () => {
               className="w-full h-full object-cover"
             />
           </div>
+          </motion.div>
         ))}
         {images.map((image, key) => (
+          <motion.div  variants={childVariants}
+        whileInView="show"  // Child will animate when it is in view
+        initial="hidden"
+        viewport={{  amount: 0.5 }}>
           <div
             className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2"
             key={key}
@@ -64,8 +102,13 @@ const GallerySection = () => {
               className="w-full h-full object-cover"
             />
           </div>
+          </motion.div>
         ))}
         {images.map((image, key) => (
+          <motion.div  variants={childVariants}
+        whileInView="show"  // Child will animate when it is in view
+        initial="hidden"
+        viewport={{  amount: 0.5 }}>
           <div
             className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2"
             key={key}
@@ -76,8 +119,10 @@ const GallerySection = () => {
               className="w-full h-full object-cover"
             />
           </div>
+          </motion.div>
         ))}
       </div>
+      </motion.div>
     </section>
   );
 };

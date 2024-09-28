@@ -5,7 +5,7 @@ export const Past = () => {
   return (
    
     <div className='pt-20'>
-        <h1 className="xs:text-3xl font-normal lg:text-5xl tra" style={{color:"#FFbd00" }}>
+        <h1 className="xs:text-3xl font-normal lg:text-5xl text-blue-500" style={{color:"#FAE694" }}>
             Past Performers
         </h1>
         
