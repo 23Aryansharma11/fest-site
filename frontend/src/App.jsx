@@ -19,6 +19,8 @@ import Gallery from "./pages/Gallery.jsx";
 import { Sponsors } from "./pages/Sponsors.jsx";
 import { Update } from "./pages/Update.jsx";
 import PageNotFOund from "./pages/PageNotFOund.jsx";
+import Card from "./components/events/EventPage/Helper/Card.jsx";
+import { Tempcard } from "./pages/card.jsx";
 function App() {
   const { authUser } = useAuthContext();
 
@@ -68,6 +70,10 @@ function App() {
         <Route
           path="/update/:id"
           element={authUser ? <Update /> : <Navigate to="/register" />}
+        />
+        <Route
+          path="/hello"
+          element={<Tempcard/>}
         />
         <Route
           path="*"
