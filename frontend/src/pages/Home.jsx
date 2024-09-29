@@ -12,7 +12,7 @@ const Home = () => {
   
 
   return (
-    <div style={{width:"100%"}} className='bg-black'>
+    <div style={{width:"100%"}} className='bg-black overflow-hidden'>
     
         <Nav/>
         <UtkarshIntro />

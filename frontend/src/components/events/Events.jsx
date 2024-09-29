@@ -6,6 +6,7 @@ import pubg from "../../assets/pubg.jpg"
 import { Sidebar } from "./Sidebar.jsx";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import {motion} from "framer-motion"
 // const Events = () => {
 //   return (
 //     <div className="space-y-4">
@@ -50,6 +51,10 @@ const decrease=()=>{
   return (
     <>
     <div className="d-flex lg:justify-normal xs:items-center xs:flex-col md:flex-row xs:relative sm:justify-center lg:pl-64 md:justify-center">
+    <motion.div initial={{opacity:0,scale:0,}} transition={{
+        duration: 1, // Slow down the animation to 2 seconds
+        // ease: "easeInOut" // Optional easing function
+      }}  whileInView={{opacity:1,scale:1}}>
      <div className="xs:mt-14 md:mt-0 w-80 min-h-56 overflow-hidden relative object-contain">
       <button className="absolute right-0 top-24 bg-transparent text-3xl p-0" onClick={increase}><IoIosArrowDroprightCircle/></button>
       <button className="absolute left-0 top-24 p-0 bg-transparent text-3xl" onClick={decrease}><IoIosArrowDropleftCircle></IoIosArrowDropleftCircle></button>
@@ -60,7 +65,7 @@ const decrease=()=>{
 
      </div>
 
-
+</motion.div>
 <Sidebar value={data[count]}/>
     </div>
 

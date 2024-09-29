@@ -6,6 +6,7 @@ import SignUp from "./pages/SignUp.jsx";
 import Login from "./pages/Login.jsx";
 import { Form } from "./pages/Form.jsx";
 import { Toaster } from "react-hot-toast";
+
 import { useAuthContext } from "./context/authcontext.jsx";
 import EventPage from "./components/events/EventPage/EventPage.jsx";
 import { Admin } from "./pages/Admin.jsx";
@@ -21,11 +22,13 @@ import { Update } from "./pages/Update.jsx";
 import PageNotFOund from "./pages/PageNotFOund.jsx";
 import Card from "./components/events/EventPage/Helper/Card.jsx";
 import { Tempcard } from "./pages/card.jsx";
+
 function App() {
   const { authUser } = useAuthContext();
 
   return (
     <div className="App">
+    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route

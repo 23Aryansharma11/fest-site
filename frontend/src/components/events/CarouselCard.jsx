@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
-
+import {motion } from "framer-motion"
 const CarouselCard = ({ imageUrl, name, shortDescription, slug }) => {
   return (
     <div className=" md:w-full flex justify-center items-center">
       <div className="w-full  flex flex-col md:flex-row items-center justify-center gap-10 lg:gap-40">
+      
         <div
           className={`w-full md:w-1/2 h-80 flex justify-center items-center`}
         >
+        <motion.div initial={{opacity:0,scale:0}} whileInView={{opacity:1,scale:1}}>
           <img src={imageUrl} alt="" />
+          </motion.div>
         </div>
 
         <span className="flex flex-col gap-10 w-full md:w-2/4 px-3 rounded-lg mt-5 md:mt-0">
