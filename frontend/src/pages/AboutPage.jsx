@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <>
       <Nav />
-      <div className="text-white p-2">
+      <div style={{padding:"0 34px"}} className="text-white p-x-8">
         <div>
           <h1 className="text-left text-3xl md:text-5xl text-prim py-3">
             University Institute of Technology

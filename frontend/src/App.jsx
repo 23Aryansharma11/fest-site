@@ -22,6 +22,7 @@ import { Update } from "./pages/Update.jsx";
 import PageNotFOund from "./pages/PageNotFOund.jsx";
 import Card from "./components/events/EventPage/Helper/Card.jsx";
 import { Tempcard } from "./pages/card.jsx";
+import { Loading } from "./pages/Loading.jsx";
 
 function App() {
   const { authUser } = useAuthContext();
@@ -30,7 +31,7 @@ function App() {
     <div className="App">
     
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route
           path="/register"
           element={authUser ? <Navigate to="/" /> : <SignUp />}
@@ -77,6 +78,10 @@ function App() {
         <Route
           path="/hello"
           element={<Tempcard/>}
+        />
+          <Route
+          path="/"
+          element={<Loading/>}
         />
         <Route
           path="*"

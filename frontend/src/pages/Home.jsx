@@ -7,13 +7,14 @@ import About from '../components/About/About.jsx'
 import UtkarshIntro from '../components/UtkarshIntro/UtkarshIntro.jsx'
 import Footer from '../components/Footer/Footer.jsx'
 import { CgTrophy } from 'react-icons/cg'
+import { Loading } from './Loading.jsx'
 
 const Home = () => {
   
 
   return (
     <div style={{width:"100%"}} className='bg-black overflow-hidden'>
-    
+
         <Nav/>
         <UtkarshIntro />
         <About/>

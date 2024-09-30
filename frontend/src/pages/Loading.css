@@ -1,0 +1,76 @@
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+  }
+  
+  .os-phrases {
+    position: relative;
+  }
+  
+  h2 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 14px;
+    text-align: center;
+    opacity: 0;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .word {
+    margin: 0 15px;
+  }
+  
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: rotateY(-90deg);
+    transition: all 0.5s ease;
+  }
+  
+  /* General animation for each phrase */
+  .phrase {
+    opacity: 0;
+    animation: fadeIn 5s ease forwards;
+  }
+  
+  /* Animation delay for each h2 */
+  .phrase-0 { animation-delay: 0s; }
+  .phrase-1 { animation-delay: 5s; }
+  .phrase-2 { animation-delay: 10s; }
+  .phrase-3 { animation-delay: 15s; }
+  .phrase-4 { animation-delay: 20s; }
+  .phrase-5 { animation-delay: 25s; }
+  .phrase-6 { animation-delay: 30s; }
+  .phrase-7 { animation-delay: 35s; }
+  
+  /* CSS Animation for each letter appearing with a delay */
+  .word .letter {
+    animation: letterIn 1s ease forwards;
+  }
+  
+  .word .letter:nth-child(1) { animation-delay: 0.1s; }
+  .word .letter:nth-child(2) { animation-delay: 0.2s; }
+  .word .letter:nth-child(3) { animation-delay: 0.3s; }
+  .word .letter:nth-child(4) { animation-delay: 0.4s; }
+  /* Add more delays for more letters if needed */
+  
+  /* Keyframes for phrase */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Keyframes for letter animation */
+  @keyframes letterIn {
+    0% { opacity: 0; transform: rotateY(-90deg); }
+    100% { opacity: 1; transform: rotateY(0deg); }
+  }
