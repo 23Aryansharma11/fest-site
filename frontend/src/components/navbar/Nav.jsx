@@ -3,9 +3,13 @@ import { Link, NavLink } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { useAuthContext } from "../../context/authcontext";
 import toast from "react-hot-toast";
+import { motion, useAnimation } from "framer-motion";
 
 const Nav = () => {
   const { authUser, setAuthUser } = useAuthContext();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const controls = useAnimation();
+
   const navItems = [
     { label: "About", href: "/about" },
     { label: "Events", href: "/events" },
@@ -14,9 +18,8 @@ const Nav = () => {
     { label: "Contact", href: "/contact" },
   ];
 
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const handleLogout = async () => {
-    localStorage.removeItem("user"); //doubt of error
+    localStorage.removeItem("user");
     await setAuthUser(null);
     try {
       const res = await fetch("/api/auth/logout");
@@ -26,19 +29,20 @@ const Nav = () => {
       }
       toast.success(`Logged out successfully`);
     } catch (error) {
-      toast.error(error);
-    }
-    {
+      toast.error(error.message);
     }
   };
+
   const toggleMobileMenu = async () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen((prev) => !prev);
+    isMobileMenuOpen
+      ? controls.start({ height: 0 })
+      : controls.start({ height: "auto" });
   };
 
   return (
-    <nav className="bg-darkbg/95 md:bg-darkbg/50 md:backdrop-blur-lg text-white sticky top-0 z-20 mx-auto w-full flex items-center justify-between p-2 flex-wrap">
-      <Link to="/">
-        {" "}
+    <nav className="bg-darkbg/95 md:bg-darkbg/50 md:backdrop-blur-lg text-white sticky top-0 z-20 mx-auto w-full flex items-center justify-between p-2 flex-wrap px-5">
+      <Link to="/home">
         <div className="flex items-center justify-between font-bold text-2xl orbitron hover:text-prim transition-colors duration-300">
           <img
             className="size-15 pr-3"
@@ -57,64 +61,93 @@ const Nav = () => {
           )}
         </button>
       </div>
-      <div
-        className={`absolute top-full left-0 w-full ${
-          isMobileMenuOpen ? "block bg-darkbg/95 " : "hidden"
-        } text-white alata-regular z-30 p-2 md:flex md:static md:w-2/3 md:items-center md:justify-between absolute`}
+      <motion.div
+        className={`absolute top-full left-0 w-full text-white z-30 p-2 md:flex md:static md:w-2/3 md:items-center md:justify-between transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? "bg-darkbg/95" : "hidden"
+        }`}
+        animate={controls}
+        initial={{ height: 0 }}
       >
         <div className="md:flex transition-color ease-in-out duration-300">
           {navItems.map((item, key) => (
-            <NavLink
+            <motion.div
               key={key}
-              to={item.href}
-              className={({ isActive }) =>
-                `py-2 md:px-4 md:py-0 block    ${
-                  isActive
-                    ? "text-prim"
-                    : " hover:text-prim transition-colors duration-300"
-                }`
-              }
-              onClick={toggleMobileMenu}
+              initial={{ opacity: 0, y: -30 }} // Start above the normal position
+              animate={{ opacity: 1, y: 0 }} // Fall to original position
+              transition={{
+                duration: 0.5,
+                delay: key * 0.1, // Stagger effect
+              }}
             >
-              {item.label}
-            </NavLink>
+              <NavLink
+                to={item.href}
+                className={({ isActive }) =>
+                  `py-2 md:px-4 md:py-0 block font-bold ${
+                    isActive
+                      ? "text-prim"
+                      : "hover:text-prim transition-colors duration-300"
+                  }`
+                }
+                onClick={toggleMobileMenu}
+              >
+                {item.label}
+              </NavLink>
+            </motion.div>
           ))}
           {authUser && (
-            <NavLink
-              to="/getme"
-              className={({ isActive }) =>
-                `py-2 md:px-4 md:py-0 block    ${
-                  isActive
-                    ? "text-prim"
-                    : " hover:text-prim transition-colors duration-300"
-                }`
-              }
-              onClick={toggleMobileMenu}
+            <motion.div
+              initial={{ opacity: 0, y: -30 }} // Start above the normal position
+              animate={{ opacity: 1, y: 0 }} // Fall to original position
+              transition={{
+                duration: 0.5,
+                delay: navItems.length * 0.1, // Delay for the next item
+              }}
             >
-              Applied
-            </NavLink>
+              <NavLink
+                to="/getme"
+                className={({ isActive }) =>
+                  `py-2 md:px-4 md:py-0 block font-bold ${
+                    isActive
+                      ? "text-prim"
+                      : "hover:text-prim transition-colors duration-300"
+                  }`
+                }
+                onClick={toggleMobileMenu}
+              >
+                Applied
+              </NavLink>
+            </motion.div>
           )}
-          {authUser && authUser.isAdmin ? (
-            <NavLink
-              to="/getall"
-              className={({ isActive }) =>
-                `py-2 md:px-4 md:py-0 block    ${
-                  isActive
-                    ? "text-prim"
-                    : " hover:text-prim transition-colors duration-300"
-                }`
-              }
-              onClick={toggleMobileMenu}
+          {authUser?.isAdmin && (
+            <motion.div
+              initial={{ opacity: 0, y: -30 }} // Start above the normal position
+              animate={{ opacity: 1, y: 0 }} // Fall to original position
+              transition={{
+                duration: 0.5,
+                delay: (navItems.length + 1) * 0.1, // Delay for the next item
+              }}
             >
-              All Submissions
-            </NavLink>
-          ) : null}
+              <NavLink
+                to="/getall"
+                className={({ isActive }) =>
+                  `py-2 md:px-4 md:py-0 block font-bold ${
+                    isActive
+                      ? "text-prim"
+                      : "hover:text-prim transition-colors duration-300"
+                  }`
+                }
+                onClick={toggleMobileMenu}
+              >
+                All Submissions
+              </NavLink>
+            </motion.div>
+          )}
         </div>
         <div className="md:flex md:items-center gap-3">
           {authUser ? (
             <Link
               to="/"
-              className="block hover:text-prim transition-colors duration-300 py-2 px-4 md:hidden"
+              className="block font-bold hover:text-prim transition-colors duration-300 py-2 px-4 md:hidden"
               onClick={handleLogout}
             >
               Logout
@@ -123,26 +156,28 @@ const Nav = () => {
             <>
               <Link
                 to="/login"
-                className="block hover:text-prim transition-colors duration-300 py-2 px-4 md:hidden"
+                className="block font-bold hover:text-prim transition-colors duration-300 py-2 px-4 md:hidden"
                 onClick={toggleMobileMenu}
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className="block hover:text-prim transition-colors duration-300 py-2 px-4 md:hidden"
+                className="block font-bold hover:text-prim transition-colors duration-300 py-2 px-4 md:hidden"
                 onClick={toggleMobileMenu}
               >
                 Register
               </Link>
             </>
           )}
-          {/*for mobile devices*/}
-
-          {/*for larger screens */}
+          {/* For larger screens */}
           {authUser ? (
             <button className="hidden md:block">
-              <Link to="/" className="block text-white" onClick={handleLogout}>
+              <Link
+                to="/"
+                className="block text-white font-bold"
+                onClick={handleLogout}
+              >
                 Logout
               </Link>
             </button>
@@ -151,7 +186,7 @@ const Nav = () => {
               <button className="hidden md:block">
                 <Link
                   to="/login"
-                  className="block text-white"
+                  className="block text-white font-bold"
                   onClick={toggleMobileMenu}
                 >
                   Login
@@ -160,7 +195,7 @@ const Nav = () => {
               <button className="hidden md:block md:bg-prim border-none hover:bg-yellow-600 transition-colors duration-300">
                 <Link
                   to="/register"
-                  className="block text-white"
+                  className="block text-white font-bold"
                   onClick={toggleMobileMenu}
                 >
                   Register
@@ -169,7 +204,7 @@ const Nav = () => {
             </>
           )}
         </div>
-      </div>
+      </motion.div>
     </nav>
   );
 };
