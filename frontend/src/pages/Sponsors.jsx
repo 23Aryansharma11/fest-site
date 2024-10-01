@@ -82,6 +82,7 @@ export const Sponsors = () => {
                 rotate: [0, 5, -5, 0],
                 boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
                 delay: 0,
+                duration: 0.2
               }}
             >
               <SponsorCard
