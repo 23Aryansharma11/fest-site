@@ -12,7 +12,7 @@ export default {
     extend: {
       colors: {
         // Todo: Change Site Colors
-        darkbg: "#14110F", // used (mainly) for background
+        darkbg: "#000", // used (mainly) for background
         prim: "#FCBA04", // used for CTA buttons
         secondary: "#A52422", // flexible use
         white: "#FFFFFF", // used for text

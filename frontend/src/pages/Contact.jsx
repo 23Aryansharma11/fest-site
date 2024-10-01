@@ -44,12 +44,12 @@ const Contact = () => {
     <>
     <Nav/>
       <div className="flex justify-center items-center w-full h-[100vh] bg-inherit xs:p-0 md:px-5 py-5 overflow-hidden">
-        <div className="xl:max-w-7xl bg-inherit drop-shadow-xl border-3 border-yellow-500 border-black/20 w-full rounded-md flex justify-between items-stretch xs:px-2 md:px-5 xl:px-5 py-5">
+        <div className="xl:max-w-7xl bg-inherit drop-shadow-xl border-3  border-black/20 w-full rounded-md flex justify-between items-stretch xs:px-2 md:px-5 xl:px-5 py-5">
           <button
             onClick={() => navigate(-1)}
-            className="absolute left-3 top-10 btn btn-warning"
+            className="absolute left-3 top-10 border-yellow-400 bg-transparent"
           >
-            <IoIosArrowBack />
+            <IoIosArrowBack  className="text-yellow-400"/>
           </button>
           <div className="sm:w-[60%] lg:w-[50%] bg-cover bg-center items-center justify-center hidden md:flex">
             <img
@@ -75,7 +75,7 @@ const Contact = () => {
                     onChange={(e) => {
                       setName(e.target.value);
                     }}
-                    className="input input-bordered input-warning border-3   w-full text-black placeholder:text-black/70"
+                    className=" border-b-2 w-full text-prim placeholder:text-prim placeholder:text-black/70 focus:outline-none bg-transparent "
                   />
                
                 <input
@@ -86,7 +86,7 @@ const Contact = () => {
                   onChange={(e) => {
                     setEmail(e.target.value);
                   }}
-                  className="input input-bordered input-warning border-3   w-full text-black placeholder:text-black/70"
+                  className=" border-b-2 w-full text-prim placeholder:text-prim placeholder:text-black/70 focus:outline-none bg-transparent "
                 />
                 <textarea
                   placeholder="Enter Your Message"
@@ -95,7 +95,7 @@ const Contact = () => {
                   onChange={(e) => {
                     setMessage(e.target.value);
                   }}
-                  className="input input-bordered input-warning p-3 border-3 w-full text-black placeholder:text-black h-32"
+                  className=" border-b-2 w-full text-prim placeholder:text-prim placeholder:text-black/70 focus:outline-none bg-transparent "
                 />
                  </div>
                 <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center pt-3">
