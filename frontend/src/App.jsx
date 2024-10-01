@@ -20,7 +20,7 @@ import Gallery from "./pages/Gallery.jsx";
 import { Sponsors } from "./pages/Sponsors.jsx";
 import { Update } from "./pages/Update.jsx";
 import PageNotFOund from "./pages/PageNotFOund.jsx";
-import Card from "./components/events/EventPage/Helper/Card.jsx";
+
 import { Tempcard } from "./pages/card.jsx";
 import { Loading } from "./pages/Loading.jsx";
 
@@ -29,7 +29,6 @@ function App() {
 
   return (
     <div className="App">
-    
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route
@@ -69,26 +68,17 @@ function App() {
         <Route path="/developers" element={<Developers />} />
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
-        
+
         <Route path="/sponsors" element={<Sponsors />} />
         <Route
           path="/update/:id"
           element={authUser ? <Update /> : <Navigate to="/register" />}
         />
-        <Route
-          path="/hello"
-          element={<Tempcard/>}
-        />
-          <Route
-          path="/"
-          element={<Loading/>}
-        />
-        <Route
-          path="*"
-          element={<PageNotFOund/>}
-        />
+        <Route path="/hello" element={<Tempcard />} />
+        <Route path="/" element={<Loading />} />
+        <Route path="*" element={<PageNotFOund />} />
       </Routes>
-      
+
       <Toaster />
     </div>
   );
