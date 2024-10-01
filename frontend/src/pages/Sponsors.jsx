@@ -34,15 +34,16 @@ export const Sponsors = () => {
 
   const teamInfo = [
     {
-      name: "Sujal Verdhan",
-      number: "8626872550",
-      email: "sujalverdhen1234@gmail.com",
-    },
-    {
       name: "Sushant Sharma",
       number: "7018937275",
       email: "sushant.sharma@example.com",
     },
+    {
+      name: "Sujal Verdhan",
+      number: "8626872550",
+      email: "sujalverdhen1234@gmail.com",
+    },
+
     {
       name: "Pranjal Sharma",
       number: "6230376536",
@@ -80,6 +81,7 @@ export const Sponsors = () => {
                 scale: 1.1,
                 rotate: [0, 5, -5, 0],
                 boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+                delay: 0,
               }}
             >
               <SponsorCard
