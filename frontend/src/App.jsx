@@ -12,7 +12,7 @@ import EventPage from "./components/events/EventPage/EventPage.jsx";
 import { Admin } from "./pages/Admin.jsx";
 import { Applied } from "./pages/Applied.jsx";
 import EventInfo from "./pages/EventInfo.jsx";
-import { Developers } from "./pages/Developers.jsx";
+import { data, Developers } from "./pages/Developers.jsx";
 import Contact from "./pages/Contact.jsx";
 import { About } from "./pages/AboutPage.jsx";
 
@@ -66,7 +66,7 @@ function App() {
           element={authUser ? <Applied /> : <Navigate to="/register" />}
         />
         <Route path="/developers" element={<Developers />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About value={data} />} />
         <Route path="/gallery" element={<Gallery />} />
 
         <Route path="/sponsors" element={<Sponsors />} />

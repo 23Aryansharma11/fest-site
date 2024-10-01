@@ -1,0 +1,37 @@
+
+[
+  {
+    "name": "Sujal Verdhan",
+    "description":
+      "As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
+    "work": "Web Developer",
+   "insta": "https://www.instagram.com/sujal_vardhan/",
+    "linkedin": "https://www.linkedin.com/in/sujal-verdhan-21859a225/",
+    "image":"/images/sujal2.jpg"
+  },
+  {
+    "name": "Divay Sharma",
+    "description":
+      "As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
+    "work": "Web Developer",
+   "insta": "https://www.instagram.com/divay._.sharma/",
+    "linkedin": "https://www.linkedin.com/in/divaysharma",
+    "image": "/images/Divay.png"
+  },
+  {
+    "name": "Aryan",
+    "description":
+      "As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
+    "work": "Web Developer",
+   "insta": "",
+    "linkedin": ""
+  },
+  {
+    "name": "Ruhani Kapoor",
+    "description":
+      "As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
+    "work": "Web Developer",
+   "insta": "",
+    "linkedin": ""
+  }
+]

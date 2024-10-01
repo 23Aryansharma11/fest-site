@@ -1,6 +1,11 @@
 import React from "react";
 import { FaLaptopCode, FaUsers, FaChartLine } from "react-icons/fa";
 import Nav from "../components/navbar/Nav";
+import { FaInstagram } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import value from "../Data/DevelopersData.json";
+import { DevHelper } from "../components/developers/DevHelper";
+import developerData from "../Data/DevelopersData.json";
 
 export const About = () => {
   const data = {
@@ -148,63 +153,14 @@ export const About = () => {
           </section>
 
           {/* Tech Team Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-semibold text-gray-100 mb-8">
-              Meet the Tech Team
+          <section className="mb-16 ">
+            <h2 className="text-3xl font-semibold text-yellow-400 mb-8 border-b border-yellow-400 pb-2 ">
+              Meet the Developers
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Team Member 1 */}
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md text-center">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt="John Doe"
-                  className="rounded-full w-32 h-32 mx-auto mb-4"
-                />
-                <h3 className="text-xl font-semibold text-gray-100 mb-2">
-                  John Doe
-                </h3>
-                <p className="text-gray-400">CEO & Founder</p>
-                <p className="text-gray-400 mt-2">
-                  With over 15 years of experience in the tech industry, John
-                  leads the team with a passion for innovation and growth.
-                </p>
-              </div>
-
-              {/* Team Member 2 */}
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md text-center">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt="Jane Smith"
-                  className="rounded-full w-32 h-32 mx-auto mb-4"
-                />
-                <h3 className="text-xl font-semibold text-gray-100 mb-2">
-                  Jane Smith
-                </h3>
-                <p className="text-gray-400">CTO</p>
-                <p className="text-gray-400 mt-2">
-                  Jane is the technical mastermind behind TechWorld, driving our
-                  technology strategy and leading the development of new
-                  solutions.
-                </p>
-              </div>
-
-              {/* Team Member 3 */}
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md text-center">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt="Mike Brown"
-                  className="rounded-full w-32 h-32 mx-auto mb-4"
-                />
-                <h3 className="text-xl font-semibold text-gray-100 mb-2">
-                  Mike Brown
-                </h3>
-                <p className="text-gray-400">Lead Developer</p>
-                <p className="text-gray-400 mt-2">
-                  Mike ensures that all the platforms and products are built to
-                  the highest technical standards, ensuring seamless
-                  performance.
-                </p>
-              </div>
+            <div className="md:grid-cols-2 xs:grid-cols-1 sm:grid-cols-2 place-items-center  lg:grid-cols-2 d-grid gap-3 justify-center ">
+              {developerData.map((e, index) => (
+                <DevHelper key={index} value={e} />
+              ))}
             </div>
           </section>
 
