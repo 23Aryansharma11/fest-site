@@ -3,6 +3,45 @@ import { FaLaptopCode, FaUsers, FaChartLine } from "react-icons/fa";
 import Nav from "../components/navbar/Nav";
 
 export const About = () => {
+  const data = {
+    "Event Highlights": [
+      {
+        event: "Guest Lecture",
+      },
+      {
+        event: "Project/Startup Exhibition",
+      },
+      {
+        event: "Hackathon",
+      },
+      {
+        event: "Dexteria",
+      },
+      {
+        event: "Atlantus",
+      },
+      {
+        event: "Lafz",
+      },
+    ],
+    "Why Attend?": [
+      {
+        event: "Network with professionals, startups, and potential mentors",
+      },
+      {
+        event: "Compete in different events to test creativity and skills",
+      },
+      {
+        event: "Improve your coding and design skills under time constraints",
+      },
+      {
+        event: "Collaborate with peers on challenging projects",
+      },
+      {
+        event: "Enjoy a mix of learning, creativity, and entertainment",
+      },
+    ],
+  };
   return (
     <div className="min-h-screen">
       <Nav />
@@ -84,31 +123,27 @@ export const About = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-2xl font-semibold text-gray-100 mb-2">
-                  Event Highlights
-                </h3>
-                <ul className="text-gray-400 list-disc list-inside">
-                  <li>AI & Machine Learning Workshop</li>
-                  <li>Blockchain Innovations Panel</li>
-                  <li>Robotics Expo</li>
-                  <li>Keynote from Tech CEOs and Pioneers</li>
-                  <li>Startup Pitch Competitions</li>
-                </ul>
-              </div>
-
-              <div className="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-2xl font-semibold text-gray-100 mb-2">
-                  Why Attend?
-                </h3>
-                <ul className="text-gray-400 list-disc list-inside">
-                  <li>Exclusive Insights into Emerging Technologies</li>
-                  <li>Networking with Industry Leaders</li>
-                  <li>Hands-on Experience with Cutting-edge Products</li>
-                  <li>Opportunities to Join Workshops Led by Experts</li>
-                  <li>Expand Your Professional Network</li>
-                </ul>
-              </div>
+              {/* Mapping over the events data */}
+              {Object.keys(data).map((category) => (
+                <div
+                  key={category}
+                  className="bg-gray-900 p-8 rounded-lg shadow-lg w-full max-w-xl mx-auto"
+                >
+                  <h3 className="text-3xl font-bold text-yellow-400 mb-4 border-b border-yellow-400 pb-2">
+                    {category}
+                  </h3>
+                  <ul className="text-gray-300 text-xl space-y-2 list-inside list-none cursor-pointer">
+                    {data[category].map((event, index) => (
+                      <li
+                        key={index}
+                        className="hover:text-yellow-400 transition duration-300"
+                      >
+                        {event.event}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </section>
 
@@ -178,7 +213,7 @@ export const About = () => {
             <h2 className="text-3xl font-semibold text-gray-100 mb-4">
               Get in Touch
             </h2>
-            <p className="text-lg text-gray-300 mb-6">
+            <p className="text-lg text-gray-300 mb-6 text-center">
               Have questions or want to collaborate with us? We’re here to help!
               Feel free to reach out.
             </p>
