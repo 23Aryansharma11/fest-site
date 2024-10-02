@@ -10,8 +10,8 @@ const UtkarshIntro = () => {
     var typed = new Typed('#element', {
        
         strings: [
-          'WTF',
-          '<i className="italic">It\'s<i/> <span id="utf">UTF</span>',
+          '<span className="text-6xl" id="wtf">WTF</span>',
+          '<i className="italic text-6xl " id="it">It\'s   <span className="text-6xl" id="utf">UTF</span><i/> ',
          
           
         ],
@@ -67,7 +67,7 @@ const UtkarshIntro = () => {
       </section>
       <section className="w-full md:w-1/2 flex flex-col  justify-center gap-5 md:gap-10 px-5 mr-20 text-left text-pretty">
       <motion.div  initial={{opacity:1,x:800,scale:1}} animate={{opacity:1,y:0,x:0,scale:1}} transition={{type:"spring",stiffness:800,damping:150}} >
-      <h1 className="text-4xl md:text-6xl font-bold italic "> <span id='element'className="italic"  ref={el} /></h1></motion.div>
+       <span id='element' className="italic font-bold md:text-6xl"  ref={el} ></span></motion.div>
         <motion.div initial={{opacity:0,x:0,y:600,scale:0}} animate={{opacity:1,y:0,x:0,scale:1}} transition={{type:"spring",stiffness:500,damping:200}}>
         <h2 className="text-lg md:text-2xl md:leading-9 cabin">
           Welcome to Utkarsh, the largest techno-cultural fest in Himachal

@@ -8,13 +8,14 @@ import UtkarshIntro from '../components/UtkarshIntro/UtkarshIntro.jsx'
 import Footer from '../components/Footer/Footer.jsx'
 import { CgTrophy } from 'react-icons/cg'
 import { Loading } from './Loading.jsx'
+import { Particles } from '../components/Particles/Particles.jsx'
 
 const Home = () => {
   
 
   return (
     <div style={{width:"100%"}} className='bg-black overflow-hidden'>
-
+        <Particles/>
         <Nav/>
         <UtkarshIntro />
         <About/>

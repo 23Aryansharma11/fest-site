@@ -12,10 +12,19 @@
   }
   i{
     font-style: italic;
+    font-size:2rem;
+    color:#8c8c8c;
+  }
+  
+  #wtf{
+    font-size:4rem;
+    color:#8c8c8c;
   }
   #utf{
-    color:#8c8c8c;
+    /* color:#8c8c8c; */
+    color:white;
     font-style: italic;
+    font-size:4rem;
   }
   .backface-hidden {
     backface-visibility: hidden;

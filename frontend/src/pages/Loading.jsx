@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import "./Loading.scss"
 import  "letteringjs"
 import { useNavigate } from 'react-router-dom'
+import { Particles } from '../components/Particles/Particles'
 // import "./Loading.js"
 
 // const splitIntoWords = (text) => {
@@ -51,6 +52,7 @@ export const Loading = () => {
     
   return (
     <div style={{zIndex:"1000"}} className="w-full h-screen absolute bg-black">	
+    <Particles/>
     <div className="os-phrases" id="os-phrases">
     {phrases.map((phrase, index) => (
           <h2 key={index} className={`phrase phrase-${index}`}>
