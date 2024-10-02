@@ -1,5 +1,5 @@
 import React from "react";
-import { CiMail } from "react-icons/ci";
+import { HiMail } from "react-icons/hi";
 import { FaLinkedin } from "react-icons/fa";
 import SocialIconAnimation from "../Animation/SocialIconAnimation";
 export const DevHelper = ({ value }) => {
@@ -34,8 +34,8 @@ export const DevHelper = ({ value }) => {
       <div className="mt-6 d-flex gap-3 justify-center text-white  cursor-pointer ">
         {[
           {
-            href: value.insta,
-            icon: CiMail,
+            href: value.mail,
+            icon: HiMail,
           },
           {
             href: value.linkedin,
@@ -47,7 +47,7 @@ export const DevHelper = ({ value }) => {
             className="w-12 h-12 bg-yellow-600 rounded-full flex justify-center items-center transition-transform duration-300 hover:scale-110"
           >
             <a href={href} rel="noopener noreferrer">
-              <SocialIconAnimation Icon={Icon} size={16} />
+              <SocialIconAnimation Icon={Icon} size={20} />
             </a>
           </div>
         ))}

@@ -1,52 +1,11 @@
 import React from "react";
 import { FaLaptopCode, FaUsers, FaChartLine } from "react-icons/fa";
 import Nav from "../components/navbar/Nav";
-import { FaInstagram } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
-import value from "../Data/DevelopersData.json";
 import { DevHelper } from "../components/developers/DevHelper";
 import developerData from "../Data/DevelopersData.json";
+import data from "../Data/AboutPageData.json";
 
 export const About = () => {
-  const data = {
-    "Event Highlights": [
-      {
-        event: "Guest Lecture",
-      },
-      {
-        event: "Project/Startup Exhibition",
-      },
-      {
-        event: "Hackathon",
-      },
-      {
-        event: "Dexteria",
-      },
-      {
-        event: "Atlantus",
-      },
-      {
-        event: "Lafz",
-      },
-    ],
-    "Why Attend?": [
-      {
-        event: "Network with professionals, startups, and potential mentors",
-      },
-      {
-        event: "Compete in different events to test creativity and skills",
-      },
-      {
-        event: "Improve your coding and design skills under time constraints",
-      },
-      {
-        event: "Collaborate with peers on challenging projects",
-      },
-      {
-        event: "Enjoy a mix of learning, creativity, and entertainment",
-      },
-    ],
-  };
   return (
     <div className="min-h-screen">
       <Nav />

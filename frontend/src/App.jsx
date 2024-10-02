@@ -8,7 +8,7 @@ import { Form } from "./pages/Form.jsx";
 import { Toaster } from "react-hot-toast";
 
 import { useAuthContext } from "./context/authcontext.jsx";
-import EventPage from "./components/events/EventPage/EventPage.jsx";
+import EventPage from "./pages/EventPage.jsx";
 import { Admin } from "./pages/Admin.jsx";
 import { Applied } from "./pages/Applied.jsx";
 import EventInfo from "./pages/EventInfo.jsx";
@@ -21,7 +21,7 @@ import { Sponsors } from "./pages/Sponsors.jsx";
 import { Update } from "./pages/Update.jsx";
 import PageNotFOund from "./pages/PageNotFOund.jsx";
 
-import { Tempcard } from "./pages/card.jsx";
+import { Tempcard } from "./components/card.jsx";
 import { Loading } from "./pages/Loading.jsx";
 
 function App() {
