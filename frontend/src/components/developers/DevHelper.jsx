@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram } from "react-icons/fa6";
+import { CiMail } from "react-icons/ci";
 import { FaLinkedin } from "react-icons/fa";
 import SocialIconAnimation from "../Animation/SocialIconAnimation";
 export const DevHelper = ({ value }) => {
@@ -35,7 +35,7 @@ export const DevHelper = ({ value }) => {
         {[
           {
             href: value.insta,
-            icon: FaInstagram,
+            icon: CiMail,
           },
           {
             href: value.linkedin,
@@ -55,25 +55,3 @@ export const DevHelper = ({ value }) => {
     </div>
   );
 };
-
-/* <div className="w-12 h-12 bg-yellow-600 rounded-full flex justify-center items-center transition-transform duration-300 hover:scale-110 cursor-pointer ">
-        {[
-          {
-            href: "https://www.instagram.com/divay._.sharma/",
-            icon: FaInstagram,
-          },
-          {
-            href: "https://www.linkedin.com/in/divaysharma",
-            icon: FaLinkedin,
-          },
-        ].map(({ icon: Icon }, idx) => (
-          <div
-            key={idx}
-            className="w-12 h-12 bg-[#233356] rounded-full flex justify-center items-center transition-transform duration-300 hover:scale-110"
-          >
-            <a href={value.href} target="_blank" rel="noopener noreferrer">
-              <SocialIconAnimation Icon={Icon} size={10} />
-            </a>
-          </div>
-        ))}
-      </div> */
