@@ -9,7 +9,7 @@ const Tabs = ({ tabs, onTabClick }) => {
   };
 
   return (
-    <div className="flex justify-center space-x-4 mx-auto mb-8 border-b-2   pb-4">
+    <div className="flex flex-wrap justify-center space-x-4 mx-auto mb-8 border-b-2   pb-4">
       {tabs.map((tab) => (
         <button
           key={tab}
