@@ -3,7 +3,25 @@
     display: flex;
     width: calc((250px +10px)* 14);
 }
-
+.past{
+    background: linear-gradient(to left, #A32CC4, #FCBA04); /* Your gradient colors */
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text; /* For other browsers */
+    color: transparent; /* Make the text color transparent */
+    /* font-size: 48px; Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    font-style: italic;
+    font-size:4rem;
+}
+.events{
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text; /* For other browsers */
+    color: transparent; /* Make the text color transparent */
+    /* font-size: 48px; Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    font-style: italic;
+    font-size:4rem;
+}
 .sliider{
     background: transparent;
     box-shadow: 0 10px 20px -5px #00000020;

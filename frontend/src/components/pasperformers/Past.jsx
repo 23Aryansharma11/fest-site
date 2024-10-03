@@ -1,11 +1,12 @@
 import Img from "./prats.jpeg"
 import "./past.css"
 import dilpreet from "./dilpreet.jpeg"
+// import "./past.css"
 export const Past = () => {
   return (
    
     <div className='pt-20'>
-        <h1 className="xs:text-3xl font-normal lg:text-5xl text-blue-500" style={{color:"#FAE694" }}>
+        <h1 className="xs:text-3xl font-normal lg:text-5xl past" >
             Past Performers
         </h1>
         

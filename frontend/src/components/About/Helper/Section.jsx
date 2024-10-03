@@ -4,7 +4,7 @@ const Section =({title,description})=> {
   return (
     <div className="hidden md:block mb-20">
     <div className="flex items-center space-x-2">
-      <div className="text-yellow-400 text-2xl">&gt;&gt;</div>
+      <div className="gradient-text text-2xl">&gt;&gt;</div>
       <h3 className="text-2xl font-bold">{title}</h3>
     </div>
     <p className="mt-4 text-base md:text-lg">{description}</p>

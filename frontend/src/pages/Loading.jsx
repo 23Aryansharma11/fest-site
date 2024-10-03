@@ -52,7 +52,7 @@ export const Loading = () => {
     
   return (
     <div style={{zIndex:"1000"}} className="w-full h-screen absolute bg-black">	
-    <Particles/>
+    {/* <Particles/> */}
     <div className="os-phrases" id="os-phrases">
     {phrases.map((phrase, index) => (
           <h2 key={index} className={`phrase phrase-${index}`}>

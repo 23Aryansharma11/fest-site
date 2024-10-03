@@ -1,34 +1,12 @@
-.carousel {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 400px;
-    margin: auto;
-    position: relative;
-  }
-  
-  .carousel-content {
-    overflow: hidden;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .carousel-item {
-    display: none;
-    width: 400%;
-    flex-shrink: 0;
-    text-align: center;
-  }
-  
-  .carousel-item.active {
-    display: block;
-  }
-  
-  .carousel-button {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1;
-  }
+.gradient-text {
+  background: linear-gradient(to left, #A32CC4, #FCBA04); /* Your gradient colors */
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text; /* For other browsers */
+  color: transparent; /* Make the text color transparent */
+  /* font-size: 48px; Adjust as needed */
+  font-weight: bold; /* Adjust as needed */
+}
+
+.bg{
+  background: linear-gradient(to right, #A32CC4, #FCBA04);
+}

@@ -11,45 +11,30 @@ const UtkarshIntro = () => {
        
         strings: [
           '<span className="text-6xl" id="wtf">WTF</span>',
-          '<i className="italic text-6xl " id="it">It\'s   <span className="text-6xl" id="utf">UTF</span><i/> ',
+          '<i className="italic text-6xl " id="it">It\'s <span className="text-6xl gradient-text" id="utf">UTF</span><i/> ',
          
           
         ],
-        loop: true,
-        loopCount: Infinity,
-        stringsElement: null,
-        // escapeHTML: false,
-        /**
-         * @property {number} typeSpeed type speed in milliseconds
-         */
-        typeSpeed: 100,
-      
-        /**
-         * @property {number} startDelay time before typing starts in milliseconds
-         */
-        startDelay: 0,
-      
-        /**
-         * @property {number} backSpeed backspacing speed in milliseconds
-         */
-        backSpeed: 10,
-      
-        /**
-         * @property {boolean} smartBackspace only backspace what doesn't match the previous string
-         */
-        smartBackspace: true,
-      
-        /**
-         * @property {boolean} shuffle shuffle the strings
-         */
-        shuffle: false,
-      
-        /**
-         * @property {number} backDelay time before backspacing in milliseconds
-         */
-        backDelay: 1000,
       
         
+
+
+
+
+
+
+        typeSpeed: 40,        // Speed at which the characters are typed (in milliseconds)
+  backSpeed: 40,        // Speed at which the characters are erased
+  backDelay: 500,      // Delay before starting to erase
+  startDelay: 500,      // Delay before starting to type
+  loop: true,           // Loop the animation
+  loopCount: Infinity,  // Infinite looping
+  showCursor: true,     // Show blinking cursor
+  cursorChar: "|",      // Character for the cursor
+  autoInsertCss: true,  // Automatically insert required CSS for blinking cursor
+  fadeOut: true,        // Smooth fade-out when erasing text
+  fadeOutDelay: 300,    // Delay before fading out
+
 
     });
 
@@ -72,14 +57,14 @@ const UtkarshIntro = () => {
         <h2 className="text-lg md:text-2xl md:leading-9 cabin">
           Welcome to Utkarsh, the largest techno-cultural fest in Himachal
           Pradesh! Hosted by{" "}
-          <span className="text-blue-500 font-bold">
+          <span className="gradient-text font-bold">
             University Institude of Technology
           </span>
           , HPU, Utkarsh attracts over{" "}
-          <span className="text-[#8c8c8c] font-bold">5000</span> participants
+          <span className="gradient-text font-bold">5000</span> participants
           from North India. Since 2014, we have proudly completed 8 editions,
           featuring over 25 competitions, lectures, and shows. <br />{" "}
-          <span className="text-[#8c8c8c]">
+          <span className="gradient-text">
             Join us for an unforgettable experience with luminaries from around
             the world.
           </span>

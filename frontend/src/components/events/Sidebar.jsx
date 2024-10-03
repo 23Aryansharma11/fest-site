@@ -1,31 +1,60 @@
-import { Link } from "react-router-dom"
-import {motion} from "framer-motion"
-export const Sidebar = ({value}) => {
-    // console.log(props.props)
-   
-  return (
-    <div className="text-left xs:w-72 lg:w-4/6 md-w-inherit leading-8 xs:pl-0 md:pl-20 " style={{color:"white"}}>
-    <motion.div initial={{x:800,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:1.5}}>
-    <h1 className="font-extrabold md:text-left    font-REM text-3xl xs:absolute xs:top-0 md:relative" style={{color:"#8c8c8c",transform:"translate(-50%,30%)",left:"50%" }}>EVENTS</h1>
-    </motion.div>
-    <motion.div initial={{y:-150,opacity:1}} whileInView={{y:0,opacity:1}} transition={{duration:1.5}}>
-    <h2 className='font-Gantari font-normal text-3xl mt-4'>{value.name}</h2>
-    </motion.div>
-    <motion.div initial={{y:150,opacity:1}} whileInView={{y:0,opacity:1}} transition={{duration:1.5}}>
-    <div className=" border-l-8 border-warning mt-4 ">
-    <p className='text-base ml-3 '>{value.description}</p>
-    </div>
-    </motion.div>
+import { Link } from "react-router-dom";
+import "./events.css"
+import { motion } from "framer-motion";
+export const Sidebar = ({ value }) => {
+  // console.log(props.props)
 
-    <div className="mt-3 ">
-    <motion.div initial={{y:100,x:0,scale:0}} whileInView={{y:0,scale:1}} transition={{duration:1.5}}>
-    
-    <Link to="/events" className='px-4 py-1 border-2 border-blue-4px-4 py-2 border-2 border-blue-500 text-white   hover:scale-10500 text-white focus:outline-none inline-block'>Explore more</Link>
+  return (
+    <div className="text-left xs:w-72 lg:w-4/6 leading-8 xs:pl-0 md:pl-20" style={{ color: "white" }}>
+    {/* Heading Animation */}
+    <motion.div
+      initial={{ scale: 0.8, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 1.2, ease: "easeInOut" }}
+    >
+      <h1 className="events bg font-extrabold text-left  text-4xl " >
+        EVENTS
+      </h1>
     </motion.div>
-    
-    </div>
-   
-   
-    </div>
-  )
-}
+  
+    {/* Subheading Animation */}
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
+    >
+      <h2 className="font-Gantari font-normal text-2xl mt-4">
+        {value.name}
+      </h2>
+    </motion.div>
+  
+    {/* Description Animation */}
+    <motion.div
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1, delay: 0.4, ease: "easeInOut" }}
+    >
+      <div className="border-l-4 border-yellow-400 mt-4 pl-3">
+        <p className="text-base">
+          {value.description}
+        </p>
+      </div>
+    </motion.div>
+  
+    {/* Button Animation */}
+    <motion.div
+      initial={{ y: 50, opacity: 0, scale: 0.9 }}
+      whileInView={{ y: 0, opacity: 1, scale: 1 }}
+      transition={{ duration: 1, delay: 0.6, type: "spring", stiffness: 120 }}
+      className="mt-6"
+    >
+      <Link
+        to="/events"
+        className="px-6 py-3 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all"
+      >
+        Explore more
+      </Link>
+    </motion.div>
+  </div>
+  );
+};

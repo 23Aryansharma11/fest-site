@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState } from "react";
 
 const Tabs = ({ tabs, onTabClick }) => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
@@ -10,11 +9,15 @@ const Tabs = ({ tabs, onTabClick }) => {
   };
 
   return (
-    <div className="flex justify-center space-x-4  mx-20 ">
+    <div className="flex justify-center space-x-4 mx-auto mb-8 border-b-2 border-yellow-500 pb-4">
       {tabs.map((tab) => (
         <button
           key={tab}
-          className={`w-100 px-6 py-2 font-bold ${activeTab === tab ? 'bg-yellow-500 text-black rounded-md'  : 'bg-black text-yellow-500'} rounded-md focus:outline-none`}
+          className={`px-6 py-2 text-lg font-semibold transition-colors duration-300 ${
+            activeTab === tab
+              ? "bg-yellow-500 text-black rounded-t-md"
+              : "bg-gray-900 text-yellow-500"
+          } focus:outline-none hover:bg-yellow-400`}
           onClick={() => handleTabClick(tab)}
         >
           {tab}

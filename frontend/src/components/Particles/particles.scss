@@ -1,10 +1,10 @@
 
 
 // best in chrome
-$total: 1000; // total particles
+$total: 700; // total particles
 $orb-size: 300px;
 $particle-size: 3px;
-$time: 10s; 
+$time: 20s; 
 $base-hue: 0; // change for diff colors (180 is nice)
 
 html, body {
@@ -19,7 +19,7 @@ body {
 
 .wrap {
   position: absolute;
-//   overflow: hidden;
+  // overflow: hidden;
   top: 50%;
   left: 50%;
   width: 0; 

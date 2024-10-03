@@ -9,6 +9,7 @@
   
   .animate-spin-coin {
     animation: spin-coin 4s infinite linear;
+    animation-delay: 0s;
   }
   i{
     font-style: italic;
@@ -22,14 +23,31 @@
   }
   #utf{
     /* color:#8c8c8c; */
-    color:white;
-    font-style: italic;
+    background: linear-gradient(to right, #A32CC4, #FCBA04); /* Your gradient colors */
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text; /* For other browsers */
+    color: transparent; /* Make the text color transparent */
+    /* font-size: 48px; Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    /* font-style: italic; */
     font-size:4rem;
   }
   .backface-hidden {
     backface-visibility: hidden;
   }
+  .typed-cursor {
+    font-size: 4rem; /* Make the cursor inherit the font size of the surrounding text */
+    color: inherit;     /* Make sure the cursor color matches the text */
+    animation: blink 0.7s infinite; /* Optional: controls blinking effect */
+  }
   
+  /* @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  } */
+  #element{
+    font-family: 'Marine Corps', sans-serif;
+  }
   .transform-style-preserve-3d {
     transform-style: preserve-3d;
   }

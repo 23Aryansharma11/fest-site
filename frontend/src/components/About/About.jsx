@@ -1,22 +1,22 @@
 import Section from "./Helper/Section";
-import robotImage from "../../assets/robot_spy-B22OfTYi.png"; // Ensure you have the robot image saved in your src folder
-import {motion } from "framer-motion"
+import robotImage from "../../assets/robot_spy-B22OfTYi.png";
 const About = () => {
   return (
-   
     <div className="bg-black p-4 md:p-8">
-
-      <h2 style={{color:"#FFbd00"}} className="text-3xl md:text-4xl font-bold mb-4 flex justify-center items-center md:mb-6">
+      <h2
+        // style={{ color: "#FFbd00" }}
+        className="text-3xl md:text-4xl font-bold mb-4 flex justify-center items-center md:mb-6 gradient-text"
+      >
         About
       </h2>
       <div className="flex flex-col md:flex-row text-white">
         <div className=" md:w-1/3">
           <h1 className="text-xl">UIT&apos;s Techfest</h1>
-          <h2 className="text-3xl md:text-5xl font-bold my-4 text-white">
-            UTKARSH 2024
+          <h2 className="text-3xl md:text-5xl font-bold my-4 gradient-text">
+            UTF 2024
           </h2>
           <div className="flex justify-center items-start md:mb-8">
-            <div className="bg-yellow-500 w-1 mr-4 self-stretch"></div>
+            <div className="bg w-1 mr-4 self-stretch"></div>
             <p className="text-base md:text-lg mb-8">
               Cognizance, the congregation of the finest technical minds of the
               country is the annual technical fest of IIT Roorkee. It is a
@@ -34,16 +34,13 @@ const About = () => {
             description="At Cognizance, we're committed to driving positive change through innovation and collaboration. That's why we've launched several initiatives that are making a difference in our communities and beyond."
           />
         </div>
-        <div className="hidden md:block md:w-1/3 md:flex md:flex-col md:items-center">
+        <div className="hidden md:w-1/3 md:flex md:flex-col md:items-center">
           <img src={robotImage} alt="Robot" className="mb-8 w-full max-w-sm" />
-          
         </div>
         <div className="hidden md:block md:w-1/3 ">
-          <h2 className="text-3xl md:text-5xl font-bold my-4 ">
-            UTKARSH 2024
-          </h2>
+          <h2 className="text-3xl md:text-5xl font-bold my-4 gradient-text">UTF 2024</h2>
           <div className="flex justify-center items-start md:mb-8">
-            <div className="bg-yellow-500 w-1 mr-4 self-stretch"></div>
+            <div className="bg w-1 mr-4 self-stretch"></div>
             <p className="text-base md:text-lg mb-8">
               Cognizance, the congregation of the finest technical minds of the
               country is the annual technical fest of IIT Roorkee. It is a
@@ -62,7 +59,6 @@ const About = () => {
         </div>
       </div>
     </div>
-    
   );
 };
 

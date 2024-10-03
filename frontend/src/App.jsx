@@ -8,11 +8,11 @@ import { Form } from "./pages/Form.jsx";
 import { Toaster } from "react-hot-toast";
 
 import { useAuthContext } from "./context/authcontext.jsx";
-import EventPage from "./components/events/EventPage/EventPage.jsx";
+import EventPage from "./pages/EventPage.jsx";
 import { Admin } from "./pages/Admin.jsx";
 import { Applied } from "./pages/Applied.jsx";
 import EventInfo from "./pages/EventInfo.jsx";
-import { Developers } from "./pages/Developers.jsx";
+import { data, Developers } from "./pages/Developers.jsx";
 import Contact from "./pages/Contact.jsx";
 import { About } from "./pages/AboutPage.jsx";
 
@@ -20,8 +20,8 @@ import Gallery from "./pages/Gallery.jsx";
 import { Sponsors } from "./pages/Sponsors.jsx";
 import { Update } from "./pages/Update.jsx";
 import PageNotFOund from "./pages/PageNotFOund.jsx";
-import Card from "./components/events/EventPage/Helper/Card.jsx";
-import { Tempcard } from "./pages/card.jsx";
+
+import { Tempcard } from "./components/card.jsx";
 import { Loading } from "./pages/Loading.jsx";
 
 function App() {
@@ -29,7 +29,6 @@ function App() {
 
   return (
     <div className="App">
-    
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route
@@ -67,28 +66,19 @@ function App() {
           element={authUser ? <Applied /> : <Navigate to="/register" />}
         />
         <Route path="/developers" element={<Developers />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About value={data} />} />
         <Route path="/gallery" element={<Gallery />} />
-        
+
         <Route path="/sponsors" element={<Sponsors />} />
         <Route
           path="/update/:id"
           element={authUser ? <Update /> : <Navigate to="/register" />}
         />
-        <Route
-          path="/hello"
-          element={<Tempcard/>}
-        />
-          <Route
-          path="/"
-          element={<Loading/>}
-        />
-        <Route
-          path="*"
-          element={<PageNotFOund/>}
-        />
+        <Route path="/hello" element={<Tempcard />} />
+        <Route path="/" element={<Loading />} />
+        <Route path="*" element={<PageNotFOund />} />
       </Routes>
-      
+
       <Toaster />
     </div>
   );

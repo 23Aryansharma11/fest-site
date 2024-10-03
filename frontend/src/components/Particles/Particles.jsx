@@ -3,7 +3,7 @@ import "./particles.scss"
 import {motion} from "framer-motion"
 export const Particles = () => {
   return (
-    <motion.div drag className="w-[500px] bg-transparent z-20">
+   
     
     <div className="wrap">
     
@@ -1954,6 +1954,6 @@ export const Particles = () => {
     <div className="c"></div>
     <div className="c"></div>
    </div>
-   </motion.div>
+  
   )
 }

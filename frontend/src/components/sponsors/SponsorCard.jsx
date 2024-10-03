@@ -1,16 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-export const SponsorCard = () => {
+export const SponsorCard = ({ image, name, description, link }) => {
   return (
-    <div className='d-flex justify-evenly pt-48 items-center'>
-    <div>
-      <img className="max-w-52 max-h-52" src="https://w0.peakpx.com/wallpaper/453/948/HD-wallpaper-video-game-fifa-22-kylian-mbappe.jpg"></img>
-</div>
-      <div>
-   <h2 className='text-yellow-500'>J.P MORGAN</h2>
-   <p>This is our sponsor with high value</p>
+    <Link to={link} className="text-white shadow-md rounded-lg overflow-hidden">
+      <img src={image} alt={name} className="w-full h-48 object-cover" />
+      <div className="p-4">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-2">{name}</h3>
+        <p className="text-gray-600 w-full text-balance">{description}</p>
       </div>
-
-    </div>
-  )
-}
+    </Link>
+  );
+};

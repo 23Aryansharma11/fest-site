@@ -1,5 +1,5 @@
 import "./spinningLogo.css";
-
+import img from  "../../assets/atlantus.png"
 const SpinningLogo = () => {
   // Todo: Add higher quality logo
   const frontImageUrl =
@@ -9,14 +9,14 @@ const SpinningLogo = () => {
       <div className="coin relative size-48 md:size-96 transform-style-preserve-3d animate-spin-coin">
         <div className="coin-face coin-front absolute w-full h-full backface-hidden">
           <img
-            src={frontImageUrl}
+            src={img}
             alt="Front"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="coin-face coin-back absolute w-full h-full backface-hidden transform rotate-y-180">
           <img
-            src={frontImageUrl}
+            src={img}
             alt="Back"
             className="w-full h-full object-cover"
           />

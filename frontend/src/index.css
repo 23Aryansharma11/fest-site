@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Cabin:ital,wght@0,400..700;1,400..700&family=Orbitron:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Cabin:ital,wght@0,400..700;1,400..700&family=Orbitron:wght@400..900&display=swap");
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 @tailwind base;
 @tailwind components;
@@ -11,7 +11,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -66,25 +66,36 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #FCBA04;
+  background: linear-gradient(to left, #A32CC4, #FCBA04); /* Your gradient colors */
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text; /* For other browsers */
+  color: transparent; /* Make the text color transparent */
+  /* font-size: 48px; Adjust as needed */
+  font-weight: bold; /* Adjust as needed */
+  /* font-style: italic; */
 }
-.link{
-  color:white;
+.link {
+  /* color: white; */
 }
-.link:hover {
+link:hover {
   text-decoration: none;
-  color: #FCBA04;
+  background: linear-gradient(to left, #A32CC4, #FCBA04);
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Orbitron", sans-serif;
 }
-p{
+p {
   font-family: "Cabin", sans-serif;
-  color:white;
-  text-align:left;
+  color: white;
+  text-align: left;
 }
 body {
-text-align: center;
+  text-align: center;
   min-width: 320px;
   min-height: 100vh;
   background-color: black;
@@ -106,14 +117,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #FCBA04;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
 
 /* font classes */
 
@@ -138,16 +146,9 @@ button:focus-visible {
   font-variation-settings: "wdth" 100;
 }
 
+/* fonts  */
+/* outfit  prata */
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+
+
+

@@ -55,7 +55,7 @@ transition: 1s ease-in-out;
   .outer:hover .text {
     opacity: 1;
   
-transform: translateY(50px);
+transform: translateY(10px);
 
 
   }
