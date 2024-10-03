@@ -13,7 +13,7 @@ const Card = ({ title, fees, image, description }) => {
     navigate("/eventdetail", { state: info });
   };
   return (
-    <div className="h-80 w-60 relative outer overflow-hidden rounded-xl peer">
+    <div className="h-80 w-60 relative outer overflow-hidden rounded-xl peer gradient-border">
       <img className="h-full w-full object-cover object-center" src={image} />
       <div
         style={{ transition: "1s ease-in-out" }}

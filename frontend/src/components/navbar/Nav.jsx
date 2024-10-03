@@ -41,7 +41,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-darkbg/95 md:bg-darkbg/50 md:backdrop-blur-lg text-white sticky top-0 z-20 mx-auto w-full flex items-center justify-between p-2 flex-wrap px-5">
+    <nav className="bg-darkbg/95 md:bg-darkbg/50 md:backdrop-blur-lg text-white  top-0 z-20 mx-auto w-full flex items-center justify-between p-2 flex-wrap px-5 fixed">
       <Link to="/home">
         <div className="flex items-center justify-between font-bold text-2xl orbitron hover:text-prim transition-colors duration-300">
           <img
@@ -49,7 +49,7 @@ const Nav = () => {
             src="https://res.cloudinary.com/aryansharma/image/upload/f_auto,q_auto/utkarsh_logo"
             alt="logo"
           />
-        <span style={{fontStyle:"'Marine Corps', sans-serif"}} className="logo"> UTF 2024</span>
+        <span style={{fontStyle:"'Marine Corps', sans-serif"}} className="logo gradient-text"> UTF 2024</span>
         </div>
       </Link>
       <div className="md:hidden flex items-center">
@@ -136,8 +136,8 @@ const Nav = () => {
                 className={({ isActive }) =>
                   `py-2 md:px-4 md:py-0 block font-bold ${
                     isActive
-                      ? "text-prim"
-                      : "hover:text-prim transition-colors duration-300"
+                      ? "gradient-text"
+                      : "hover:gradient-text transition-colors duration-300"
                   }`
                 }
                 onClick={toggleMobileMenu}
@@ -160,8 +160,8 @@ const Nav = () => {
                 className={({ isActive }) =>
                   `py-2 md:px-4 md:py-0 block font-bold ${
                     isActive
-                      ? "text-prim"
-                      : "hover:text-prim transition-colors duration-300"
+                      ? "gradient-text"
+                      : "hover:gradient-text transition-colors duration-300"
                   }`
                 }
                 onClick={toggleMobileMenu}

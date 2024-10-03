@@ -1,12 +1,10 @@
 import "./App.css";
-// import Nav from './components/navbar/nav'
 import Home from "./pages/Home.jsx";
 import { Routes, Route, Navigate } from "react-router-dom";
 import SignUp from "./pages/SignUp.jsx";
 import Login from "./pages/Login.jsx";
 import { Form } from "./pages/Form.jsx";
 import { Toaster } from "react-hot-toast";
-
 import { useAuthContext } from "./context/authcontext.jsx";
 import EventPage from "./pages/EventPage.jsx";
 import { Admin } from "./pages/Admin.jsx";
@@ -15,12 +13,10 @@ import EventInfo from "./pages/EventInfo.jsx";
 import { data, Developers } from "./pages/Developers.jsx";
 import Contact from "./pages/Contact.jsx";
 import { About } from "./pages/AboutPage.jsx";
-
 import Gallery from "./pages/Gallery.jsx";
 import { Sponsors } from "./pages/Sponsors.jsx";
 import { Update } from "./pages/Update.jsx";
 import PageNotFOund from "./pages/PageNotFOund.jsx";
-
 import { Tempcard } from "./components/card.jsx";
 import { Loading } from "./pages/Loading.jsx";
 

@@ -9,10 +9,10 @@ export const About = () => {
   return (
     <div className="min-h-screen">
       <Nav />
-      <div className="min-h-screen bg-gray-900 text-white flex flex-col justify-center items-center p-8">
+      <div className="min-h-screen mt-[5rem] bg-gray-900 text-white flex flex-col justify-center items-center p-8">
         <div className="max-w-6xl mx-auto text-center">
           {/* Header Section */}
-          <h1 className="text-5xl font-bold mb-6 text-gray-100 text-prim">
+          <h1 className="text-5xl font-bold mb-6 text-gray-100 gradient-text">
             About UTF
           </h1>
           <p className="text-xl text-gray-400 mb-8 text-justify">
@@ -26,7 +26,7 @@ export const About = () => {
 
           {/* Mission Statement Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-semibold text-gray-100 mb-4 text-prim">
+            <h2 className="text-3xl font-semibold text-gray-100 mb-4 gradient-text">
               Our Mission
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed text-justify">
@@ -75,7 +75,7 @@ export const About = () => {
 
           {/* Tech Fest Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-semibold text-gray-100 mb-4">
+            <h2 className="text-3xl font-semibold text-gray-100 mb-4 gradient-text">
               Tech Fest 2024
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
@@ -93,14 +93,14 @@ export const About = () => {
                   key={category}
                   className="bg-gray-900 p-8 rounded-lg shadow-lg w-full max-w-xl mx-auto"
                 >
-                  <h3 className="text-3xl font-bold text-yellow-400 mb-4 border-b border-yellow-400 pb-2">
+                  <h3 className="text-3xl font-bold gradient-text mb-4 border-b input pb-2">
                     {category}
                   </h3>
                   <ul className="text-gray-300 text-xl space-y-2 list-inside list-none cursor-pointer">
                     {data[category].map((event, index) => (
                       <li
                         key={index}
-                        className="hover:text-yellow-400 transition duration-300"
+                        className="hover:gradient-text transition duration-300"
                       >
                         {event.event}
                       </li>
@@ -113,7 +113,7 @@ export const About = () => {
 
           {/* Tech Team Section */}
           <section className="mb-16 ">
-            <h2 className="text-3xl font-semibold text-yellow-400 mb-8 border-b border-yellow-400 pb-2 ">
+            <h2 className="text-3xl font-semibold gradient-text mb-8 border-b input pb-2 ">
               Meet the Developers
             </h2>
             <div className="md:grid-cols-2 xs:grid-cols-1 sm:grid-cols-2 place-items-center  lg:grid-cols-2 d-grid gap-3 justify-center ">
@@ -125,7 +125,7 @@ export const About = () => {
 
           {/* Contact Section */}
           <section className="mt-12">
-            <h2 className="text-3xl font-semibold text-gray-100 mb-4">
+            <h2 className="text-3xl font-semibold gradient-text mb-4">
               Get in Touch
             </h2>
             <p className="text-lg text-gray-300 mb-6 text-center">
@@ -134,7 +134,7 @@ export const About = () => {
             </p>
             <a
               href="/contact"
-              className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+              className="inline-block px-8 py-3 bg text-white rounded-lg font-semibold  transition duration-300"
             >
               Contact Us
             </a>

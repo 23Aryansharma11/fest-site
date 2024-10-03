@@ -9,7 +9,7 @@
 .outer{
     margin-top: 0;
     transition: 0.5s ease-in-out;
-    border: 2px solid yellow ;
+    /* border: 2px solid yellow ; */
 }
 
 .outer:hover .inner{

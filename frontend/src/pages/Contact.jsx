@@ -49,9 +49,9 @@ const Contact = () => {
         <div className="xl:max-w-7xl bg-inherit drop-shadow-xl border-3  border-black/20 w-full rounded-md flex justify-between items-stretch xs:px-2 md:px-5 xl:px-5 py-5">
           <button
             onClick={() => navigate(-1)}
-            className="absolute left-3 top-10 border-yellow-400 bg-transparent"
+            className="absolute left-3 top-10 gradient-text bg-transparent"
           >
-            <IoIosArrowBack className="text-yellow-400" />
+            <IoIosArrowBack className="gradient-text" />
           </button>
           <div className="sm:w-[60%] lg:w-[50%] bg-cover bg-center items-center justify-center hidden md:flex">
             <img
@@ -61,7 +61,7 @@ const Contact = () => {
             />
           </div>
           <div className="mx-auto w-full lg:w-1/2 md:p-10 py-5 md:py-0">
-            <h1 className="text-center text-2xl sm:text-3xl font-semibold text-yellow-500">
+            <h1 className="text-center text-2xl sm:text-3xl font-semibold gradient-text">
               Contact Us
             </h1>
             <div className="w-full mt-5 sm:mt-8">
@@ -77,7 +77,7 @@ const Contact = () => {
                       onChange={(e) => {
                         setName(e.target.value);
                       }}
-                      className=" border-b-2 w-full text-prim placeholder:text-prim placeholder:text-black/70 focus:outline-none bg-transparent "
+                      className="input border-b-2 w-full gradient-text   placeholder:text-black/70 focus:outline-none bg-transparent "
                     />
 
                     <input
@@ -89,7 +89,7 @@ const Contact = () => {
                       onChange={(e) => {
                         setEmail(e.target.value);
                       }}
-                      className=" border-b-2 w-full text-prim placeholder:text-prim placeholder:text-black/70 focus:outline-none bg-transparent "
+                      className="  w-full gradient-text  input placeholder:text-black/70 focus:outline-none bg-transparent "
                     />
                     <textarea
                       placeholder="Enter Your Message"
@@ -98,11 +98,11 @@ const Contact = () => {
                       onChange={(e) => {
                         setMessage(e.target.value);
                       }}
-                      className=" border-b-2 w-full text-prim placeholder:text-prim placeholder:text-black/70 focus:outline-none bg-transparent "
+                      className=" border-b-2 w-full gradient-text input placeholder:text-black/70 focus:outline-none bg-transparent "
                     />
                   </div>
                   <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center pt-3">
-                    <button className="btn btn-outline btn-warning  max-w-[200px]">
+                    <button className=" hover:bg-yellow-500 hover:scale-[1.2] hover:border-yellow-400 bg  max-w-[200px]">
                       Submit
                     </button>
                   </div>

@@ -7,7 +7,7 @@ export const DevHelper = ({ value }) => {
   return (
     <div
       style={{ borderRadius: "10px", Width: "16rem" }}
-      className="text-center xs:w-screen sm:w-auto  border-2 p-4 mb-3  border-yellow-500 "
+      className="text-center xs:w-screen sm:w-auto  border-2 p-4 mb-3  gradient-border rounded-md "
     >
       <div
         style={{
@@ -18,17 +18,18 @@ export const DevHelper = ({ value }) => {
           height: "100px",
           width: "100px",
         }}
+        
       >
         <img
           style={{ height: "100%", width: "100%", objectFit: "cover" }}
           src={value.image}
         ></img>
       </div>
-      <h2 className="my-3 text-2xl text-yellow-500">{value.name}</h2>
+      <h2 className="my-3 text-2xl gradient-text">{value.name}</h2>
       <p className="my-3 text-center ">
         <em>{value.description}</em>
       </p>
-      <h4 className="my-3 text-center text-yellow-500">
+      <h4 className="my-3 text-center gradient-text">
         <b>{value.work}</b>
       </h4>
       <div className="mt-6 d-flex gap-3 justify-center text-white  cursor-pointer ">

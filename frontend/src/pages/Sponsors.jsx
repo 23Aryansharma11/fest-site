@@ -37,7 +37,7 @@ export const Sponsors = () => {
     {
       name: "Sushant Sharma",
       number: "7018937275",
-      email: "sushant.sharma@example.com",
+      email: "sushant.sharma@gmail.com",
     },
     {
       name: "Sujal Verdhan",
@@ -48,7 +48,7 @@ export const Sponsors = () => {
     {
       name: "Pranjal Sharma",
       number: "6230376536",
-      email: "pranjal.sharma@example.com",
+      email: "pranjal.sharma@gmail.com",
     },
   ];
 
@@ -60,9 +60,9 @@ export const Sponsors = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-        className="container mx-auto p-6"
+        className="container mx-auto mt-[5rem] p-6"
       >
-        <h1 className="text-4xl font-bold text-center text-prim mb-8">
+        <h1 className="text-4xl font-bold text-center gradient-text mb-8">
           Our Sponsors
         </h1>
 
@@ -105,7 +105,7 @@ export const Sponsors = () => {
           transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
           className="border border-yellow-500 rounded-lg p-6 bg-gray-100"
         >
-          <h3 className="text-3xl font-semibold text-prim text-center mb-6">
+          <h3 className="text-3xl font-semibold gradient-text text-center mb-6">
             Sponsorship Inquiries
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -124,7 +124,7 @@ export const Sponsors = () => {
                 whileHover={{ scale: 1.1, rotate: 5, transition: { yoyo: 3 } }}
                 className="flex flex-col justify-center items-center"
               >
-                <h4 className="text-xl font-semibold text-prim">
+                <h4 className="text-xl font-semibold gradient-text">
                   {member.name}
                 </h4>
                 <p className="text-lg">{member.number}</p>

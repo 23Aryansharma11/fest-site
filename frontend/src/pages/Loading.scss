@@ -13,7 +13,9 @@ body {
 	color: #fff;
 	background: #000;
 }
+link:hover{
 
+}
 a {
 	color: #f0f0f0;
 	text-decoration: none;
@@ -299,10 +301,27 @@ a:hover {
 
 
 
+.input{
+	border-top:0;
+	border-left:0;
+	border-right:0;
+	// border: 5px  solid;
+	
+    border-radius: 12px;
+    border-image: linear-gradient(45deg, #ff6b6b, #f94c1e, #f0b31e) 1;
+}
 
 
-
-
+.input::placeholder{
+	background: linear-gradient(to right, #A32CC4, #FCBA04); /* Your gradient colors */
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text; /* For other browsers */
+    color: transparent; /* Make the text color transparent */
+    /* font-size: 48px; Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    /* font-style: italic; */
+    // font-size:4rem;
+}
 
 
 

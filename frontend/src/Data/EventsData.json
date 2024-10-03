@@ -2,6 +2,7 @@
   "ATLANTUS Events": [
     {
      "title": "NFS",
+     "title": "NFS",
       "fees": "100",
       "image":
         "https://res.cloudinary.com/dofidva2t/image/upload/v1722049947/nfs_gbtjzc.jpg",
@@ -11,6 +12,7 @@
 
     {
      "title": "BGMI",
+     "title": "BGMI",
       "fees": "100",
       "image":
         "https://res.cloudinary.com/dofidva2t/image/upload/v1722049947/nfs_gbtjzc.jpg",
@@ -18,6 +20,7 @@
         "BGMI is the ultimate mobile battleground, where every drop leads to epic showdowns. Parachute in, scavenge for gear, and outlast the competition in a thrilling fight for survival. With intense shootouts, massive open maps, and pulse-pounding action, BGMI lets you team up or go solo in a race to be the last one standing. Customize your weapons, jump into epic vehicles, and dominate every round. BGMI brings the battle royale mayhem to your fingertips."
     },
     {
+     "title": "Valorant",
      "title": "Valorant",
       "fees": "100",
       "image":
@@ -27,6 +30,7 @@
     },
     {
      "title": "Chess",
+     "title": "Chess",
       "fees": "100",
       "image":
         "https://res.cloudinary.com/dofidva2t/image/upload/v1722049946/chess_ctgg7z.jpg",
@@ -34,6 +38,7 @@
         "Chess is the classic brain battle, where every move counts in a war of wits. From kings to pawns, it’s all about strategy, foresight, and a killer instinct. Outsmart your opponent and deliver checkmate in this ultimate game of mind versus mind. With infinite possibilities and timeless appeal, chess reigns supreme in the world of competitive intellect."
     },
     {
+     "title": "WWE 2K22",
      "title": "WWE 2K22",
       "fees": "100",
       "image":
@@ -43,6 +48,7 @@
     },
     {
      "title": "CLASH ROYALE",
+     "title": "CLASH ROYALE",
       "fees": "100",
       "image":
         "https://res.cloudinary.com/dofidva2t/image/upload/v1722050341/clash_royale-min_lpvhgw.jpg",
@@ -51,12 +57,14 @@
     },
     {
      "title": "TREASURE HUNT",
+     "title": "TREASURE HUNT",
       "fees": "100",
       "image": "pubg",
       "description":
         "Treasure Hunt takes you on an epic adventure to find hidden riches in uncharted lands. Solve mind-bending puzzles, dodge traps, and uncover ancient secrets as you race to claim the ultimate prize. Every map is packed with surprises and challenges, making every step a thrilling quest. If you’ve got a taste for adventure, this is the game for you."
     },
     {
+     "title": "FREE FIRE",
      "title": "FREE FIRE",
       "fees": "100",
       "image":
@@ -66,6 +74,7 @@
     },
     {
      "title": "MINI MILITIA",
+     "title": "MINI MILITIA",
       "fees": "100",
       "image":
         "https://res.cloudinary.com/dofidva2t/image/upload/v1722051300/free_fire_ymdzgx.jpg",
@@ -73,6 +82,7 @@
         "Mini Militia is the fast-paced, multiplayer shooter that’s all about mayhem and madness. Arm yourself with crazy weapons, fly with jetpacks, and outgun your friends in intense, cartoon-style skirmishes. Battle in chaotic maps where every corner is an ambush waiting to happen. Mini Militia is the ultimate blend of fun and fury, perfect for those who crave non-stop action."
     },
     {
+     "title": "TEKKEN",
      "title": "TEKKEN",
       "fees": "100",
       "image":
@@ -82,6 +92,7 @@
     },
     {
      "title": "FIFA",
+     "title": "FIFA",
       "fees": "100",
       "image":
         "https://res.cloudinary.com/dofidva2t/image/upload/v1722051793/Fifa_1592566574619_1592566698613_ixsur1.png",
@@ -89,6 +100,7 @@
         "FIFA is where football dreams come alive. Step into the cleats of your favorite players, craft your ultimate team, and dominate the pitch with jaw-dropping goals and next-level skills. With stunning graphics, realistic gameplay, and tournaments that get your heart racing, FIFA lets you experience the thrill of the beautiful game like never before. Every match is a chance for glory—are you ready to lift the cup?"
     },
     {
+     "title": "CHROME RUN",
      "title": "CHROME RUN",
       "fees": "100",
      " image":
@@ -298,12 +310,13 @@
     {
      "title": "QUIBBLE",
       "fees": "100",
-     " image":
+     "image":
         "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
       "description":
         "Quibble is a fun and exciting quiz competition designed to test your brainpower and quick thinking. It’s all about answering questions from your field of study as fast as you can! Each department or branch will form 4 teams (one from each year), and the event will have three thrilling rounds: Round 1 (Pass the Question): A question is asked to a team, and if they can’t answer, it passes to the next team, Round 2 (Rapid Fire): Fast-paced questions where quick answers are key!, Round 3 (Buzzer Round): Be the fastest to hit the buzzer and answer., Teams consist of 3 members, and you’ll face questions based on your branch’s subjects. So, sharpen your knowledge and get ready to show what you know—this is your chance to shine!"
     },
     {
+     "title": "Problematic",
      "title": "Problematic",
       "fees": "100",
       "image":
@@ -313,6 +326,7 @@
     },
     {
      "title": "Web Weaver",
+     "title": "Web Weaver",
       "fees": "100",
       "image":
         "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
@@ -320,6 +334,7 @@
         "Web Weaver is a creative web development competition. Participants are challenged to design and develop responsive, modern websites based on a given theme. With a focus on UX, UI, and innovative design, this event allows web developers to showcase their HTML, CSS, and JavaScript skills. Whether you're a frontend expert or have full-stack knowledge, Web Weaver will push your creativity to the next level."
     },
     {
+     "title": "Google Hunt",
      "title": "Google Hunt",
       "fees": "100",
       "image":
@@ -329,6 +344,7 @@
     },
     {
      "title": "Winshoot",
+     "title": "Winshoot",
       "fees": "100",
       "image":
         "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
@@ -336,6 +352,7 @@
         "Winshoot is a fast-paced game development competition focused on creating mini-games with a time limit. Whether you're building an action-packed shooter or a puzzle game, your team will need to code, design, and debug a functional game from scratch. Judges will evaluate creativity, gameplay, and technical execution. Ready to build your next masterpiece under pressure? Winshoot is the stage for game developers to show their skills."
     },
     {
+     "title": "Frames Per Second",
      "title": "Frames Per Second",
       "fees": "100",
       "image":
@@ -345,6 +362,7 @@
     },
     {
      "title": "DesignX",
+     "title": "DesignX",
       "fees": "100",
       "image":
         "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
@@ -352,6 +370,7 @@
         "DesignX is a graphic design competition where participants are tasked with creating visually stunning digital art or promotional materials based on a given theme. Using tools like Adobe Photoshop, Illustrator, or Figma, competitors will have to demonstrate creativity, originality, and technical skills in their designs. Whether it’s a poster, logo, or website layout, DesignX is the event for designers to showcase their talents."
     },
     {
+     "title": "CADesignX",
      "title": "CADesignX",
       "fees": "100",
       "image":
@@ -361,6 +380,7 @@
     },
     {
      "title": "Bob the Builder",
+     "title": "Bob the Builder",
       "fees": "100",
       "image":
         "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
@@ -368,6 +388,7 @@
         "Bob the Builder is a hands-on event where participants must design and build a physical structure or prototype using a limited set of materials. This could involve creating bridges, towers, or functional prototypes. The event emphasizes teamwork, engineering skills, and resourcefulness. It’s perfect for aspiring engineers and makers looking to showcase their construction and design abilities."
     },
     {
+     "title": "UIT Best Coder",
      "title": "UIT Best Coder",
       "fees": "100",
       "image":
@@ -377,6 +398,7 @@
       },
     {
      "title": "Smack-D-Bug",
+     "title": "Smack-D-Bug",
       "fees": "100",
       "image":
         "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
@@ -384,6 +406,7 @@
         "Smack-D-Bug is a debugging competition designed to challenge participants to find and fix bugs in a codebase. With complex code riddled with errors, your task is to quickly identify the problems and resolve them. Speed and accuracy are crucial. Are you ready to show off your debugging skills and help make buggy code run flawlessly?"
     },
     {
+     "title": "Aperture",
      "title": "Aperture",
       "fees": "100",
       "image":

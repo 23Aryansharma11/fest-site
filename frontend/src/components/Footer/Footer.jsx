@@ -1,3 +1,4 @@
+// Footer.js
 import React from "react";
 import {motion} from "framer-motion"
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';

@@ -10,7 +10,7 @@ const WelcomeScreen = () => {
           transition={{ type: "spring", stiffness: 800, damping: 150 }}
         >
           <h1 className="text-2xl md:text-4xl font-light mb-4">
-            WELCOME TO <span className=" text-prim">UTF</span> 2024
+            WELCOME TO <span className=" gradient-text">UTF</span> 2024
           </h1>
         </motion.div>
         <motion.div
@@ -18,7 +18,7 @@ const WelcomeScreen = () => {
           animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
           transition={{ type: "spring", stiffness: 800, damping: 150 }}
         >
-          <h2 className="text-6xl md:text-7xl font-bold mb-4 text-prim">
+          <h2 className="text-6xl md:text-7xl font-bold mb-4 gradient-text">
             GALLERY
           </h2>
         </motion.div>
