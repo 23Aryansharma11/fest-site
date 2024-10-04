@@ -150,5 +150,17 @@ button:focus-visible {
 /* outfit  prata */
 
 
+input {
+  caret-color: white; 
+  outline: none;
+  
+}
 
+input::-moz-focus-outer{
+  border-color: none;
+}
 
+input:focus {
+  border: none;
+  outline: none;
+}

@@ -52,16 +52,14 @@ export const Form = () => {
           <form onSubmit={handleSubmit}>
             {qr && (
               <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity text-left duration-300">
-                <div className="relative bg-white p-6 rounded-lg shadow-lg w-full max-w-sm">
+                <div className="relative bg-black gradient-border p-6 rounded-lg shadow-lg w-full max-w-sm">
                   <img
                     className="mx-auto h-64 object-cover rounded-md"
                     src={QR}
                     alt="QR Code"
                   />
-                  <p className="text-gray-700 mt-4 text-sm text-center">
-                    <strong className="text-red-500">Note:</strong> Please pay
-                    the event fee and fill in the transaction ID below.
-                    Applications are processed only after payment verification.
+                  <p className="gradient-text mt-4 text-sm text-center">
+                    <strong className="text-error">Note:</strong> Please make the payment of the amount specified on the event page and enter the transaction ID below. Your application will be processed only after the payment has been successfully verified.Those who are applying for Dexteria are exempted from fees.They can add null to transaction id.
                   </p>
                   <button
                     onClick={handleModal}

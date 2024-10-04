@@ -96,7 +96,7 @@ const Nav = () => {
             </motion.div>
           ))}
           {
-            !authUser&& (
+            authUser&& (
               <motion.div
               initial={{ opacity: 0, y: -30 }} // Start above the normal position
               animate={{ opacity: 1, y: 0 }} // Fall to original position
