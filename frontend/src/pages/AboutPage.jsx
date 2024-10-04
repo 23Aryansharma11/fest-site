@@ -4,7 +4,7 @@ import Nav from "../components/navbar/Nav";
 import { DevHelper } from "../components/developers/DevHelper";
 import developerData from "../Data/DevelopersData.json";
 import data from "../Data/AboutPageData.json";
-
+import boys from "../assets/photos/boy1.jpeg"
 export const About = () => {
   return (
     <div className="min-h-screen">
@@ -112,8 +112,9 @@ export const About = () => {
           </section>
 
           {/* Tech Team Section */}
-          <section className="mb-16 ">
-            <h2 className="text-3xl font-semibold gradient-text mb-8 border-b input pb-2 ">
+          <section className="mb-16 relative">
+          {/* <img className="absolute" src={boys}></img> */}
+            <h2 className="text-3xl h-full font-semibold gradient-text mb-8 border-b input pb-2 ">
               Meet the Developers
             </h2>
             <div className="md:grid-cols-2 xs:grid-cols-1 sm:grid-cols-2 place-items-center  lg:grid-cols-2 d-grid gap-3 justify-center ">

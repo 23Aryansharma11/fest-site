@@ -20,6 +20,13 @@ const userSchema = new mongoose.Schema({
       ref: "Event",
       default: [],
     },
+    
   ],
+  collabs: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Collab",
+      default: [],
+    },]
 });
 export const User = mongoose.model("User", userSchema);

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const ComingSoon = () => {
   const title = `Coming  Soon`;
-  const subtitle = "We are working hard to bring something amazing!";
+  const subtitle = "Registrations will begin soon!";
   const launchDate = "November 2024";
 
   // Animation variant for each letter in title

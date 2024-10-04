@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import Nav from "../components/navbar/Nav";
 import { FaLocationDot } from "react-icons/fa6";
 import { useLocation } from 'react-router-dom';
+import "./EventTabs.css"
+import { useState } from "react";
 const EventInfo = () => {
   const location = useLocation(); // Get the location object
   const { state } = location; // Extract state from location object
+  const [active,setActive]=useState("first")
 
   // Check if state is available and contains the expected properties
   if (!state) {
@@ -38,17 +41,48 @@ const EventInfo = () => {
                 <span>{state.title}</span>{" "}
                 {state.prize && <span>₹{state.prize}</span>}
               </h2>
-              <p className="flex items-center  gap-2 text-gray">
+              <p className="flex items-center  gap-2 text-gray mt-2">
                 <FaLocationDot />
                 Uit, Summer Hill
               </p>
             </span>
+            <div role="tablist" className="tabs tabs-lifted mt-4">
+  <input
+    style={{width: "10rem"}}
+    type="radio"
+    onClick={() => setActive("first")}
+    name="my_tabs_2"
+    role="tab"
+    className={`${active === "first" && "bg"} tab w-[10rem] text-white`}
+    aria-label="Description"
+    checked={active === "first"}
+  />
+  <div role="tabpanel" className={`${active === "first" ? "visible" : "hidden"} tab-content bg-black rounded-box`}>
+    <p className="mt-4 text-gray-600 text-justify">{state.description}</p>
+  </div>
 
-            <p className="mt-4 text-gray-600">{state.description}</p>
+  <input
+    onClick={() => setActive("second")}
+    style={{width: "10rem"}}
+    type="radio"
+    name="my_tabs_2"
+    role="tab"
+    className={`tab w-[10rem] ${active === "second" && "bg"} text-white`}
+    aria-label="Rules"
+    checked={active === "second"}
+  />
+  <div role="tabpanel" className={`${active === "second" ? "visible" : "hidden"} tab-content bg-base-100 border-base-300 rounded-box p-6`}>
+    {state.rules ? state.rules : "Haven't Made Rules yet"}
+  </div>
+</div>
+
+
+            
 
             <Link
-              to={`/form/${state.title}`}
-              className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400 float-left"
+              // to={`/form/${state.title}`}
+              to="/comingsoon"
+              className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition gradient-border bg-black hover:bg focus:outline-none focus:ring focus:ring-yellow-400 float-left"
             >
               Register
             </Link>

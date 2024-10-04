@@ -1,11 +1,23 @@
+:root {
+  --total: 700; // default total particles
+}
 
+@media screen and (max-width: 768px) {
+  :root {
+    --total: 400; // fewer particles for tablets
+  }
+}
 
-// best in chrome
-$total: 700; // total particles
+@media screen and (max-width: 480px) {
+  :root {
+    --total: 200; // fewer particles for mobile devices
+  }
+}
+
 $orb-size: 300px;
 $particle-size: 3px;
 $time: 20s; 
-$base-hue: 0; // change for diff colors (180 is nice)
+$base-hue: 0; // change for different colors (180 is nice)
 
 html, body {
   height: 100%;
@@ -14,12 +26,10 @@ html, body {
 body {
   background: black;
   overflow-x: hidden;
-//   overflow: hidden; // no scrollbars.. 
 }
 
 .wrap {
   position: absolute;
-  // overflow: hidden;
   top: 50%;
   left: 50%;
   width: 0; 
@@ -27,8 +37,7 @@ body {
   transform-style: preserve-3d;
   perspective: 1000px;
   z-index: 0;
-  animation: rotate $time infinite linear; // rotate orb
-//   z-index: 99;
+  animation: rotate $time infinite linear;
 }
 
 @keyframes rotate {
@@ -45,12 +54,12 @@ body {
   opacity: 0; 
 }
 
-@for $i from 1 through $total {
-  $z: (random(360) * 1deg); // random angle to rotateZ
-  $y: (random(360) * 1deg); // random to rotateX
-  $hue: ((40/$total * $i) + $base-hue); // set hue
+@for $i from 1 through 700 { // keep this constant
+  $z: (random(360) * 1deg); 
+  $y: (random(360) * 1deg); 
+  $hue: ((40/700 * $i) + $base-hue); // keep total constant for calculation
   
-  .c:nth-child(#{$i}){ // grab the nth particle
+  .c:nth-child(#{$i}) {
     animation: orbit#{$i} $time infinite;
     animation-delay: ($i * .01s); 
     background-color: hsla($hue, 100%, 50%, 1);
@@ -58,17 +67,20 @@ body {
 
   @keyframes orbit#{$i}{ 
     20% {
-      opacity: 1; // fade in
+      opacity: 1; 
     }
     30% {
-      transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); // form orb
+      transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); 
     }
     80% {
-      transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); // hold orb state 30-80
-      opacity: 1; // hold opacity 20-80
+      transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); 
+      opacity: 1;
     }
     100% {
-       transform: rotateZ(-$z) rotateY($y) translateX( ($orb-size * 3) ) rotateZ($z); // translateX * 3
+      transform: rotateZ(-$z) rotateY($y) translateX(($orb-size * 3)) rotateZ($z); 
     }
   }
 }
+
+// Now we need to conditionally display particles based on screen size.
+// Add this to your JavaScript or React component file.

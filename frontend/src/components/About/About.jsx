@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Section from "./Helper/Section";
-import robotImage from "../../assets/robot_spy-B22OfTYi.png";
+import robotImage from "../../assets/atlantus.png";
 import useOnScreen from "../../hooks/useOnScreen.js"; // Adjust the import path based on your project structure
 
 const About = () => {

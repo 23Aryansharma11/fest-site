@@ -49,12 +49,12 @@ const IntroPart = () => {
      <span id='element' className="italic font-bold md:text-6xl"  ref={el} ></span></motion.div>
       <motion.div initial={{opacity:0,x:0,y:600,scale:0}} animate={{opacity:1,y:0,x:0,scale:1}} transition={{type:"spring",stiffness:500,damping:200}}>
       <h2 className="text-lg md:text-2xl md:leading-9 cabin">
-        Welcome to Utkarsh, the largest techno-cultural fest in Himachal
+        Welcome to UTF, the largest techno fest in Himachal
         Pradesh! Hosted by{" "}
         <span className="gradient-text font-bold">
           University Institude of Technology
         </span>
-        , HPU, Utkarsh attracts over{" "}
+        , HPU, UTF attracts over{" "}
         <span className="gradient-text font-bold">5000</span> participants
         from North India. Since 2014, we have proudly completed 8 editions,
         featuring over 25 competitions, lectures, and shows. <br />{" "}
