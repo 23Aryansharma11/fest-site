@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { useAuthContext } from "../../context/authcontext";
 import toast from "react-hot-toast";
+import img from "../../assets/atlantus.png";
 import { motion, useAnimation } from "framer-motion";
 import "./nvabar.css";
 const Nav = () => {
@@ -44,17 +45,12 @@ const Nav = () => {
   return (
     <nav className="bg-darkbg/95 md:bg-darkbg/50 md:backdrop-blur-lg text-white  top-0 z-20 mx-auto w-full flex items-center justify-between p-2 flex-wrap px-5 fixed">
       <Link to="/home">
-        <div className="flex items-center justify-between font-bold text-2xl orbitron hover:text-prim transition-colors duration-300">
-          <img
-            className="size-15 pr-3"
-            src="https://res.cloudinary.com/aryansharma/image/upload/f_auto,q_auto/utkarsh_logo"
-            alt="logo"
-          />
+        <div className="flex gap-2 items-center justify-between font-bold text-2xl orbitron hover:text-prim transition-colors duration-300">
+          <img className="size-8" src={img} alt="logo" />
           <span
             style={{ fontStyle: "'Marine Corps', sans-serif" }}
             className="logo gradient-text"
           >
-            {" "}
             UTF 2024
           </span>
         </div>
@@ -101,6 +97,30 @@ const Nav = () => {
               </NavLink>
             </motion.div>
           ))}
+          {authUser && (
+            <motion.div
+              initial={{ opacity: 0, y: -30 }} // Start above the normal position
+              animate={{ opacity: 1, y: 0 }} // Fall to original position
+              transition={{
+                duration: 0.5,
+                delay: navItems.length * 0.1, // Delay for the next item
+              }}
+            >
+              <NavLink
+                to="/getme"
+                className={({ isActive }) =>
+                  `py-2 md:px-4 md:py-0 block font-bold  p-4 hover:gradient-text ${
+                    isActive
+                      ? "gradient-text"
+                      : "hover:gradient-text transition-colors duration-300"
+                  }`
+                }
+                onClick={toggleMobileMenu}
+              >
+                Collaborate
+              </NavLink>
+            </motion.div>
+          )}
 
           {authUser && (
             <motion.div

@@ -28,6 +28,7 @@ const Section = ({ data }) => {
       {data.map((event, index) => (
         <motion.div
           variants={childVariants}
+          whileInView="show"
           key={index}
           className="flex justify-center"
         >

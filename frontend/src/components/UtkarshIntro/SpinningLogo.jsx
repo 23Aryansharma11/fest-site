@@ -20,7 +20,7 @@ const SpinningCoinLogo = () => {
         animate={spinAnimation}
       >
         {/* Front face */}
-        <div className="absolute w-full h-full backface-hidden">
+        <div className="absolute w-full h-full">
           <img
             src={img}
             alt="Coin Front"
@@ -28,7 +28,7 @@ const SpinningCoinLogo = () => {
           />
         </div>
         {/* Back face */}
-        <div className="absolute w-full h-full backface-hidden transform rotate-y-180">
+        <div className="absolute w-full h-full transform rotate-y-180">
           <img
             src={img}
             alt="Coin Back"

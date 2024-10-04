@@ -23,6 +23,12 @@ export const Form = () => {
   };
 
   const handleChange = (e) => {
+    // if(e.target.name === "contact"){
+    //   const number = e.target.value;
+    //   const alphabets = ['a', 'A', 'b', 'B']
+    //   number.split("").includes()
+    // }
+
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
@@ -40,22 +46,20 @@ export const Form = () => {
       <Nav />
       <div className="min-h-screen flex items-center justify-center bg-gray-900 py-12">
         <div className="w-full max-w-2xl p-8 bg-gray-800 shadow-lg rounded-lg">
-          <h1 className="text-3xl text-yellow-500 font-bold text-center mb-6">
+          <h1 className="text-3xl gradient-text font-bold text-center mb-6 ">
             Event Registration Form
           </h1>
           <form onSubmit={handleSubmit}>
             {qr && (
-              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-300">
-                <div className="relative bg-white p-6 rounded-lg shadow-lg w-full max-w-sm">
+              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity text-left duration-300">
+                <div className="relative bg-black gradient-border p-6 rounded-lg shadow-lg w-full max-w-sm">
                   <img
                     className="mx-auto h-64 object-cover rounded-md"
                     src={QR}
                     alt="QR Code"
                   />
-                  <p className="text-gray-700 mt-4 text-sm text-center">
-                    <strong className="text-red-500">Note:</strong> Please pay
-                    the event fee and fill in the transaction ID below.
-                    Applications are processed only after payment verification.
+                  <p className="gradient-text mt-4 text-sm text-center">
+                    <strong className="text-error">Note:</strong> Please make the payment of the amount specified on the event page and enter the transaction ID below. Your application will be processed only after the payment has been successfully verified.Those who are applying for Dexteria are exempted from fees.They can add null to transaction id.
                   </p>
                   <button
                     onClick={handleModal}
@@ -80,7 +84,7 @@ export const Form = () => {
             )}
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-left text-gray-300 mb-2">
                 Event Name *
               </label>
               <input
@@ -88,12 +92,12 @@ export const Form = () => {
                 name="eventName"
                 value={name}
                 disabled
-                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500 cursor-not-allowed"
+                className="bg-black gradient-text focus:outline-none input py-3 px-4 w-full"
               />
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-300 mb-2 text-left">
                 Email *
               </label>
               <input
@@ -101,27 +105,32 @@ export const Form = () => {
                 name="email"
                 value={authUser.email}
                 disabled
-                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500 cursor-not-allowed"
+                className="bg-black gradient-text focus:outline-none input py-3 px-4 w-full"
               />
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-300 mb-2 text-left ">
                 Contact No. *
               </label>
               <input
-                type="tel"
+                type="number"
                 name="contact"
                 onChange={handleChange}
                 required
                 placeholder="Enter Contact No."
-                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                className="bg-black gradient-text appearance-none focus focus:outline-none input py-3 px-4 w-full"
+                style={{
+          '-moz-appearance': 'none', // Hides arrows in Firefox
+          '-webkit-appearance': 'none', // Hides arrows in WebKit browsers (Chrome, Safari)
+          'appearance': 'none' // Standard CSS property to remove appearance
+        }}
               />
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-300 mb-2 text-left">
                   Player 1 Name *
                 </label>
                 <input
@@ -130,12 +139,12 @@ export const Form = () => {
                   onChange={handleChange}
                   required
                   placeholder="Enter player 1 name"
-                  className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                  className="bg-black gradient-text focus:outline-none input w-full py-3 px-4 "
                 />
               </div>
 
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+              <div className="mb-6 ">
+                <label className="block text-sm  text-left font-medium text-gray-300 mb-2">
                   Player 2 Name (if applicable)
                 </label>
                 <input
@@ -143,12 +152,12 @@ export const Form = () => {
                   name="player2Name"
                   onChange={handleChange}
                   placeholder="Enter player 2 name"
-                  className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                  className="bg-black gradient-text focus:outline-none input py-3 px-4 w-full "
                 />
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-left text-gray-300 mb-2">
                   Player 3 Name (if applicable)
                 </label>
                 <input
@@ -156,12 +165,12 @@ export const Form = () => {
                   name="player3Name"
                   onChange={handleChange}
                   placeholder="Enter player 3 name"
-                  className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                  className="bg-black gradient-text focus:outline-none w-full input py-3 px-4 "
                 />
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-left text-sm font-medium text-gray-300 mb-2">
                   Player 4 Name (if applicable)
                 </label>
                 <input
@@ -169,13 +178,13 @@ export const Form = () => {
                   name="player4Name"
                   onChange={handleChange}
                   placeholder="Enter player 4 name"
-                  className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                  className="bg-black gradient-text focus:outline-none w-full input py-3 px-4 "
                 />
               </div>
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-left text-gray-300 mb-2">
                 Year *
               </label>
               <input
@@ -184,12 +193,12 @@ export const Form = () => {
                 onChange={handleChange}
                 required
                 placeholder="Enter Year"
-                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                className="bg-black gradient-text input w-full focus:outline-none py-3 px-4 "
               />
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-left text-sm font-medium text-gray-300 mb-2">
                 Branch *
               </label>
               <input
@@ -198,21 +207,21 @@ export const Form = () => {
                 onChange={handleChange}
                 required
                 placeholder="Enter Branch"
-                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                className="bg-black w-full input focus:outline-none py-3 px-4 "
               />
             </div>
 
             <div className="mb-6">
               <a
                 onClick={handleModal}
-                className="text-yellow-500 cursor-pointer hover:underline transition duration-150 ease-in-out"
+                className="gradient-text w-full cursor-pointer hover:underline transition duration-150 ease-in-out"
               >
                 Generate QR Code
               </a>
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="text-left block text-sm font-medium text-gray-300 mb-2">
                 Transaction ID *
               </label>
               <input
@@ -221,13 +230,13 @@ export const Form = () => {
                 onChange={handleChange}
                 required
                 placeholder="Enter Transaction ID"
-                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                className="bg-black input focus:outline-none py-3 px-4 w-full"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-3 bg-yellow-500 text-white rounded-lg shadow-lg hover:bg-yellow-600 transition-all duration-150 ease-in-out focus:ring-4 focus:ring-yellow-300"
+              className="w-full py-3 gradient-text gradient-border  text-white rounded-lg shadow-lg hover:gradient-text transition-all duration-150 ease-in-out focus:ring-4 focus:gradient-text"
             >
               {loading ? (
                 <span className="loading loading-infinity loading-lg"></span>
