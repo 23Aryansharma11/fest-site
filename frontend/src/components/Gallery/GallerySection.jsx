@@ -2,7 +2,7 @@ import robotImage from "../../assets/robot_spy-B22OfTYi.png";
 import { motion } from "framer-motion";
 
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 1 },
   show: {
     opacity: 1,
     transition: {
