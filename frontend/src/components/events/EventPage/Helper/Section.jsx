@@ -23,7 +23,7 @@ const Section = ({ data }) => {
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
-      className="container mx-auto px-4 py-10 grid lg:grid-cols-4 md:grid-cols-2 xs:grid-cols-1 gap-8 "
+      className={`container mx-auto px-4 py-10 grid lg:grid-cols-4 md:grid-cols-2 xs:grid-cols-1 gap-8 `}
     >
       {data.map((event, index) => (
         <motion.div

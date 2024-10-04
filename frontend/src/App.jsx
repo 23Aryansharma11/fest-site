@@ -20,6 +20,7 @@ import PageNotFOund from "./pages/PageNotFOund.jsx";
 import { Tempcard } from "./components/card.jsx";
 import { Loading } from "./pages/Loading.jsx";
 import ComingSoon from "./pages/ComingSoom.jsx";
+import CollaboratorPage from "./pages/Collaborate.jsx";
 
 function App() {
   const { authUser } = useAuthContext();
@@ -65,7 +66,6 @@ function App() {
         <Route path="/developers" element={<Developers />} />
         <Route path="/about" element={<About value={data} />} />
         <Route path="/gallery" element={<Gallery />} />
-
         <Route path="/sponsors" element={<Sponsors />} />
         <Route
           path="/update/:id"
@@ -75,6 +75,7 @@ function App() {
         <Route path="/" element={<Loading />} />
         <Route path="*" element={<PageNotFOund />} />
         <Route path="/comingSoon" element={<ComingSoon />} />
+        <Route path="/collaborate" element={<CollaboratorPage />} />
       </Routes>
 
       <Toaster />

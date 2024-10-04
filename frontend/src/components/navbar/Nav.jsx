@@ -4,7 +4,7 @@ import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { useAuthContext } from "../../context/authcontext";
 import toast from "react-hot-toast";
 import { motion, useAnimation } from "framer-motion";
-import "./nvabar.css"
+import "./nvabar.css";
 const Nav = () => {
   const { authUser, setAuthUser } = useAuthContext();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,6 +16,7 @@ const Nav = () => {
     { label: "Sponsors", href: "/sponsors" },
     { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
+    { label: "Collaborate", href: "/collaborate" },
   ];
 
   const handleLogout = async () => {
@@ -49,7 +50,13 @@ const Nav = () => {
             src="https://res.cloudinary.com/aryansharma/image/upload/f_auto,q_auto/utkarsh_logo"
             alt="logo"
           />
-        <span style={{fontStyle:"'Marine Corps', sans-serif"}} className="logo gradient-text"> UTF 2024</span>
+          <span
+            style={{ fontStyle: "'Marine Corps', sans-serif" }}
+            className="logo gradient-text"
+          >
+            {" "}
+            UTF 2024
+          </span>
         </div>
       </Link>
       <div className="md:hidden flex items-center">
@@ -94,34 +101,7 @@ const Nav = () => {
               </NavLink>
             </motion.div>
           ))}
-          {
-            !authUser&& (
-              <motion.div
-              initial={{ opacity: 0, y: -30 }} // Start above the normal position
-              animate={{ opacity: 1, y: 0 }} // Fall to original position
-              transition={{
-                duration: 0.5,
-                delay: navItems.length * 0.1, // Delay for the next item
-              }}
-            >
-              <NavLink
-                to="/getme"
-                className={({ isActive }) =>
-                  `py-2 md:px-4 md:py-0 block font-bold  p-4 hover:gradient-text ${
-                    isActive
-                      ? "gradient-text"
-                      : "hover:gradient-text transition-colors duration-300"
-                  }`
-                }
-                onClick={toggleMobileMenu}
-              >
-               
-                  Collaborate
-               
-              </NavLink>
-            </motion.div>
-            )
-          }
+
           {authUser && (
             <motion.div
               initial={{ opacity: 0, y: -30 }} // Start above the normal position
@@ -220,7 +200,7 @@ const Nav = () => {
                   Login
                 </Link>
               </button>
-              <button  className="  hidden md:block   button    duration-300">
+              <button className="  hidden md:block   button    duration-300">
                 <Link
                   to="/register"
                   className="block text-white font-bold "
