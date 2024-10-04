@@ -81,7 +81,7 @@ const PaymentPage = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className=" bg-transparent gradient-border py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:shadow-2xl"
+            className=" bg-transparent gradient-border py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:shadow-2xl "
             onClick={handlePaymentClick}
           >
             Regular Payment
@@ -93,7 +93,7 @@ const PaymentPage = () => {
           {showPaymentForm && (
             <motion.div
               key="payment-form"
-              className="mt-12"
+              className="mt-12 w-full sm:w-full sm:px-4" // Full width on small screens
               variants={fadeInUp}
               initial="hidden"
               animate="visible"
@@ -103,7 +103,7 @@ const PaymentPage = () => {
                 Payment Form
               </h2>
               <motion.form
-                className="bg-gray-800 p-10 rounded-lg flex flex-col gap-6 shadow-lg max-w-lg mx-auto" // Increased width
+                className="bg-gray-800 p-10 rounded-lg flex flex-col gap-6 shadow-lg max-w-lg mx-auto sm:w-full" // Full width on small screens
                 initial="hidden"
                 animate="visible"
                 variants={staggerContainer}
@@ -111,37 +111,37 @@ const PaymentPage = () => {
                 <motion.input
                   type="text"
                   placeholder="Name"
-                  className="p-3  bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="bg-black gradient-text focus:outline-none input py-3 px-4 w-full"
                   variants={fadeInUp}
                 />
                 <motion.input
                   type="text"
                   placeholder="Contact Number"
-                  className="p-3 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="bg-black gradient-text focus:outline-none input py-3 px-4 w-full"
                   variants={fadeInUp}
                 />
                 <motion.input
                   type="email"
                   placeholder="Email ID"
-                  className="p-3 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="bg-black gradient-text focus:outline-none input py-3 px-4 w-full"
                   variants={fadeInUp}
                 />
                 <motion.input
                   type="text"
                   placeholder="Transaction ID"
-                  className="p-3 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="bg-black gradient-text focus:outline-none input py-3 px-4 w-full"
                   variants={fadeInUp}
                 />
                 <motion.button
                   type="button"
-                  className="bg-transparent gradient-border py-2 rounded-md  transition duration-300 ease-in-out transform hover:shadow-xl"
-                  onClick={handleShowQR} // Button to show QR Code Modal
+                  className="bg-transparent gradient-border py-2 rounded-md transition duration-300 ease-in-out transform hover:shadow-xl"
+                  onClick={handleShowQR}
                 >
                   Show QR Code
                 </motion.button>
                 <motion.button
                   type="submit"
-                  className="bg-transparent gradient-border py-3 rounded-md  transition duration-300 ease-in-out transform hover:shadow-xl"
+                  className="bg-transparent gradient-border py-3 rounded-md transition duration-300 ease-in-out transform hover:shadow-xl"
                   variants={fadeInUp}
                 >
                   Submit
@@ -156,7 +156,7 @@ const PaymentPage = () => {
           {showQR && (
             <motion.div
               className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-              onClick={handleCloseQR} // Close modal on overlay click
+              onClick={handleCloseQR}
               variants={fadeInUp}
               initial="hidden"
               animate="visible"

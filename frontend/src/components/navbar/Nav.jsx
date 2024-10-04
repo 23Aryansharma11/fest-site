@@ -97,30 +97,6 @@ const Nav = () => {
               </NavLink>
             </motion.div>
           ))}
-          {authUser && (
-            <motion.div
-              initial={{ opacity: 0, y: -30 }} // Start above the normal position
-              animate={{ opacity: 1, y: 0 }} // Fall to original position
-              transition={{
-                duration: 0.5,
-                delay: navItems.length * 0.1, // Delay for the next item
-              }}
-            >
-              <NavLink
-                to="/getme"
-                className={({ isActive }) =>
-                  `py-2 md:px-4 md:py-0 block font-bold  p-4 hover:gradient-text ${
-                    isActive
-                      ? "gradient-text"
-                      : "hover:gradient-text transition-colors duration-300"
-                  }`
-                }
-                onClick={toggleMobileMenu}
-              >
-                Collaborate
-              </NavLink>
-            </motion.div>
-          )}
 
           {authUser && (
             <motion.div
