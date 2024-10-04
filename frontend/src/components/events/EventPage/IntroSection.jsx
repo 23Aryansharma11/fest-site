@@ -1,9 +1,11 @@
 import { MotionConfig } from "framer-motion";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Hexagon } from "../../Animation/Hexagon";
 const IntroSection = () => {
   return (
     <div className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+     <Hexagon/>
       <div className="bg-black bg-opacity-50 p-4 rounded-lg">
         <motion.div
         initial={{ opacity: 1, x: -800, scale: 1 }}

@@ -49,9 +49,9 @@ const Contact = () => {
         <div className="xl:max-w-7xl bg-inherit drop-shadow-xl border-3  border-black/20 w-full rounded-md flex justify-between items-stretch xs:px-2 md:px-5 xl:px-5 py-5">
           <button
             onClick={() => navigate(-1)}
-            className="absolute left-3 top-10 gradient-text bg-transparent"
+            className="absolute left-3 top-10 bg bg-transparent text-white"
           >
-            <IoIosArrowBack className="gradient-text" />
+            <IoIosArrowBack className="text-white" />
           </button>
           <div className="sm:w-[60%] lg:w-[50%] bg-cover bg-center items-center justify-center hidden md:flex">
             <img
