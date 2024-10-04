@@ -1,5 +1,20 @@
 import robotImage from "../../assets/robot_spy-B22OfTYi.png";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from "react";
+
+const GallerySection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); 
+    window.addEventListener("resize", handleResize); 
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
 const containerVariants = {
   hidden: { opacity: 1 },
@@ -11,22 +26,21 @@ const containerVariants = {
   },
 };
 
-const childVariants = {
-  hidden: { opacity: 0, y: 50, rotate: -10 },
-  show: {
-    opacity: 1,
-    y: 0,
-    rotate: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
-  hover: {
-    scale: 1.1,
-    rotate: 5,
-    transition: { duration: 0.3, ease: "easeInOut" },
-  },
-};
+  const childVariants = {
+    hidden: { opacity: 0, y: 50, rotate: -10 },
+    show: {
+      opacity: 1,
+      y: 0,
+      rotate: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+    hover: {
+      scale: 1.1,
+      rotate: 5,
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
+  };
 
-const GallerySection = () => {
   const images = [
     {
       imgUrl:
@@ -39,23 +53,22 @@ const GallerySection = () => {
       imgUrl:
         "https://i.pinimg.com/564x/c1/3c/c8/c13cc8b2e0c21cf637ec362e1d45718d.jpg",
     },
-    // Add new images after this
   ];
 
   return (
     <section className="min-h-screen w-full flex justify-center items-center">
       <motion.div
         initial="hidden"
-        whileInView="show" // Parent container will animate when in view
+        whileInView="show"
         variants={containerVariants}
-        viewport={{ amount: 0.2 }}
+        viewport={{ amount: 0.2, once: true }} // Load once in view
       >
         <div className="h-full w-full flex flex-wrap justify-evenly items-center gap-5">
-          {images.map((image, key) => (
+        {images.map((image, key) => (
             <motion.div
               key={key}
               variants={childVariants}
-              whileInView="show" // Child will animate when it is in view
+              whileInView="show"
               initial="hidden"
               whileHover="hover"
               viewport={{ amount: 0.5 }}
@@ -68,12 +81,11 @@ const GallerySection = () => {
                 />
               </div>
             </motion.div>
-          ))}
-          {images.map((image, key) => (
+          ))}{images.map((image, key) => (
             <motion.div
               key={key}
               variants={childVariants}
-              whileInView="show" // Child will animate when it is in view
+              whileInView="show"
               initial="hidden"
               whileHover="hover"
               viewport={{ amount: 0.5 }}
@@ -86,12 +98,11 @@ const GallerySection = () => {
                 />
               </div>
             </motion.div>
-          ))}
-          {images.map((image, key) => (
+          ))}{images.map((image, key) => (
             <motion.div
               key={key}
               variants={childVariants}
-              whileInView="show" // Child will animate when it is in view
+              whileInView="show"
               initial="hidden"
               whileHover="hover"
               viewport={{ amount: 0.5 }}
@@ -104,12 +115,11 @@ const GallerySection = () => {
                 />
               </div>
             </motion.div>
-          ))}
-          {images.map((image, key) => (
+          ))}{images.map((image, key) => (
             <motion.div
               key={key}
               variants={childVariants}
-              whileInView="show" // Child will animate when it is in view
+              whileInView="show"
               initial="hidden"
               whileHover="hover"
               viewport={{ amount: 0.5 }}
@@ -122,12 +132,11 @@ const GallerySection = () => {
                 />
               </div>
             </motion.div>
-          ))}
-          {images.map((image, key) => (
+          ))}{images.map((image, key) => (
             <motion.div
               key={key}
               variants={childVariants}
-              whileInView="show" // Child will animate when it is in view
+              whileInView="show"
               initial="hidden"
               whileHover="hover"
               viewport={{ amount: 0.5 }}
