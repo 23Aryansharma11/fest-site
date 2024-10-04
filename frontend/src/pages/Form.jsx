@@ -1,120 +1,243 @@
-import React, { useState } from 'react'
-import useRegistration from '../hooks/useRegistration.js'
-import Nav from '../components/navbar/Nav'
-import { useAuthContext } from '../context/authcontext'
-import { useParams } from 'react-router-dom'
-// import { useRegistration } from '../hooks/useRegistration.js'
-// import Input from '../components/input/Input.jsx'
-import QR from "./qrcode.jpg"
+import React, { useState } from "react";
+import useRegistration from "../hooks/useRegistration.js";
+import Nav from "../components/navbar/Nav";
+import { useAuthContext } from "../context/authcontext";
+import { useParams } from "react-router-dom";
+import QR from "./qrcode.jpg";
+
 export const Form = () => {
-  const handleModal=()=>{
-    setQr(!qr)
-  }
-  const [qr,setQr]=useState(false)
-  const {registration,loading}=useRegistration()
-  const {name}=useParams()
-  console.log(name)
-  const {authUser}=useAuthContext()
-  const [values,setValues]=useState({email:authUser.email,player2Name:"",player3Name:"",player4Name:"",eventName:name})
-  const handleChange=(e)=>{
-        setValues((prev)=>{return {...prev,[e.target.name]:e.target.value}})
-  }
-  
-  const handleSubmit=async(e)=>{
+  const [qr, setQr] = useState(false);
+  const { registration, loading } = useRegistration();
+  const { name } = useParams();
+  const { authUser } = useAuthContext();
+  const [values, setValues] = useState({
+    email: authUser.email,
+    player2Name: "",
+    player3Name: "",
+    player4Name: "",
+    eventName: name,
+  });
+
+  const handleModal = () => {
+    setQr(!qr);
+  };
+
+  const handleChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    try{
+    try {
       await registration(values);
-
-
-    }catch(err){
-      console.log(err)
+    } catch (err) {
+      console.log(err);
     }
-  }
-  console.log(values)
+  };
+
   return (
     <>
-    <Nav/>
-    <div className='w-full '>
-    <h1 className='text-yellow-500 py-3 orbitron xs:text-4xl'>Registration Form</h1>
-    <form onSubmit={(e)=>handleSubmit(e)}>
-    {qr?
-    <div className=' w-full d-flex justify-center'>
-  <div className='fixed h-max top-5 p-4 bg-white z-30 mx-auto  max-w-96'>
-   <div className='mx-auto'>
-    <img className="h-72 object-cover w-64 mx-auto pb-7" src={QR}></img>
-    
-   </div>
- 
- <p className='text-error'><b>Note:</b> Everyone is required to pay fees according to their event.And after payment it is required to fill transaction id in the form. Please keep in mind that Tech Team will only accept application after verification of transaction id. </p>
- <button onClick={handleModal} className='absolute top-0 right-0 text-white'>X</button>
-  </div></div>:null
-  }
-     <label className="form-control p-12 mx-auto backdrop:blur-xl max-w-lg min-w-64 bg-transparent border-yellow-400 border-l cabin">
-    
-     <div className='relative' >
-    
-  <div className="label w-full">
-    <span className="label-text text-white">Event Name *</span>
-   
-  </div>
-  <input disabled onChange={(e)=>{handleChange(e)}} value={name} name='eventName' required="true" type="text" placeholder="Enter event name" className="input disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 input-bordered bg-black text-white select-warning border-white  w-full " />
-  <div className="label">
-    <span className="label-text text-white">Email *</span>
-   
-  </div>
-  <input type="text" required="true" disabled value={authUser.email} onChange={(e)=>{handleChange(e)}} name='email'  placeholder="Enter Your email" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
-  <div className="label">
-    <span required= "true"  className="label-text text-white">Contact No. *</span>
-   
-  </div>
-  <input type="tel" required="true" onChange={(e)=>{handleChange(e)}} name='contact'  placeholder="Enter Contact No" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
-  <div className="label">
-    <span className="label-text text-white">Player 1 Name * </span>
-   
-  </div>
-  <input type="text" required="true" placeholder="Enter player 1 name " onChange={(e)=>{handleChange(e)}} name='player1Name'  className="input input-bordered bg-black text-white select-warning border-white  w-full " />
-  <div className="label">
-    <span className="label-text text-white">Player 2 Name (if applicable)</span>
-   
-  </div>
-  <input  type="text" onChange={(e)=>{handleChange(e)}} name='player2Name'  placeholder="Enter player 2 name (if applicable)" className="input input-bordered bg-black text-white select-warning border-white  w-full " />
-  <div className="label">
-    <span className="label-text text-white">Player 3 Name (if applicable)</span>
-   
-  </div>
-  <input type="text" placeholder="Enter player 3 name (if applicable)" onChange={(e)=>{handleChange(e)}} name='player3Name'  className="input input-bordered bg-black text-white select-warning border-white  w-full " />
-  <div className="label">
-    <span className="label-text text-white">Player 4 Name (if applicable)</span>
-   
-  </div>
-  <input type="text" placeholder="Enter player 4 name (if applicable)" onChange={(e)=>{handleChange(e)}} name='player4Name'  className="input input-bordered bg-black text-white select-warning border-white  w-full " />
-  <div className="label">
-    <span className="label-text text-white">Year *</span>
-   
-  </div>
-  <input type="text" required="true" placeholder="Enter Year" onChange={(e)=>{handleChange(e)}} name='year'  className="input input-bordered bg-black text-white select-warning border-white  w-full " />
-  <div className="label">
-    <span className="label-text text-white">Branch *</span>
-   
-  </div>
-  <input type="text" required placeholder="Enter Branch" onChange={(e)=>{handleChange(e)}} name='branch' className="input input-bordered select-warning border-white  bg-black text-white w-full " />
-  
-  <a onClick={handleModal} className='text-error ml-auto float-right pt-6'>Generate QR Code</a>
-  
-  <div className="label">
-    <span className="label-text text-white">Transaction ID *</span>
-   
-  </div>
-  <input type="text" required placeholder="Enter Transaction id" onChange={(e)=>{handleChange(e)}} name='transaction'  className="input input-bordered select-warning border-white  bg-black text-white w-full " />
-</div>
-<button className="btn btn-warning   mt-6">{loading?<span className="loading loading-infinity loading-lg"></span>:"Submit"}</button>
-</label>
-</form>
- 
+      <Nav />
+      <div className="min-h-screen flex items-center justify-center bg-gray-900 py-12">
+        <div className="w-full max-w-2xl p-8 bg-gray-800 shadow-lg rounded-lg">
+          <h1 className="text-3xl text-yellow-500 font-bold text-center mb-6">
+            Event Registration Form
+          </h1>
+          <form onSubmit={handleSubmit}>
+            {qr && (
+              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-300">
+                <div className="relative bg-white p-6 rounded-lg shadow-lg w-full max-w-sm">
+                  <img
+                    className="mx-auto h-64 object-cover rounded-md"
+                    src={QR}
+                    alt="QR Code"
+                  />
+                  <p className="text-gray-700 mt-4 text-sm text-center">
+                    <strong className="text-red-500">Note:</strong> Please pay
+                    the event fee and fill in the transaction ID below.
+                    Applications are processed only after payment verification.
+                  </p>
+                  <button
+                    onClick={handleModal}
+                    className="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+                  >
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            )}
 
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Event Name *
+              </label>
+              <input
+                type="text"
+                name="eventName"
+                value={name}
+                disabled
+                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500 cursor-not-allowed"
+              />
+            </div>
 
-    </div>
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Email *
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={authUser.email}
+                disabled
+                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500 cursor-not-allowed"
+              />
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Contact No. *
+              </label>
+              <input
+                type="tel"
+                name="contact"
+                onChange={handleChange}
+                required
+                placeholder="Enter Contact No."
+                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Player 1 Name *
+                </label>
+                <input
+                  type="text"
+                  name="player1Name"
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter player 1 name"
+                  className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                />
+              </div>
+
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Player 2 Name (if applicable)
+                </label>
+                <input
+                  type="text"
+                  name="player2Name"
+                  onChange={handleChange}
+                  placeholder="Enter player 2 name"
+                  className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                />
+              </div>
+
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Player 3 Name (if applicable)
+                </label>
+                <input
+                  type="text"
+                  name="player3Name"
+                  onChange={handleChange}
+                  placeholder="Enter player 3 name"
+                  className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                />
+              </div>
+
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Player 4 Name (if applicable)
+                </label>
+                <input
+                  type="text"
+                  name="player4Name"
+                  onChange={handleChange}
+                  placeholder="Enter player 4 name"
+                  className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+                />
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Year *
+              </label>
+              <input
+                type="text"
+                name="year"
+                onChange={handleChange}
+                required
+                placeholder="Enter Year"
+                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+              />
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Branch *
+              </label>
+              <input
+                type="text"
+                name="branch"
+                onChange={handleChange}
+                required
+                placeholder="Enter Branch"
+                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+              />
+            </div>
+
+            <div className="mb-6">
+              <a
+                onClick={handleModal}
+                className="text-yellow-500 cursor-pointer hover:underline transition duration-150 ease-in-out"
+              >
+                Generate QR Code
+              </a>
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Transaction ID *
+              </label>
+              <input
+                type="text"
+                name="transaction"
+                onChange={handleChange}
+                required
+                placeholder="Enter Transaction ID"
+                className="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:ring-yellow-500 focus:border-yellow-500"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3 bg-yellow-500 text-white rounded-lg shadow-lg hover:bg-yellow-600 transition-all duration-150 ease-in-out focus:ring-4 focus:ring-yellow-300"
+            >
+              {loading ? (
+                <span className="loading loading-infinity loading-lg"></span>
+              ) : (
+                "Submit"
+              )}
+            </button>
+          </form>
+        </div>
+      </div>
     </>
-  )
-}
-
+  );
+};
