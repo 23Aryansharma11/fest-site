@@ -15,8 +15,8 @@ const Contact = () => {
   const handleClick = (e) => {
     e.preventDefault();
 
-    if(!name||!email||!message){
-      return toast.error("Please enter all fields")
+    if (!name || !email || !message) {
+      return toast.error("Please enter all fields");
     }
     console.log(form.current);
     // setEmail("");
@@ -46,10 +46,10 @@ const Contact = () => {
     <>
       <Nav />
       <div className="flex justify-center items-center w-full h-[100vh] bg-inherit xs:p-0 md:px-5 py-5 overflow-hidden">
-        <div className="xl:max-w-7xl bg-inherit drop-shadow-xl border-3  border-black/20 w-full rounded-md flex justify-between items-stretch xs:px-2 md:px-5 xl:px-5 py-5">
+        <div className="xl:max-w-7xl bg-inherit drop-shadow-xl border-3  border-black/20 w-full rounded-md flex justify-between items-stretch xs:px-2 md:px-5 xl:px-5 py-5 ">
           <button
             onClick={() => navigate(-1)}
-            className="absolute left-3 top-10 gradient-text bg-transparent"
+            className="absolute left-3 top-10 gradient-text "
           >
             <IoIosArrowBack className="gradient-text" />
           </button>
@@ -69,7 +69,7 @@ const Contact = () => {
                 <form onSubmit={handleClick} ref={form}>
                   <div className="flex  flex-col gap-6">
                     <input
-                    required
+                      required
                       type="text"
                       value={name}
                       name="name"
@@ -81,7 +81,7 @@ const Contact = () => {
                     />
 
                     <input
-                    required
+                      required
                       type="email"
                       value={email}
                       name="email"

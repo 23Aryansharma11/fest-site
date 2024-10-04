@@ -19,6 +19,7 @@ import { Update } from "./pages/Update.jsx";
 import PageNotFOund from "./pages/PageNotFOund.jsx";
 import { Tempcard } from "./components/card.jsx";
 import { Loading } from "./pages/Loading.jsx";
+import ComingSoon from "./pages/ComingSoom.jsx";
 
 function App() {
   const { authUser } = useAuthContext();
@@ -73,6 +74,7 @@ function App() {
         <Route path="/hello" element={<Tempcard />} />
         <Route path="/" element={<Loading />} />
         <Route path="*" element={<PageNotFOund />} />
+        <Route path="/comingSoon" element={<ComingSoon />} />
       </Routes>
 
       <Toaster />
