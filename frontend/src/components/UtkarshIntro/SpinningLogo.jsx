@@ -1,32 +1,43 @@
-import "./spinningLogo.css";
-import img from  "../../assets/atlantus.png"
-const SpinningLogo = () => {
-  // Todo: Add higher quality logo
-  const frontImageUrl =
-    "https://res.cloudinary.com/aryansharma/image/upload/v1721474616/UtkarshLogo.png";
+import { motion } from "framer-motion";
+import img from "../../assets/atlantus.png"; // Path to your image
+
+const SpinningCoinLogo = () => {
+  // Define the spin animation
+  const spinAnimation = {
+    rotateY: [0, 360], // Spin around Y-axis
+    transition: {
+      duration: 4,
+      ease: "linear",
+      repeat: Infinity, // Repeat infinitely
+    },
+  };
+
   return (
-    <div className="flex justify-center items-center h-full">
-      <div className="coin relative size-48 md:size-96 transform-style-preserve-3d animate-spin-coin">
-        <div className="coin-face coin-front absolute w-full h-full backface-hidden">
+    <div className="flex justify-center items-center h-screen bg-gray-100">
+      <motion.div
+        className="relative w-64 h-64 md:w-96 md:h-96 perspective-1000" // Increased size
+        style={{ transformStyle: "preserve-3d" }} // Enable 3D transformations
+        animate={spinAnimation}
+      >
+        {/* Front face */}
+        <div className="absolute w-full h-full backface-hidden">
           <img
             src={img}
-            alt="Front"
-            className="w-full h-full object-cover"
+            alt="Coin Front"
+            className="w-full h-full object-cover rounded-full" // Rounded for coin effect
           />
         </div>
-        <div className="coin-face coin-back absolute w-full h-full backface-hidden transform rotate-y-180">
+        {/* Back face */}
+        <div className="absolute w-full h-full backface-hidden transform rotate-y-180">
           <img
             src={img}
-            alt="Back"
-            className="w-full h-full object-cover"
+            alt="Coin Back"
+            className="w-full h-full object-cover rounded-full" // Rounded for coin effect
           />
         </div>
-        <div className="coin-edge absolute w-full h-full backface-hidden">
-          <div className="edge w-full h-full bg-gray-300 transform rotate-x-90 translate-z-24"></div>
-        </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
 
-export default SpinningLogo;
+export default SpinningCoinLogo;
