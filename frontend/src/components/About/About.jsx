@@ -10,7 +10,7 @@ const About = () => {
     <div className="bg-black p-4 md:p-12 text-white sm:mt-[15rem]" ref={ref}>
       {/* About Heading */}
       <motion.h2
-        className="text-3xl gradient-text md:text-5xl font-bold mb-8 text-center"
+        className="text-6xl gradient-text md:text-5xl font-bold mb-8 text-center"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -50 }}
         transition={{ duration: 0.5 }}
