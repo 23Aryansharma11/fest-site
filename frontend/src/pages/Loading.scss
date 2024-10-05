@@ -10,12 +10,10 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 
 body {
 	font-family: 'Dosis', Calibri, Arial, sans-serif;
-	color: #fff;
-	background: #000;
+	// color: #fff;
+	
 }
-link:hover{
 
-}
 a {
 	color: #f0f0f0;
 	text-decoration: none;
@@ -56,13 +54,23 @@ a:hover {
 }
 
 .os-phrases h2 {
+
 	font-family: 'Marine Corps', sans-serif;
-	
-	font-size: 70px;
+font-size: 70px;
 	font-weight: 200;
 	width: 100%;
 	overflow: hidden;
 	// text-transform: uppercase;
+	background: linear-gradient(to right, #A32CC4, #FBA804); /* Your gradient colors */
+	-webkit-background-clip: text; /* For Safari */
+	background-clip: text; /* For other browsers */
+	color: transparent; /* Make the text color transparent */
+	// font-size: 48px; /* Adjust as needed */
+	font-weight: bold; /* Adjust as needed */
+	/* border: 3px solid #FFDD00; Border color */
+	padding: 5px; /* Add padding for better appearance */
+	display: inline-block; /* Ensure border only wraps text */
+  
 	padding: 0;
 	margin: 0;
 	position: absolute;
@@ -75,13 +83,17 @@ a:hover {
 
 .os-phrases h2,
 .os-phrases h2 > span {
+	
 	height: 100%;
+	position: absolute;
 	/* Centering with flexbox */
+	text-align: center;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
+	justify-content:center ;
 	-webkit-flex-direction: row;
 	-ms-flex-direction: row;
 	flex-direction: row;
@@ -98,7 +110,8 @@ a:hover {
 }
 
 .os-phrases h2 > span {
-	margin: 0 15px;
+	margin: 0 auto;
+	
 }
 
 .os-phrases h2 > span > span {
@@ -110,38 +123,46 @@ a:hover {
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .os-phrases h2 > span > span > span {
   
 	display: inline-block;
-	color: hsla(0,0%,0%,0);
+	// color: hsla(0,0%,0%,0);
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	-webkit-transform: translate3d(0,0,0);
 	-moz-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-	-webkit-animation: OpeningSequence 5.2s linear forwards;
-	-moz-animation: OpeningSequence 5.2s linear forwards;
-	animation: OpeningSequence 5.2s linear forwards;
+	-webkit-animation: OpeningSequence 3.2s linear forwards;
+	-moz-animation: OpeningSequence 3.2s linear forwards;
+	animation: OpeningSequence 3.2s linear forwards;
 }
 
 .os-phrases h2:nth-child(1) > span > span > span {
-	font-size: 150px;
+	// font-size: 150px;
+
+    
 }
 
 .os-phrases h2:nth-child(2) > span > span > span {
-	-webkit-animation-delay: 5s;
-	-moz-animation-delay: 5s;
-	animation-delay: 5s;
+	
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	animation-delay: 3s;
 }
 
 .os-phrases h2:nth-child(3) > span > span > span {
-    font-size: 150px;
-	-webkit-animation-delay: 10s;
-	-moz-animation-delay: 10s;
-	animation-delay: 10s;
+    // font-size: 150px;
+	-webkit-animation-delay:6s;
+	-moz-animation-delay: 6s;
+	animation-delay: 6s;
+
+  
 }
 
 .os-phrases h2:nth-child(4) > span > span > span {
@@ -151,7 +172,7 @@ a:hover {
 }
 
 .os-phrases h2:nth-child(5) > span > span > span {
-	font-size: 150px;
+	// font-size: 150px;
 	-webkit-animation-delay: 21s;
 	-moz-animation-delay: 21s;
 	animation-delay: 21s;
@@ -174,14 +195,14 @@ a:hover {
 
 @-webkit-keyframes OpeningSequence {
 	0% {
-		text-shadow: 0 0 50px #fff;
-		letter-spacing: 80px;
+		// text-shadow: 0 0 50px #fff;
+		letter-spacing: 50px;
 		opacity: 0;
 		-webkit-transform: rotateY(-90deg);
 	}
 	50% {
 		text-shadow: 0 0 1px #fff;
-		letter-spacing: 14px;
+		letter-spacing: 10px;
 		opacity: 0.8;
 		-webkit-transform: rotateY(0deg);
 	}
@@ -296,6 +317,17 @@ a:hover {
 .os-phrases h2:nth-child(4) .word2 {
 	font-weight: 600;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

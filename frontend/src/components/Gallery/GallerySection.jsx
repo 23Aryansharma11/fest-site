@@ -43,18 +43,32 @@ const containerVariants = {
 
   const images = [
     {
-      imgUrl:
-        "https://i.pinimg.com/564x/59/4d/dc/594ddc10737934b1dbe7b1b4354aa3ae.jpg",
-    },
-    {
-      imgUrl: robotImage,
+      imgUrl: "https://res.cloudinary.com/dofidva2t/image/upload/v1728128984/wbika0kdq6ialclt3atu.jpg",
     },
     {
       imgUrl:
-        "https://i.pinimg.com/564x/c1/3c/c8/c13cc8b2e0c21cf637ec362e1d45718d.jpg",
+        "https://res.cloudinary.com/dofidva2t/image/upload/v1728128963/ip9tvpy5of6dxro3bqrq.jpg",
+    },
+    
+    {
+      imgUrl:
+        "https://res.cloudinary.com/dofidva2t/image/upload/v1728129109/xwghstgdcfpiqkhem9ll.jpg",
     },
   ];
-
+  const images2 = [
+    {
+      imgUrl: "https://res.cloudinary.com/dofidva2t/image/upload/v1728128967/o3qhv37uj1wfdw78odis.jpg",
+    },
+    {
+      imgUrl:
+        "https://res.cloudinary.com/dofidva2t/image/upload/v1728129067/wyliqcuri4b0zctbyneo.jpg",
+    },
+    
+    {
+      imgUrl:
+        "https://res.cloudinary.com/dofidva2t/image/upload/v1728129017/ftz0ind4f5qa4jar5z7p.jpg",
+    },
+  ];
   return (
     <section className="min-h-screen w-full flex justify-center items-center">
       <motion.div
@@ -81,7 +95,7 @@ const containerVariants = {
                 />
               </div>
             </motion.div>
-          ))}{images.map((image, key) => (
+          ))}{images2.map((image, key) => (
             <motion.div
               key={key}
               variants={childVariants}

@@ -58,9 +58,9 @@ const Section = ({ data }) => {
   return (
     <div
      
-      className="container mx-auto px-4 py-10 grid lg:grid-cols-4 md:grid-cols-2 xs:grid-cols-1 gap-8"
+      className={`container mx-auto px-4 py-10 grid  ${data.length===0?"grid-cols-1":"lg:grid-cols-4 md:grid-cols-2 xs:grid-cols-1"}  gap-8`}
     >
-      {data.map((event, index) => (
+      {data.length!==0?data.map((event, index) => (
         <motion.div
           key={index}
           className="flex justify-center"
@@ -79,7 +79,7 @@ const Section = ({ data }) => {
             description={event.description}
           />
         </motion.div>
-      ))}
+      )):<p className="text-white text-center text-2xl mx-auto event-p"> COMING SOON ....</p>}
     </div>
   );
 };

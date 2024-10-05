@@ -18,7 +18,7 @@ const data=await res.json()
 if(data.error==="Token expired"){
     localStorage.removeItem("user");
     setAuthUser(null);
-    navigate("/")
+    navigate("/home")
 }
 if(data.error){
     throw new Error(data.error)

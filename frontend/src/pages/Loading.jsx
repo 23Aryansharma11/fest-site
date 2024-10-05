@@ -21,9 +21,9 @@ export const Loading = () => {
     const splitText = (text,index) => {
       
         return text.split(' ').map((word, wordIndex) => (
-          <span key={wordIndex} className="word">
+          <span key={wordIndex} className="word ">
             {word.split('').map((letter, letterIndex) => (
-              <span key={letterIndex} className="letter">{letter}</span>
+              <span key={letterIndex} className="letter ">{letter}</span>
             ))}
           </span>
         ));
@@ -46,7 +46,7 @@ export const Loading = () => {
         .children( "span" ).lettering(); 
         setTimeout(()=>{
     navigate("/home")
-        },16000)
+        },9000)
     //    navigate("/home")
       }, []);
     
@@ -55,7 +55,7 @@ export const Loading = () => {
     {/* <Particles/> */}
     <div className="os-phrases" id="os-phrases">
     {phrases.map((phrase, index) => (
-          <h2 key={index} className={`phrase phrase-${index}`}>
+          <h2 key={index} className={`phrase xs:text-[4rem] md:text-[8rem] text-center flex justify-center phrase-${index}`}>
             {splitText(phrase,index)}
           </h2>
         ))}

@@ -31,11 +31,11 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route
           path="/register"
-          element={authUser ? <Navigate to="/" /> : <SignUp />}
+          element={authUser ? <Navigate to="/home" /> : <SignUp />}
         />
         <Route
           path="/login"
-          element={authUser ? <Navigate to="/" /> : <Login />}
+          element={authUser ? <Navigate to="/home" /> : <Login />}
         />
         <Route
           path="/form/:name"

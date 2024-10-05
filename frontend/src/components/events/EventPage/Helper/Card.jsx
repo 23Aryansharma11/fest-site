@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "./card.css";
 const Card = ({ title, fees, image, description }) => {
   const navigate = useNavigate();
-  let smalldesc = description?.slice(0, 100);
+  let smalldesc = description?.slice(0, 150);
   const handleClick = () => {
     const info = {
       title: title,
@@ -20,8 +20,8 @@ const Card = ({ title, fees, image, description }) => {
         className="absolute w-full h-full top-0  inner translate-y-96 peer-hover:translate-y-0  "
       ></div>
       <div className="text w-full h-full p-2 bg-transparent opacity-100">
-        <h1 className="text-2xl">{title}</h1>
-        <p>{smalldesc}</p>
+        <h1 className="text-2xl ">{title}</h1>
+        <p className="text-justify">{smalldesc}...</p>
         <p className="text-center">
           <span className="text-yellow-500 text-center ">Fees:</span>
           {fees}

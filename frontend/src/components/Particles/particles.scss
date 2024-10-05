@@ -1,5 +1,5 @@
 :root {
-  --total: 700; // default total particles
+  --total: 500; // default total particles
 }
 
 @media screen and (max-width: 768px) {
@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 480px) {
   :root {
-    --total: 200; // fewer particles for mobile devices
+    --total: 0; // fewer particles for mobile devices
   }
 }
 
@@ -54,7 +54,7 @@ body {
   opacity: 0; 
 }
 
-@for $i from 1 through 700 { // keep this constant
+@for $i from 1 through 500{ // keep this constant
   $z: (random(360) * 1deg); 
   $y: (random(360) * 1deg); 
   $hue: ((40/700 * $i) + $base-hue); // keep total constant for calculation
