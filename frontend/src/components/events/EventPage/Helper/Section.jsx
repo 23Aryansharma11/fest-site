@@ -67,7 +67,7 @@ const Section = ({ data }) => {
           variants={childVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{  amount: 0.3 }}
+          viewport={{ amount: 0.3 }}
           whileHover={hoverEffect} // 3D rotation and parallax effect
           whileTap={bounceEffect} // Bounce effect when tapped/clicked
         >
