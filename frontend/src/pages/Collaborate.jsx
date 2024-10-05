@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Nav from "../components/navbar/Nav";
 import Footer from "../components/Footer/Footer";
-
+import pay from "../assets/divay pay.jpg"
+import  useCollab  from "../hooks/useCollab";
+import toast from "react-hot-toast";
 const PaymentPage = () => {
+  const {collab,loading}=useCollab()
   const [showQR, setShowQR] = useState(false);
   const [showPaymentForm, setShowPaymentForm] = useState(false);
-
+const [data,setData]=useState({name:"",email:"",transaction:"",contact:""})
   const handleAnonymousPaymentClick = () => {
     setShowPaymentForm(false);
     setShowQR(true);
@@ -45,6 +48,26 @@ const PaymentPage = () => {
       transition: { staggerChildren: 0.2 },
     },
   };
+  const handleChange = (e) => {
+    // if(e.target.name === "contact"){
+    //   const number = e.target.value;
+    //   const alphabets = ['a', 'A', 'b', 'B']
+    //   number.split("").includes()
+    // }
+
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+const handleSubmit=async(e)=>{
+  
+  e.preventDefault();
+  try {
+    await collab(data);
+  } catch (err) {
+    toast.error(`${err}`)
+    console.log(err);
+  }
+}
 
   return (
     <>
@@ -107,27 +130,36 @@ const PaymentPage = () => {
                 initial="hidden"
                 animate="visible"
                 variants={staggerContainer}
+                onSubmit={handleSubmit}
               >
                 <motion.input
                   type="text"
+                  onChange={handleChange}
                   placeholder="Name"
+                  name="name"
                   className="bg-black gradient-text focus:outline-none input py-3 px-4 w-full"
                   variants={fadeInUp}
                 />
                 <motion.input
                   type="text"
+                  name="contact"
+                  onChange={handleChange}
                   placeholder="Contact Number"
                   className="bg-black gradient-text focus:outline-none input py-3 px-4 w-full"
                   variants={fadeInUp}
                 />
                 <motion.input
                   type="email"
+                  name="email"
+                  onChange={handleChange}
                   placeholder="Email ID"
                   className="bg-black gradient-text focus:outline-none input py-3 px-4 w-full"
                   variants={fadeInUp}
                 />
                 <motion.input
                   type="text"
+                  name="transaction"
+                  onChange={handleChange}
                   placeholder="Transaction ID"
                   className="bg-black gradient-text focus:outline-none input py-3 px-4 w-full"
                   variants={fadeInUp}
@@ -140,9 +172,10 @@ const PaymentPage = () => {
                   Show QR Code
                 </motion.button>
                 <motion.button
-                  type="submit"
+                  // type="submit"
                   className="bg-transparent gradient-border py-3 rounded-md transition duration-300 ease-in-out transform hover:shadow-xl"
                   variants={fadeInUp}
+                  
                 >
                   Submit
                 </motion.button>
@@ -177,7 +210,7 @@ const PaymentPage = () => {
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                 >
                   <img
-                    src="https://via.placeholder.com/200"
+                    onChange={handleChange} src={pay}
                     alt="QR Code"
                     className="w-48 h-48 mx-auto"
                   />

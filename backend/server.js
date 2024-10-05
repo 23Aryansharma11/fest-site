@@ -6,6 +6,7 @@ import authRoutes from "./routes/auth.routes.js";
 import regitrationRoutes from "./routes/registration.routes.js"
 import path from "path"
 import adminRoutes from "./routes/admin.routes.js"
+import collabRoutes from "./routes/collab.routes.js"
 // import { connect } from "mongoose";
 const app=express();
 app.use(express.json())
