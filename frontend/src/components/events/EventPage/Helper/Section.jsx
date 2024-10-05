@@ -56,10 +56,7 @@ const bounceEffect = {
 
 const Section = ({ data }) => {
   return (
-    <div
-     
-      className="container mx-auto px-4 py-10 grid lg:grid-cols-4 md:grid-cols-2 xs:grid-cols-1 gap-8"
-    >
+    <div className="container mx-auto px-4 py-10 grid lg:grid-cols-4 md:grid-cols-2 xs:grid-cols-1 gap-8">
       {data.map((event, index) => (
         <motion.div
           key={index}
@@ -67,7 +64,7 @@ const Section = ({ data }) => {
           variants={childVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{  amount: 0.3 }}
+          viewport={{ amount: 0.3 }}
           whileHover={hoverEffect} // 3D rotation and parallax effect
           whileTap={bounceEffect} // Bounce effect when tapped/clicked
         >
