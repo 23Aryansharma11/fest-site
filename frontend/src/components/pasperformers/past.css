@@ -1,5 +1,5 @@
 .slider-track{
-    animation: scroll 40s linear infinite;
+    animation: scroll 30s linear infinite;
     display: flex;
     width: calc((250px +10px)* 14);
 }
@@ -34,6 +34,7 @@
  .slide {
     height: 300px;
     width: 250px;
+   position: relative;
 }
 .sliider:before {
     left: 0;

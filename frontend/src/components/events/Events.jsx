@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import nfs from "../../assets/nfs.jpeg";
-import chess from "../../assets/chess.jpg";
-import pubg from "../../assets/pubg.jpg";
+
 import { Sidebar } from "./Sidebar.jsx";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
@@ -14,19 +12,19 @@ const Events = () => {
       name: "NFS",
       description:
         "Get ready to rev your engines and feel the adrenaline rush in the world of Need for Speed where speed meets excitement and every second counts!",
-      img: nfs,
+      img: "https://res.cloudinary.com/dofidva2t/image/upload/v1722049947/nfs_gbtjzc.jpg",
     },
     {
       name: "Chess",
       description:
         "Prepare to sharpen your mind and strategize your moves at the ultimate chess event—where every decision counts and only the best will checkmate their way to victory",
-      img: chess,
+      img: "https://res.cloudinary.com/dofidva2t/image/upload/v1722049946/chess_ctgg7z.jpg",
     },
     {
       name: "BGMI",
       description:
         "Gear up and get ready for the ultimate Battlegrounds Mobile India showdown—where strategic gameplay, intense battles, and only the strongest will emerge victorious!",
-      img: pubg,
+      img: "https://res.cloudinary.com/dofidva2t/image/upload/v1728236243/ubrj8qxrtgdq88xzmh5a.jpg",
     },
   ];
   const increase = () => {

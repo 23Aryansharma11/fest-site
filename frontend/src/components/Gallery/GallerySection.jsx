@@ -43,7 +43,18 @@ const containerVariants = {
 
   const images = [
     {
-      imgUrl: "https://res.cloudinary.com/dofidva2t/image/upload/v1728128984/wbika0kdq6ialclt3atu.jpg",
+      imgUrl: "https://res.cloudinary.com/dofidva2t/image/upload/v1728230457/h7f8onjbjgb0qw16vihr.jpg",
+    },
+      {
+      imgUrl: "https://res.cloudinary.com/dofidva2t/image/upload/v1728230414/iy1qwvvy8invssddjb1b.jpg",
+    },
+    {
+      imgUrl: "https://res.cloudinary.com/dofidva2t/image/upload/v1728235788/y4smaigvesi29syyiuzu.jpg",
+    },
+    
+    {
+      imgUrl:
+        "https://res.cloudinary.com/dofidva2t/image/upload/v1728230445/tisdggdq24xttwsce88y.jpg",
     },
     {
       imgUrl:
@@ -57,7 +68,7 @@ const containerVariants = {
   ];
   const images2 = [
     {
-      imgUrl: "https://res.cloudinary.com/dofidva2t/image/upload/v1728128967/o3qhv37uj1wfdw78odis.jpg",
+      imgUrl: "https://res.cloudinary.com/dofidva2t/image/upload/v1728128984/wbika0kdq6ialclt3atu.jpg",
     },
     {
       imgUrl:
@@ -67,6 +78,39 @@ const containerVariants = {
     {
       imgUrl:
         "https://res.cloudinary.com/dofidva2t/image/upload/v1728129017/ftz0ind4f5qa4jar5z7p.jpg",
+    },
+    {
+      imgUrl:
+        "https://res.cloudinary.com/dofidva2t/image/upload/v1728128981/lfmd0rszhzjmjy2nvcsu.jpg",
+    },
+    
+  ];
+
+
+  const images3 = [
+    {
+      imgUrl:
+        "https://res.cloudinary.com/dofidva2t/image/upload/v1728232673/qcl1efcktaw8sbehkezr.jpg",
+    },
+    {
+      imgUrl: "https://res.cloudinary.com/dofidva2t/image/upload/v1728230466/u1t4yus4rwdljjvhvixw.jpg",
+    },
+    {
+      imgUrl:
+        "https://res.cloudinary.com/dofidva2t/image/upload/v1728230446/dqsfykjuou8elo7mmttp.jpg",
+    },
+    
+   
+  ];
+  const images4 = [
+  
+    {
+      imgUrl:
+        "https://res.cloudinary.com/dofidva2t/image/upload/v1728230430/ulm0b8hbfsnjrpvel9xy.jpg",
+    },
+    {
+      imgUrl:
+        "https://res.cloudinary.com/dofidva2t/image/upload/v1728235526/bgfedxt6cthktt1cp4rd.jpg",
     },
   ];
   return (
@@ -112,7 +156,7 @@ const containerVariants = {
                 />
               </div>
             </motion.div>
-          ))}{images.map((image, key) => (
+          ))}{images3.map((image, key) => (
             <motion.div
               key={key}
               variants={childVariants}
@@ -129,24 +173,7 @@ const containerVariants = {
                 />
               </div>
             </motion.div>
-          ))}{images.map((image, key) => (
-            <motion.div
-              key={key}
-              variants={childVariants}
-              whileInView="show"
-              initial="hidden"
-              whileHover="hover"
-              viewport={{ amount: 0.5 }}
-            >
-              <div className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2">
-                <img
-                  src={image.imgUrl}
-                  alt="image"
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </div>
-            </motion.div>
-          ))}{images.map((image, key) => (
+          ))}{images4.map((image, key) => (
             <motion.div
               key={key}
               variants={childVariants}
@@ -164,6 +191,7 @@ const containerVariants = {
               </div>
             </motion.div>
           ))}
+          
         </div>
       </motion.div>
     </section>

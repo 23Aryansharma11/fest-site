@@ -18,9 +18,9 @@ const WelcomeScreen = () => {
           animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
           transition={{ type: "spring", stiffness: 800, damping: 150 }}
         >
-          <h2 className="text-6xl md:text-7xl font-bold mb-4 gradient-text">
+          <h1 className="text-6xl md:text-7xl font-bold mb-4 gradient-text">
             GALLERY
-          </h2>
+          </h1>
         </motion.div>
         <motion.div
           initial={{ opacity: 1, x: 0, y: 800, scale: 1 }}

@@ -96,7 +96,7 @@ h6 {
 p {
   font-family: "Cabin", sans-serif;
   color: white;
-  text-align: left;
+  text-align: justify;
 }
 body {
   text-align: center;
@@ -157,7 +157,12 @@ input {
   caret-color: white;
   outline: none;
 }
-
+h1{
+  font-family: "Marine Corps", sans-serif;
+}
+.utf{
+font-family: "Marine Corps", sans-serif;
+}
 input::-moz-focus-outer {
   border-color: none;
 }

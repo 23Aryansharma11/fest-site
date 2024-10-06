@@ -9,14 +9,14 @@ const About = () => {
   return (
     <div className="bg-black p-4 md:p-12 text-white sm:mt-[15rem]" ref={ref}>
       {/* About Heading */}
-      <motion.h2
+      <motion.h1
         className="text-6xl gradient-text md:text-5xl font-bold mb-8 text-center"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -50 }}
         transition={{ duration: 0.5 }}
       >
         About
-      </motion.h2>
+      </motion.h1>
 
       {/* Content Container */}
       <div className="flex flex-col md:flex-row gap-12">
@@ -30,9 +30,9 @@ const About = () => {
           <h1 className="text-2xl gradient-text font-semibold">
             UIT&apos;s Techfest
           </h1>
-          <h2 className="text-4xl gradient-text md:text-5xl font-bold my-6 ">
+          <h1 className="text-4xl gradient-text md:text-5xl font-bold my-6 ">
             UTF 2024
-          </h2>
+          </h1>
           <div className="flex items-start mb-8">
             <div className="gradient-text w-1 h-auto mr-4"></div>
             <p className="text-lg leading-relaxed">
@@ -73,9 +73,9 @@ const About = () => {
           animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 100 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-5xl  gradient-text font-bold my-6">
+          <h1 className="text-3xl md:text-5xl  gradient-text font-bold my-6">
             UTF 2024
-          </h2>
+          </h1>
           <div className="flex items-start mb-8">
             <div className="bg w-1 h-auto mr-4"></div>
             <p className="text-lg leading-relaxed">

@@ -5,10 +5,10 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 
 const Footer = () => {
   const socialMedia = [
-    { name: 'Facebook', url: 'https://facebook.com', icon: <FaFacebookF /> },
-    { name: 'Twitter', url: 'https://twitter.com', icon: <FaTwitter /> },
-    { name: 'Instagram', url: 'https://instagram.com', icon: <FaInstagram /> },
-    { name: 'LinkedIn', url: 'https://linkedin.com', icon: <FaLinkedinIn /> },
+   
+
+    { name: 'Instagram', url: 'https://www.instagram.com/uit.tech/', icon: <FaInstagram /> },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/technical-team-uit-786b4732b/', icon: <FaLinkedinIn /> },
   ];
 
   
@@ -16,7 +16,7 @@ const Footer = () => {
   const links = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Schedule', path: '/schedule' },
+    { name: 'Schedule', path: '/comingsoon' },
     { name: 'Events', path: '/events' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -39,7 +39,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
         >
-          <h2 className="gradient-text text-3xl font-bold mb-4">UTF 2024</h2>
+          <h2 className="gradient-text text-3xl font-bold utf mb-4">UTF 2024</h2>
           <p className="text-gray-300">Pioneering Innovation in Technology and Engineering.</p>
           <p className="text-gray-400 mt-4">Empowering the next generation of tech enthusiasts.</p>
         </motion.div>
@@ -53,8 +53,8 @@ const Footer = () => {
         >
           <h2 className="gradient-text text-xl font-bold mb-4">Contact Us</h2>
           <div className="text-center"><p className="text-center">{college}</p> <p className="text-center">{uni}</p> <p className="text-center" >{place}</p> <p className="text-center">{state}</p></div>
-          <p className="text-gray-300 mt-4 text-center">Email: info@uittechfest.com</p>
-          <p className="text-gray-300 text-center">Phone: +91 8626872550</p>
+          <p className="text-gray-300 mt-4 text-center">Email: technicalhead@uithpu.ac.in</p>
+          <p className="text-gray-300 text-center">Phone: +91 7018937275</p>
         </motion.div>
 
         {/* Quick Links Section */}
@@ -96,7 +96,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
                 transition={{ type: 'spring', stiffness: 300 }}
-                className="hover:gradient-text transition-colors duration-300"
+                className="hover:gradient-text social duration-300"
               >
                 {social.icon}
               </motion.a>
@@ -116,7 +116,7 @@ const Footer = () => {
           <h2 className="gradient-text text-xl font-bold mb-4">Sponsors</h2>
           <ul className="space-y-2">
             <li><a href="/sponsors" className="hover:gradient-text transition-colors duration-300">Become a Sponsor</a></li>
-            <li><a href="/partners" className="hover:gradient-text transition-colors duration-300">Our Partners</a></li>
+            <li><a href="/sponsors" className="hover:gradient-text transition-colors duration-300">Our Partners</a></li>
           </ul>
         </div>
         {/* <div>
@@ -129,15 +129,15 @@ const Footer = () => {
         <div>
           <h2 className="gradient-text text-xl font-bold mb-4">Volunteers</h2>
           <ul className="space-y-2">
-            <li><a href="/volunteer" className="hover:gradient-text transition-colors duration-300">Join Us</a></li>
-            <li><a href="/volunteer-guidelines" className="hover:gradient-text transition-colors duration-300">Guidelines</a></li>
+            <li><a href="/comingsoon" className="hover:gradient-text transition-colors duration-300">Join Us</a></li>
+            <li><a href="/about" className="hover:gradient-text transition-colors duration-300">Guidelines</a></li>
           </ul>
         </div>
         <div>
           <h2 className="gradient-text text-xl font-bold mb-4">Media</h2>
           <ul className="space-y-2">
-            <li><a href="/press" className="hover:gradient-text transition-colors duration-300">Press Kit</a></li>
-            <li><a href="/media-inquiries" className="hover:gradient-text transition-colors duration-300">Media Inquiries</a></li>
+            <li><a href="/contact" className="hover:gradient-text transition-colors duration-300">Press Kit</a></li>
+            <li><a href="/contact" className="hover:gradient-text transition-colors duration-300">Media Inquiries</a></li>
           </ul>
         </div>
       </motion.div>
@@ -145,10 +145,10 @@ const Footer = () => {
 
     <div className="border-t border-gray-700 mt-12 pt-8 pb-0 mb-0">
       <div className="container mx-auto px-4 text-center ">
-        <p className="text-gray-400 text-sm">&copy; 2024 UIT Shimla Tech Fest. All rights reserved.</p>
+        <p className="text-gray-400 text-sm gradient-text">&copy; 2024 UIT Shimla Tech Fest. All rights reserved by TECH.TEAM</p>
         <p className="text-gray-400 text-sm">
-          <a href="/privacy" className="hover:gradient-text transition-colors duration-300">Privacy Policy</a> | 
-          <a href="/terms" className="hover:gradient-text transition-colors duration-300 ml-2">Terms of Service</a>
+          <a href="/about" className="hover:gradient-text transition-colors duration-300">Privacy Policy</a> | 
+          <a href="/about" className="hover:gradient-text transition-colors duration-300 ml-2">Terms of Service</a>
         </p>
       </div>
     </div>
