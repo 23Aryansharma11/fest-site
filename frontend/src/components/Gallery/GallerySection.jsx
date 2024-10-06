@@ -1,4 +1,4 @@
-import robotImage from "../../assets/robot_spy-B22OfTYi.png";
+
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
