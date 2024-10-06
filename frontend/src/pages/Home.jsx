@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <div style={{width:"100%"}} className='bg-black overflow-hidden'>
-    <div className='overflow-hidden h-[100vh] absolute'>
+    <div className='overflow-hidden xs:h-[150vh] lg:h-[100vh] absolute'>
     <div className='  w-screen  top-[20rem]'>
         <Particles/>
         </div>

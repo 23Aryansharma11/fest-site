@@ -13,7 +13,7 @@ const SpinningCoinLogo = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center mt-[5rem] bg-gray-100">
       <motion.div
         className="relative w-64 h-64 md:w-96 md:h-96 perspective-1000" // Increased size
         style={{ transformStyle: "preserve-3d" }} // Enable 3D transformations

@@ -59,7 +59,7 @@ export const Form = () => {
                     alt="QR Code"
                   />
                   <p className="gradient-text mt-4 text-sm text-center">
-                    <strong className="text-error">Note:</strong> Please make the payment of the amount specified on the event page and enter the transaction ID below. Your application will be processed only after the payment has been successfully verified.Those who are applying for Dexteria are exempted from fees.They can add null to transaction id.
+                    <strong className="text-error">Note:</strong> Please make the payment of the amount specified on the event page and enter the transaction ID below. Your application will be processed only after the payment has been successfully verified.Those who are applying for Dexteria,LAFZ are exempted from fees.They can add null to transaction id.
                   </p>
                   <button
                     onClick={handleModal}
