@@ -5,10 +5,13 @@ import { DevHelper } from "../components/developers/DevHelper";
 import developerData from "../Data/DevelopersData.json";
 import data from "../Data/AboutPageData.json";
 import boys from "../assets/photos/boy1.jpeg";
+import Starfield from "react-starfield";
+import Footer from "../components/Footer/Footer";
 export const About = () => {
   return (
     <div className="min-h-screen">
       <Nav />
+      <Starfield/>
       <div className="min-h-screen mt-[5rem] bg-gray-900 text-white flex flex-col justify-center items-center p-8">
         <div className="max-w-6xl mx-auto text-center">
           {/* Header Section */}
@@ -142,6 +145,7 @@ export const About = () => {
           </section>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

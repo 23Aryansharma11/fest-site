@@ -6,6 +6,7 @@ import Nav from "../components/navbar/Nav";
 import Footer from "../components/Footer/Footer";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
+import Starfield from "react-starfield";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -45,6 +46,7 @@ const Contact = () => {
   return (
     <>
       <Nav />
+      {/* <Starfield/> */}
       <div className="flex justify-center items-center w-full h-[100vh] bg-inherit xs:p-0 md:px-5 py-5 overflow-hidden">
         <div className="xl:max-w-7xl bg-inherit drop-shadow-xl border-3  border-black/20 w-full rounded-md flex justify-between items-stretch xs:px-2 md:px-5 xl:px-5 py-5 ">
           <button

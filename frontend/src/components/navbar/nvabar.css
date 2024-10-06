@@ -2,6 +2,7 @@
     font-family: 'Marine Corps', sans-serif;
     color: white;
 }
+
 .button:hover{
   background: linear-gradient(to right, #A32CC4, #FCBA04);
 }

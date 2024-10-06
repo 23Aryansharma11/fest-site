@@ -21,7 +21,7 @@ const IntroSection = () => {
           animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
           transition={{ type: "spring", stiffness: 800, damping: 150 }}
         >
-          <h2 className="text-6xl md:text-7xl font-bold mb-4 gradient-text">
+          <h2 className="text-6xl md:text-7xl event font-bold mb-4 gradient-text">
             EVENTS
           </h2>
         </motion.div>

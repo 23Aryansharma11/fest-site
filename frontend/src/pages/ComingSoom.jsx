@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Starfield from "react-starfield";
 
 const ComingSoon = () => {
   const title = `Coming  Soon`;
@@ -47,6 +48,7 @@ const ComingSoon = () => {
 
   return (
     <div className="min-h-screen w-screen bg-gray-900 text-white flex flex-col items-center justify-center overflow-hidden">
+    <Starfield/>
       <div className="text-center w-full px-4 sm:w-[70%] md:w-[60%] lg:w-[50%]">
         <div className="hidden md:flex justify-center">
           {title.split("").map((letter, index) => (

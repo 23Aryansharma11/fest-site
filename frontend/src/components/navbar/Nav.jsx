@@ -160,7 +160,7 @@ const Nav = () => {
             <>
               <Link
                 to="/login"
-                className="block font-bold hover:bg transition-colors duration-300 py-2 px-4 md:hidden"
+                className="block font-bold hover:bg gradient-border transition-colors duration-300 py-2 px-4 md:hidden"
                 onClick={toggleMobileMenu}
               >
                 Login
@@ -187,7 +187,7 @@ const Nav = () => {
             </button>
           ) : (
             <>
-              <button className="hidden md:block hover:bg bg">
+              <button className="hidden md:block hover:bg gradient-border">
                 <Link
                   to="/login"
                   className="block text-white font-bold"
@@ -196,7 +196,7 @@ const Nav = () => {
                   Login
                 </Link>
               </button>
-              <button className="  hidden md:block   button    duration-300">
+              <button className="  hidden md:block   button gradient-border    duration-1000">
                 <Link
                   to="/register"
                   className="block text-white font-bold "
