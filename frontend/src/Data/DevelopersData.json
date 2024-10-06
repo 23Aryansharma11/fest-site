@@ -20,13 +20,15 @@
     "description": "As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
     "work": "Web Developer",
     "mail": "mailto:23aryansharma11@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/aryan-sharma-378971270/"
+    "linkedin": "https://www.linkedin.com/in/aryan-sharma-378971270/",
+    "image": "https://res.cloudinary.com/aryansharma/image/upload/f_auto,q_auto/hwsmcxld6w4i5siyhzuw"
   },
   {
     "name": "Ruhani Kapoor",
     "description": "As web developers, we've all been there with margins. It's like trying to keep everyone in line, but there's always that one element insisting on pushing the boundaries just a little too far!",
     "work": "Web Developer",
     "mail": "mailto:ruhanikapoor04@gmail.com ",
-    "linkedin": ""
+    "linkedin": "",
+    "image": "https://res.cloudinary.com/aryansharma/image/upload/f_auto,q_auto/ruhani"
   }
 ]
