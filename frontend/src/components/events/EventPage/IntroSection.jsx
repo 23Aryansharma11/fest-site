@@ -35,7 +35,7 @@ const IntroSection = () => {
             games, and cutting-edge innovation on display!
           </p>
           <Link
-            to="/register"
+            to="/comingsoon"
             className="px-6 py-3 bg text-white font-bold rounded-md hover:bg-orange-600 transition-transform transform hover:scale-105"
           >
             Register Now
