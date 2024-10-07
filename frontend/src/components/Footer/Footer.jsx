@@ -2,10 +2,10 @@
 import React from "react";
 import {motion} from "framer-motion"
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-
+import { FaYoutube } from "react-icons/fa";
 const Footer = () => {
   const socialMedia = [
-   
+    { name: 'Youtube', url: 'https://www.youtube.com/@HPU-UIT', icon: <FaYoutube /> },
 
     { name: 'Instagram', url: 'https://www.instagram.com/uit.tech/', icon: <FaInstagram /> },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/technical-team-uit-786b4732b/', icon: <FaLinkedinIn /> },
@@ -14,7 +14,7 @@ const Footer = () => {
   
 
   const links = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', path: '/home' },
     { name: 'About', path: '/about' },
     { name: 'Schedule', path: '/comingsoon' },
     { name: 'Events', path: '/events' },
@@ -107,18 +107,18 @@ const Footer = () => {
 
       {/* Additional Links */}
       <motion.div
-        className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-8"
+        className="mt-12 grid grid-cols-2 md:grid-cols-2 gap-8"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.6 }}
       >
-        <div className="">
+        {/* <div className="">
           <h2 className="gradient-text text-xl font-bold mb-4">Sponsors</h2>
           <ul className="space-y-2">
             <li><a href="/sponsors" className="hover:gradient-text transition-colors duration-300">Become a Sponsor</a></li>
             <li><a href="/sponsors" className="hover:gradient-text transition-colors duration-300">Our Partners</a></li>
           </ul>
-        </div>
+        </div> */}
         {/* <div>
           <h2 className="gradient-text text-xl font-bold mb-4">Resources</h2>
           <ul className="space-y-2">
@@ -149,6 +149,7 @@ const Footer = () => {
         <p className="text-gray-400 text-sm">
           <a href="/about" className="hover:gradient-text transition-colors duration-300">Privacy Policy</a> | 
           <a href="/about" className="hover:gradient-text transition-colors duration-300 ml-2">Terms of Service</a>
+          <a href="/etsa" className="hover:gradient-text transition-colors duration-300 ml-2 float-right">ETSA</a>
         </p>
       </div>
     </div>

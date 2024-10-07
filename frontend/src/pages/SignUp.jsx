@@ -14,7 +14,7 @@ const SignUp = () => {
     <main className="bg-darkbg text-white min-h-screen w-full flex items-center justify-center relative md:justify-around ">
       <button
         onClick={() => navigate(-1)}
-        className="absolute left-3 top-3 border-gray"
+        className="absolute left-3 md:top-[5rem] xs:top-[4rem]  border-gray"
       >
         <IoIosArrowBack />
       </button>

@@ -50,7 +50,7 @@ export const Sidebar = ({ value }) => {
     >
       <Link
         to="/events"
-        className="px-6 py-3 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all"
+        className="px-6 py-3 border-2 gradient-border text-white   hover:text-black transition-all"
       >
         Explore more
       </Link>

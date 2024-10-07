@@ -13,7 +13,7 @@ const Login = () => {
       <main className="bg-darkbg text-white min-h-screen w-full flex items-center justify-center md:justify-around relative">
         <button
           onClick={() => navigate(-1)}
-          className="absolute left-3 top-3 border-gray"
+          className="absolute left-3 top-[5rem] border-gray"
         >
           <IoIosArrowBack />
         </button>

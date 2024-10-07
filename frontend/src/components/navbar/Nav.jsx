@@ -14,7 +14,7 @@ const Nav = () => {
   const navItems = [
     { label: "About", href: "/about" },
     { label: "Events", href: "/events" },
-    { label: "Sponsors", href: "/sponsors" },
+    // { label: "Sponsors", href: "/sponsors" },
     { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
     { label: "Collaborate", href: "/collaborate" },
@@ -43,7 +43,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-darkbg/95 md:bg-darkbg/50 md:backdrop-blur-lg text-white  top-0 z-20 mx-auto w-full flex items-center justify-between p-2 flex-wrap px-5 fixed">
+    <nav className="bg-darkbg/95 md:bg-darkbg/50 md:backdrop-blur-lg text-white  top-0 z-20 mx-auto w-full flex items-center justify-between p-2 flex-wrap xs:px-0 md:px-5 fixed">
       <Link to="/home">
         <div className="flex gap-2 items-center justify-between font-bold text-2xl orbitron hover:text-prim transition-colors duration-300">
           <img className="size-8" src={img} alt="logo" />
@@ -187,10 +187,10 @@ const Nav = () => {
             </button>
           ) : (
             <>
-              <button className="hidden md:block hover:bg gradient-border">
+              <button className="hidden md:block  gradient-border">
                 <Link
                   to="/login"
-                  className="block text-white font-bold"
+                  className="block text-white font-bold relative z-10"
                   onClick={toggleMobileMenu}
                 >
                   Login
@@ -199,7 +199,7 @@ const Nav = () => {
               <button className="  hidden md:block   button gradient-border    duration-1000">
                 <Link
                   to="/register"
-                  className="block text-white font-bold "
+                  className="block text-white relative z-10 font-bold "
                   onClick={toggleMobileMenu}
                 >
                   Register

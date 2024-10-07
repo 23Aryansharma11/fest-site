@@ -19,7 +19,7 @@ const {loading,logIn}=useLogin()
   }
   return (
     <div className="w-full flex flex-col text-white gap-10 justify-center items-center h-full ">
-      <p className="font-bold  orbitron text-center text-5xl">Utkarsh 2k24</p>
+      <p className="font-bold  orbitron text-center text-5xl gradient-text utf">UTF 2k24</p>
       <p className="font-bold text-4xl orbitron">Login</p>
       <form className="w-full" onSubmit={handleSubmit(handleLogin)}>
         <span className="text-red-600 text-sm font-lighttrue">
@@ -30,6 +30,7 @@ const {loading,logIn}=useLogin()
           <Input
             label="Email"
             placeholder="Enter email"
+            className="  w-full text-white  input placeholder:text-black/70 focus:outline-none bg-transparent"
             type="email"
             {...register("email", {
               required: "Email is required",
@@ -43,6 +44,7 @@ const {loading,logIn}=useLogin()
           <Input
             label="Password"
             type="password"
+            className="  w-full text-white  input placeholder:text-black/70 focus:outline-none bg-transparent"
             placeholder="Enter password"
             {...register("password", {
               required: "Password is required",
@@ -52,13 +54,13 @@ const {loading,logIn}=useLogin()
               },
             })}
           />
-          <Link to="/register" className="block text-white">
+          <Link to="/register" className="block  gradient-text">
             Don't have an account?{" "}
-            <span className="text-prim underline">Register here</span>
+            <span className="text-white underline">Register here</span>
           </Link>
           <button
             disabled={loading}
-            className="bg-prim px-8 py-2 font-bold text-black disabled:bg-[#D3D3D3]"
+            className="gradient-border px-8 py-2 font-bold bg-black button disabled:bg-[#D3D3D3]"
             type="submit"
           >
             {loading ? "Logging In..." : "Login"}
