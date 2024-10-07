@@ -20,7 +20,7 @@ const PageNotFOund = () => {
         <h6 className="text-yellow-500 text-4xl">
           That's fucking diabolical ! Right.
         </h6>
-        <Link className="btn btn-warning float-end mt-4 btn-outline" to="/">
+        <Link className="btn btn-warning float-end mt-4 btn-outline" to="/home">
           Home
         </Link>
       </div>
