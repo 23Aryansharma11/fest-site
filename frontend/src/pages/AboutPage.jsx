@@ -96,7 +96,7 @@ export const About = () => {
                   key={category}
                   className="bg-gray-900 p-8 rounded-lg shadow-lg w-full max-w-xl mx-auto"
                 >
-                  <h3 className="text-3xl font-bold gradient-text mb-4 border-b input pb-2">
+                  <h3 className="text-3xl font-bold gradient-text mb-4 border-b input h-max pb-2">
                     {category}
                   </h3>
                   <ul className="text-gray-300 text-xl space-y-2 list-inside list-none cursor-pointer">
@@ -129,7 +129,7 @@ export const About = () => {
 
           {/* Contact Section */}
           <section className="mt-12">
-            <h2 className="text-3xl font-semibold gradient-text mb-4">
+            <h2 className="text-3xl font-semibold gradient-text mb-4 utf">
               Get in Touch
             </h2>
             <p className="text-lg text-gray-300 mb-6 text-center">
@@ -138,7 +138,7 @@ export const About = () => {
             </p>
             <a
               href="/contact"
-              className="inline-block px-8 py-3 bg text-white rounded-lg font-semibold  transition duration-300"
+              className="inline-block px-8 py-3 bg text-white rounded-lg font-semibold gradient-border transition duration-300"
             >
               Contact Us
             </a>

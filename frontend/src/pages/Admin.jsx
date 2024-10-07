@@ -9,7 +9,7 @@ export const Admin = () => {
   return (
     <>
       <Nav />
-      <h1 className="text-yellow-500 pb-8 text-4xl">Submissions</h1>
+      <h1 className="gradient-text mt-[4rem] pb-8 text-4xl">Submissions</h1>
       <div className="d-grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1  gap-1 m-0 p-0 place-items-center w-full">
         {events?.map((e, index) => {
           return (

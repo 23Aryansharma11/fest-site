@@ -38,7 +38,9 @@ const Contact = () => {
           toast.error(`${error.text}`);
         }
       );
-    e.target.reset();
+      setEmail("");
+      setMessage("");
+      setName("");
   };
 
   const navigate = useNavigate();
@@ -100,11 +102,11 @@ const Contact = () => {
                       onChange={(e) => {
                         setMessage(e.target.value);
                       }}
-                      className=" border-b-2 w-full gradient-text input placeholder:text-black/70 focus:outline-none bg-transparent "
+                      className=" border-b-2 w-full gradient-text input placeholder:text-black/70 focus:outline-none bg-transparent  "
                     />
                   </div>
                   <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center pt-3">
-                    <button className=" hover:bg-yellow-500 hover:scale-[1.2] hover:border-yellow-400 bg  max-w-[200px]">
+                    <button className=" gradient-border bg-black text-white  max-w-[200px]">
                       Submit
                     </button>
                   </div>
