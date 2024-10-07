@@ -78,7 +78,16 @@ function App() {
         <Route path="/collaborate" element={<CollaboratorPage />} />
       </Routes>
 
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          style: {
+            background: "#000",
+            color: "#fff",
+            border: "1px solid #A32CC4",
+            borderRadius: "4px"
+          },
+        }}
+      />
     </div>
   );
 }
