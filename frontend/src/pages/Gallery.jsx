@@ -7,9 +7,11 @@ import { Particles } from "../components/Particles/Particles";
 const Gallery = () => {
   return (
     <main className="min-h-screen w-full text-white overflow-hidden">
-    <div className=' w-screen relative top-[20rem]'>
-    <Particles/>
-    </div>
+    <div className='overflow-hidden h-[130vh] lg:h-[100vh] absolute'>
+    <div className='  w-screen  top-[20rem]'>
+        <Particles/>
+        </div>
+        </div>
       <Nav />
       {/* Welcome */}
       <WelcomeScreen />

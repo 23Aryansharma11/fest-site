@@ -131,7 +131,7 @@ const containerVariants = {
               whileHover="hover"
               viewport={{ amount: 0.5 }}
             >
-              <div className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2">
+              <div className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2 gradient-border">
                 <img
                   src={image.imgUrl}
                   alt="image"
@@ -148,7 +148,7 @@ const containerVariants = {
               whileHover="hover"
               viewport={{ amount: 0.5 }}
             >
-              <div className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2">
+              <div className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2 gradient-border">
                 <img
                   src={image.imgUrl}
                   alt="image"
@@ -165,7 +165,7 @@ const containerVariants = {
               whileHover="hover"
               viewport={{ amount: 0.5 }}
             >
-              <div className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2">
+              <div className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2 gradient-border">
                 <img
                   src={image.imgUrl}
                   alt="image"
@@ -182,7 +182,7 @@ const containerVariants = {
               whileHover="hover"
               viewport={{ amount: 0.5 }}
             >
-              <div className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2">
+              <div className="rounded-lg h-60 w-80 bg-darkbg flex justify-center items-center p-2 gradient-border">
                 <img
                   src={image.imgUrl}
                   alt="image"

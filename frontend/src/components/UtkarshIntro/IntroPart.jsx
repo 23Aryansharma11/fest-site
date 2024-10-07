@@ -50,7 +50,7 @@ const IntroPart = () => {
       <motion.div initial={{opacity:0,x:0,y:600,scale:0}} animate={{opacity:1,y:0,x:0,scale:1}} transition={{type:"spring",stiffness:500,damping:200}}>
       <h2 className="text-lg md:text-2xl md:leading-9 cabin text-justify">
         Welcome to UTF, the largest techno fest in Himachal
-        Pradesh! Hosted by{" "}
+        Pradesh University! Hosted by{" "}
         <span className="gradient-text font-bold">
           University Institude of Technology
         </span>

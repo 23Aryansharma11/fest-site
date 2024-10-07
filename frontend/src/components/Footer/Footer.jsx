@@ -107,7 +107,7 @@ const Footer = () => {
 
       {/* Additional Links */}
       <motion.div
-        className="mt-12 grid grid-cols-2 md:grid-cols-2 gap-8"
+        className="mt-12 grid grid-cols-1 md:grid-cols-1 gap-8"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.6 }}
@@ -133,19 +133,19 @@ const Footer = () => {
             <li><a href="/about" className="hover:gradient-text transition-colors duration-300">Guidelines</a></li>
           </ul>
         </div>
-        <div>
+        {/* <div>
           <h2 className="gradient-text text-xl font-bold mb-4">Media</h2>
           <ul className="space-y-2">
             <li><a href="/contact" className="hover:gradient-text transition-colors duration-300">Press Kit</a></li>
             <li><a href="/contact" className="hover:gradient-text transition-colors duration-300">Media Inquiries</a></li>
           </ul>
-        </div>
+        </div> */}
       </motion.div>
     </div>
 
     <div className="border-t border-gray-700 mt-12 pt-8 pb-0 mb-0">
       <div className="container mx-auto px-4 text-center ">
-        <p className="text-gray-400 text-sm gradient-text">&copy; 2024 UIT Shimla Tech Fest. All rights reserved by TECH.TEAM</p>
+        <p className="text-gray-400 text-sm gradient-text">&copy; 2024 UIT Shimla Tech Fest. All rights reserved by TECHNICAL TEAM</p>
         <p className="text-gray-400 text-sm">
           <a href="/about" className="hover:gradient-text transition-colors duration-300">Privacy Policy</a> | 
           <a href="/about" className="hover:gradient-text transition-colors duration-300 ml-2">Terms of Service</a>
