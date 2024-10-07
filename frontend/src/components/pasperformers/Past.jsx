@@ -5,36 +5,36 @@ import "./past.css"
 export const Past = () => {
   const data=[
     {
-      img:"https://res.cloudinary.com/dofidva2t/image/upload/v1728230471/zcmc8bgvorlj71oprsxt.jpg",
+      img:"https://res.cloudinary.com/dofidva2t/image/upload/f_auto,q_auto/zcmc8bgvorlj71oprsxt.jpg",
       name:"Dilpreet Dhillon"
     },
     {
-      img:"https://res.cloudinary.com/dofidva2t/image/upload/v1728233440/oj3tas3sslw8lnaqacf6.jpg",
+      img:"https://res.cloudinary.com/dofidva2t/image/upload/f_auto,q_auto/oj3tas3sslw8lnaqacf6.jpg",
       name:"the PRATS"
     },
     {
-      img:"https://res.cloudinary.com/dofidva2t/image/upload/v1728272328/ycflkahvhfeqaamvppgm.jpg",
+      img:"https://res.cloudinary.com/dofidva2t/image/upload/f_auto,q_auto/ycflkahvhfeqaamvppgm.jpg",
       name:"Kumar Sahil"
     },
     {
-      img:"https://res.cloudinary.com/dofidva2t/image/upload/v1728230473/ans8xgnaucxzi17cupzm.jpg",
+      img:"https://res.cloudinary.com/dofidva2t/image/upload/f_auto,q_auto/ans8xgnaucxzi17cupzm.jpg",
       name:"Kuldeep Sharma"
     },
     {
-      img:"https://res.cloudinary.com/dofidva2t/image/upload/v1728234741/u2kyz8ksphb7bdaj7ulv.jpg",
+      img:"https://res.cloudinary.com/dofidva2t/image/upload/f_auto,q_auto/u2kyz8ksphb7bdaj7ulv.jpg",
       name:"Arun Justa"
     },
     {
-      img:"https://res.cloudinary.com/dofidva2t/image/upload/v1728233440/oj3tas3sslw8lnaqacf6.jpg",
+      img:"https://res.cloudinary.com/dofidva2t/image/upload/f_auto,q_auto/oj3tas3sslw8lnaqacf6.jpg",
       name:"The PRATS"
     },
     {
-      img:"https://res.cloudinary.com/dofidva2t/image/upload/v1728230472/fqwzh06wpqaachgjjetf.jpg",
+      img:"https://res.cloudinary.com/dofidva2t/image/upload/f_auto,q_auto/fqwzh06wpqaachgjjetf.jpg",
       name:"Laman Band"
     }
  ,
     {
-      img:"https://res.cloudinary.com/dofidva2t/image/upload/v1728230471/zcmc8bgvorlj71oprsxt.jpg",
+      img:"https://res.cloudinary.com/dofidva2t/image/upload/f_auto,q_auto/zcmc8bgvorlj71oprsxt.jpg",
       name:"Dilpreet Dhillon"
     },
   ]

@@ -149,7 +149,7 @@ const Footer = () => {
         <p className="text-gray-400 text-sm">
           <a href="/about" className="hover:gradient-text transition-colors duration-300">Privacy Policy</a> | 
           <a href="/about" className="hover:gradient-text transition-colors duration-300 ml-2">Terms of Service</a>
-          <a href="/etsa" className="hover:gradient-text transition-colors duration-300 ml-2 float-right">ETSA</a>
+          {/* <a href="/etsa" className="hover:gradient-text transition-colors duration-300 ml-2 float-right">ETSA</a> */}
         </p>
       </div>
     </div>
