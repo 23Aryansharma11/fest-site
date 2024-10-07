@@ -150,7 +150,7 @@ const Nav = () => {
         <div className="md:flex md:items-center gap-3">
           {authUser ? (
             <Link
-              to="/"
+              to="/home"
               className="block font-bold  hover:bg transition-colors duration-300 py-2 px-4 md:hidden"
               onClick={handleLogout}
             >
@@ -178,7 +178,7 @@ const Nav = () => {
           {authUser ? (
             <button className="hidden md:block">
               <Link
-                to="/"
+                to="/home"
                 className="block text-white font-bold"
                 onClick={handleLogout}
               >
